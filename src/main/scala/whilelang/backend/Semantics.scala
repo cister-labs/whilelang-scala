@@ -8,14 +8,17 @@ import caos.sos.SOS
 import BExpr.*
 import IExpr.*
 
+/** Small-step semantics for commands  */
 object Semantics extends SOS[String,St]:
 
   type Env = Map[String,Int]
   type St = (Command,Env)
 
-  override def accepting(s: St) =
+  /** When is a state terminal */
+  override def accepting(s: St): Boolean =
     s._1 == Skip
 
+  /** What are the set of possible evolutions (label and new state) */
   override def next(st: St): Set[(String, St)] = st._1 match
     case Skip => Set()
     case Seq(Skip,c2) => next(c2->st._2)
@@ -34,6 +37,7 @@ object Semantics extends SOS[String,St]:
       val v = eval(e,st._2)
       Set(s"Assign $ident:=$v" -> (Skip,st._2+(ident->v)))
 
+  /** Evaluation of boolean expressions */
   def eval(b:BExpr,env:Env): Boolean = b match
     case BTrue  => true
     case BFalse => false
@@ -44,13 +48,13 @@ object Semantics extends SOS[String,St]:
     case Greater(e1, e2) => eval(e1,env) > eval(e2,env)
     case Eq(e1, e2)      => eval(e1,env) == eval(e2,env)
 
+  /** Evaluation of integer expressions */
   def eval(e:IExpr,env:Env): Int = e match
     case N(n)       => n
     case Var(ident) =>
       if env contains ident
         then env(ident)
         else sys.error(s"Variable $ident not found.")
-      //env.getOrElse(ident, sys.error(s"Variable $ident not found."))
     case Plus(e1, e2)  => eval(e1,env) + eval(e2,env)
     case Times(e1, e2) => eval(e1,env) * eval(e2,env)
     case Minus(e1, e2) => eval(e1,env) - eval(e2,env)

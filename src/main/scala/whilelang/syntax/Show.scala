@@ -5,7 +5,11 @@ import whilelang.syntax.Program.{BExpr, Command, IExpr}
 import Command.*
 
 
+/**
+ * List of functions to produce textual representations of commands
+ */
 object Show:
+  /** Pretty command, using indentation */
   def apply(com: Command): String = com match
     case Skip => "skip"
     case Seq(c1, c2) => s"${apply(c1)};\n${apply(c2)}"

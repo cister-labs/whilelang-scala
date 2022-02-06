@@ -1,8 +1,13 @@
 package whilelang.syntax
 
+/**
+ * Internal structure to represent commands in a simple while language
+ * @author José Proença
+ */
 
 object Program:
 
+  /** A command in while language */
   enum Command:
     case Skip
     case Seq(c1:Command, c2:Command)
@@ -10,6 +15,7 @@ object Program:
     case ITE(b:BExpr, ct:Command, cf:Command)
     case While(b:BExpr, c:Command)
 
+  /** An integer expression in the while language */
   enum IExpr:
     case N(n:Int)
     case Var(ident:String)
@@ -17,6 +23,7 @@ object Program:
     case Times(e1:IExpr, e2:IExpr)
     case Minus(e1:IExpr, e2:IExpr)
 
+  /** A boolean expression in the while language */
   enum BExpr:
     case BTrue
     case BFalse
@@ -28,18 +35,18 @@ object Program:
     case Eq(e1:IExpr, e2:IExpr)
 
 
-  ///////////////////
-  // Experimenting //
-  ///////////////////
+  //////////////////////////////
+  // Examples and experiments //
+  //////////////////////////////
 
   object Examples:
     import Program.Command._
     import Program.IExpr._
     import Program.BExpr._
 
-    val p1 =
+    val p1: Command =
       Seq(
         Assign("x",N(27)),
-        While( Less(N(1),Var("x")), Assign("x",Minus(Var("x"),N(5))))
+        While( Less(N(5),Var("x")), Assign("x",Minus(Var("x"),N(5))))
       )
 

@@ -9,13 +9,13 @@ import whilelang.syntax.Show
 import whilelang.syntax.Program
 import whilelang.syntax.Program.Command
 
+/** Object used to configure which analysis appear in the browser */
 object CaosConfig extends Configurator[Command]:
   val name = "WhileLang"
 
   val parser: String=>Command =
     whilelang.syntax.Parser.parseProgram
 
-  // import whilelang.syntax.Parser.Examples
   val examples = List(
      Example("x:=27; while x>1 do x:=x-5","mod 5","Keeps subtracting 5")
   )
