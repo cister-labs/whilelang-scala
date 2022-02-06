@@ -17,7 +17,10 @@ object CaosConfig extends Configurator[Command]:
     whilelang.syntax.Parser.parseProgram
 
   val examples = List(
-     Example("x:=27; while x>1 do x:=x-5","mod 5","Keeps subtracting 5")
+     Example("x:=27; while x>5 do x:=x-5",
+       "mod 5", "Keeps subtracting 5"),
+     Example("x:=5*2+10;\nif x<10\nthen {skip;x:=x+20; x:=2*x}\nelse x:=x*(0-1)",
+       "if-then-else","")
   )
 
   val widgets: Iterable[(String,Widget[Command])] = List(

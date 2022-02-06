@@ -42,9 +42,9 @@ object Parser :
 
   // Simple parsers for spaces and comments
   /** Parser for a sequence of spaces or comments */
-  val sps: P0[Unit] = (whitespace orElse comment).rep0.void
   val whitespace: P[Unit] = P.charIn(" \t\r\n").void
   val comment: P[Unit] = string("//") *> P.charWhere(_!='\n').rep0.void
+  val sps: P0[Unit] = (whitespace orElse comment).rep0.void
 
   // Parsing smaller tokens
   def alphaDigit: P[Char] =
