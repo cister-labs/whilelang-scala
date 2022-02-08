@@ -14123,7 +14123,9 @@ function $h_Lwhilelang_syntax_Parser$() {
 }
 $h_Lwhilelang_syntax_Parser$.prototype = $c_Lwhilelang_syntax_Parser$.prototype;
 $c_Lwhilelang_syntax_Parser$.prototype.parseProgram__T__Lwhilelang_syntax_Program$Command = (function(str) {
-  var x1 = this.pp__Lcats_parse_Parser__T__s_util_Either(this.command__Lcats_parse_Parser(), str);
+  var this$1 = this.command__Lcats_parse_Parser();
+  var b = this.Lwhilelang_syntax_Parser$__f_sps;
+  var x1 = this.pp__Lcats_parse_Parser__T__s_util_Either(this$1.between__Lcats_parse_Parser0__Lcats_parse_Parser0__Lcats_parse_Parser(b, b), str);
   if ((x1 instanceof $c_s_util_Left)) {
     var e = $as_T($as_s_util_Left(x1).s_util_Left__f_value);
     $m_s_sys_package$().error__T__E(e)

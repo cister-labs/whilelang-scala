@@ -17,7 +17,7 @@ object Parser :
 
   /** Parse a command  */
   def parseProgram(str:String):Command =
-    pp(command,str) match {
+    pp(program,str) match {
       case Left(e) => error(e)
       case Right(c) => c
     }
@@ -55,6 +55,9 @@ object Parser :
     P.not(string("--")).with1 *>
     (oneOf("+-><!%/*=|&".toList.map(char)).rep).string
 
+
+  /** A program is a command with possible spaces or comments around. */
+  def program: P[Command] = command.surroundedBy(sps)
 
   /** (Recursive) Parser for a command in the while language */
   def command: P[Command] = P.recursive(commRec =>
