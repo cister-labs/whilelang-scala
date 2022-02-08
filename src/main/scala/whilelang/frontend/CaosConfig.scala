@@ -28,6 +28,6 @@ object CaosConfig extends Configurator[Command]:
     "Pretty" -> view(Show.apply , Text),
     "Run" -> steps(com=>(com,Map()),whilelang.backend.Semantics,_.toString,Text),
     "Run pretty" -> steps(com=>(com,Map()),whilelang.backend.Semantics,
-      x=>Show(x._1)+" - "+x._2.mkString(","),Text)
+      x=>Show(x._1)+"\t\t"+x._2.mkString("[",",","]"),Text)
 
   )

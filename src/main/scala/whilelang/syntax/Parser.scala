@@ -89,10 +89,12 @@ object Parser :
     def lit:P[BExpr] = P.recursive( litR =>
       string("true").as(BTrue) |
       string("false").as(BFalse) |
-      ineq |
-      char('(') *> bexprRec.surroundedBy(sps) <* char(')') |
-      (char('!')*>litR).map(Not.apply)
+      (char('!')*>litR).map(Not.apply) |
+      ineq.backtrack |
+      char('(') *> bexprRec <* char(')')
     )
+    def insideBrackets:P[BExpr] =
+      bexprRec.backtrack | ineq
     def op:P[(IExpr,IExpr)=>BExpr] =
       char('<').as(Less.apply) |
       char('>').as(Greater.apply) |

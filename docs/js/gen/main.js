@@ -13952,20 +13952,19 @@ function $p_Lwhilelang_syntax_Parser$__lit$1__Lcats_parse_Parser__Lcats_parse_Pa
     var this$3 = $m_Lcats_parse_Parser$().string__T__Lcats_parse_Parser("false");
     var b$1 = $s_Lwhilelang_syntax_Program$BExpr$__BFalse__Lwhilelang_syntax_Program$BExpr();
     var that = $m_Lcats_parse_Parser$().as__Lcats_parse_Parser__O__Lcats_parse_Parser(this$3, b$1);
-    var this$5 = this$4.orElse__Lcats_parse_Parser__Lcats_parse_Parser(that);
-    var that$1 = $p_Lwhilelang_syntax_Parser$__ineq$1__Lcats_parse_Parser(this$1);
-    var this$6 = this$5.orElse__Lcats_parse_Parser__Lcats_parse_Parser(that$1);
-    var $$x1 = $m_Lcats_parse_Parser$().char__C__Lcats_parse_Parser(40);
-    var b$2 = this$1.Lwhilelang_syntax_Parser$__f_sps;
-    var that$2 = $$x1.$times$greater__Lcats_parse_Parser0__Lcats_parse_Parser(bexprRec$1$2.between__Lcats_parse_Parser0__Lcats_parse_Parser0__Lcats_parse_Parser(b$2, b$2)).$less$times__Lcats_parse_Parser0__Lcats_parse_Parser($m_Lcats_parse_Parser$().char__C__Lcats_parse_Parser(41));
-    var this$10 = this$6.orElse__Lcats_parse_Parser__Lcats_parse_Parser(that$2);
-    var this$9 = $m_Lcats_parse_Parser$().char__C__Lcats_parse_Parser(33).$times$greater__Lcats_parse_Parser0__Lcats_parse_Parser(litR$1);
-    var fn = new $c_sjsr_AnonFunction1(((this$7) => ((b$3) => {
-      var b$4 = $as_Lwhilelang_syntax_Program$BExpr(b$3);
-      return new $c_Lwhilelang_syntax_Program$BExpr$Not(b$4)
+    var this$8 = this$4.orElse__Lcats_parse_Parser__Lcats_parse_Parser(that);
+    var this$7 = $m_Lcats_parse_Parser$().char__C__Lcats_parse_Parser(33).$times$greater__Lcats_parse_Parser0__Lcats_parse_Parser(litR$1);
+    var fn = new $c_sjsr_AnonFunction1(((this$5) => ((b$2) => {
+      var b$3 = $as_Lwhilelang_syntax_Program$BExpr(b$2);
+      return new $c_Lwhilelang_syntax_Program$BExpr$Not(b$3)
     }))(this$1));
-    var that$3 = $m_Lcats_parse_Parser$().map__Lcats_parse_Parser__F1__Lcats_parse_Parser(this$9, fn);
-    return this$10.orElse__Lcats_parse_Parser__Lcats_parse_Parser(that$3)
+    var that$1 = $m_Lcats_parse_Parser$().map__Lcats_parse_Parser__F1__Lcats_parse_Parser(this$7, fn);
+    var this$10 = this$8.orElse__Lcats_parse_Parser__Lcats_parse_Parser(that$1);
+    var this$9 = $p_Lwhilelang_syntax_Parser$__ineq$1__Lcats_parse_Parser(this$1);
+    var that$2 = $m_Lcats_parse_Parser$().backtrack__Lcats_parse_Parser__Lcats_parse_Parser(this$9);
+    var this$11 = this$10.orElse__Lcats_parse_Parser__Lcats_parse_Parser(that$2);
+    var that$3 = $m_Lcats_parse_Parser$().char__C__Lcats_parse_Parser(40).$times$greater__Lcats_parse_Parser0__Lcats_parse_Parser(bexprRec$1$2).$less$times__Lcats_parse_Parser0__Lcats_parse_Parser($m_Lcats_parse_Parser$().char__C__Lcats_parse_Parser(41));
+    return this$11.orElse__Lcats_parse_Parser__Lcats_parse_Parser(that$3)
   }))($thiz, bexprRec$1)))
 }
 function $p_Lwhilelang_syntax_Parser$__op$1__Lcats_parse_Parser($thiz) {
@@ -14295,22 +14294,108 @@ $c_Lwhilelang_syntax_Show$.prototype.apply__Lwhilelang_syntax_Program$Command__T
     var x$1$1 = $as_Lwhilelang_syntax_Program$Command$Assign(com);
     var x13 = x$1$1.Lwhilelang_syntax_Program$Command$Assign__f_ident;
     var x14 = x$1$1.Lwhilelang_syntax_Program$Command$Assign__f_e;
-    return ((x13 + ":=") + x14)
+    return ((x13 + ":=") + this.apply__Lwhilelang_syntax_Program$IExpr__T(x14))
   };
   if ((com instanceof $c_Lwhilelang_syntax_Program$Command$ITE)) {
     var x$1$2 = $as_Lwhilelang_syntax_Program$Command$ITE(com);
     var x8 = x$1$2.Lwhilelang_syntax_Program$Command$ITE__f_b;
     var x9 = x$1$2.Lwhilelang_syntax_Program$Command$ITE__f_ct;
     var x10 = x$1$2.Lwhilelang_syntax_Program$Command$ITE__f_cf;
-    return ((((("if " + x8) + " then\n") + this.indent__T__I__T(this.apply__Lwhilelang_syntax_Program$Command__T(x9), 1)) + "\nelse\n") + this.indent__T__I__T(this.apply__Lwhilelang_syntax_Program$Command__T(x10), 1))
+    return ((((("if " + this.apply__Lwhilelang_syntax_Program$BExpr__T(x8)) + " then\n") + this.indent__T__I__T(this.apply__Lwhilelang_syntax_Program$Command__T(x9), 1)) + "\nelse\n") + this.indent__T__I__T(this.apply__Lwhilelang_syntax_Program$Command__T(x10), 1))
   };
   if ((com instanceof $c_Lwhilelang_syntax_Program$Command$While)) {
     var x$1$3 = $as_Lwhilelang_syntax_Program$Command$While(com);
     var x4 = x$1$3.Lwhilelang_syntax_Program$Command$While__f_b;
     var x5 = x$1$3.Lwhilelang_syntax_Program$Command$While__f_c;
-    return ((("while " + x4) + " do\n") + this.indent__T__I__T(this.apply__Lwhilelang_syntax_Program$Command__T(x5), 1))
+    return ((("while " + this.apply__Lwhilelang_syntax_Program$BExpr__T(x4)) + " do\n") + this.indent__T__I__T(this.apply__Lwhilelang_syntax_Program$Command__T(x5), 1))
   };
   throw new $c_s_MatchError(com)
+});
+$c_Lwhilelang_syntax_Show$.prototype.apply__Lwhilelang_syntax_Program$IExpr__T = (function(e) {
+  if ((e instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
+    var x$1 = $as_Lwhilelang_syntax_Program$IExpr$N(e);
+    var x37 = x$1.Lwhilelang_syntax_Program$IExpr$N__f_n;
+    return ("" + x37)
+  };
+  if ((e instanceof $c_Lwhilelang_syntax_Program$IExpr$Var)) {
+    var x$1$1 = $as_Lwhilelang_syntax_Program$IExpr$Var(e);
+    var x34 = x$1$1.Lwhilelang_syntax_Program$IExpr$Var__f_ident;
+    return x34
+  };
+  if ((e instanceof $c_Lwhilelang_syntax_Program$IExpr$Plus)) {
+    var x$1$2 = $as_Lwhilelang_syntax_Program$IExpr$Plus(e);
+    var x30 = x$1$2.Lwhilelang_syntax_Program$IExpr$Plus__f_e1;
+    var x31 = x$1$2.Lwhilelang_syntax_Program$IExpr$Plus__f_e2;
+    return ((this.apply__Lwhilelang_syntax_Program$IExpr__T(x30) + "+") + this.apply__Lwhilelang_syntax_Program$IExpr__T(x31))
+  };
+  if ((e instanceof $c_Lwhilelang_syntax_Program$IExpr$Times)) {
+    var x$1$3 = $as_Lwhilelang_syntax_Program$IExpr$Times(e);
+    var x26 = x$1$3.Lwhilelang_syntax_Program$IExpr$Times__f_e1;
+    var x27 = x$1$3.Lwhilelang_syntax_Program$IExpr$Times__f_e2;
+    return ((this.applyPar__Lwhilelang_syntax_Program$IExpr__T(x26) + "*") + this.applyPar__Lwhilelang_syntax_Program$IExpr__T(x27))
+  };
+  if ((e instanceof $c_Lwhilelang_syntax_Program$IExpr$Minus)) {
+    var x$1$4 = $as_Lwhilelang_syntax_Program$IExpr$Minus(e);
+    var x22 = x$1$4.Lwhilelang_syntax_Program$IExpr$Minus__f_e1;
+    var x23 = x$1$4.Lwhilelang_syntax_Program$IExpr$Minus__f_e2;
+    return ((this.apply__Lwhilelang_syntax_Program$IExpr__T(x22) + "-") + this.apply__Lwhilelang_syntax_Program$IExpr__T(x23))
+  };
+  throw new $c_s_MatchError(e)
+});
+$c_Lwhilelang_syntax_Show$.prototype.applyPar__Lwhilelang_syntax_Program$IExpr__T = (function(expr) {
+  return (((expr instanceof $c_Lwhilelang_syntax_Program$IExpr$Plus) || (expr instanceof $c_Lwhilelang_syntax_Program$IExpr$Minus)) ? (("(" + this.apply__Lwhilelang_syntax_Program$IExpr__T(expr)) + ")") : this.apply__Lwhilelang_syntax_Program$IExpr__T(expr))
+});
+$c_Lwhilelang_syntax_Show$.prototype.apply__Lwhilelang_syntax_Program$BExpr__T = (function(b) {
+  var x = $s_Lwhilelang_syntax_Program$BExpr$__BTrue__Lwhilelang_syntax_Program$BExpr();
+  if (((x === null) ? (b === null) : x.equals__O__Z(b))) {
+    return "true"
+  };
+  var x$3 = $s_Lwhilelang_syntax_Program$BExpr$__BFalse__Lwhilelang_syntax_Program$BExpr();
+  if (((x$3 === null) ? (b === null) : x$3.equals__O__Z(b))) {
+    return "false"
+  };
+  if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$And)) {
+    var x$1 = $as_Lwhilelang_syntax_Program$BExpr$And(b);
+    var x62 = x$1.Lwhilelang_syntax_Program$BExpr$And__f_b1;
+    var x63 = x$1.Lwhilelang_syntax_Program$BExpr$And__f_b2;
+    return ((this.applyAnd__Lwhilelang_syntax_Program$BExpr__T(x62) + " && ") + this.applyAnd__Lwhilelang_syntax_Program$BExpr__T(x63))
+  };
+  if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Or)) {
+    var x$1$1 = $as_Lwhilelang_syntax_Program$BExpr$Or(b);
+    var x58 = x$1$1.Lwhilelang_syntax_Program$BExpr$Or__f_b1;
+    var x59 = x$1$1.Lwhilelang_syntax_Program$BExpr$Or__f_b2;
+    return ((this.apply__Lwhilelang_syntax_Program$BExpr__T(x58) + " || ") + this.apply__Lwhilelang_syntax_Program$BExpr__T(x59))
+  };
+  if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Not)) {
+    var x$1$2 = $as_Lwhilelang_syntax_Program$BExpr$Not(b);
+    var x55 = x$1$2.Lwhilelang_syntax_Program$BExpr$Not__f_b;
+    return ("!" + this.applyNot__Lwhilelang_syntax_Program$BExpr__T(x55))
+  };
+  if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Less)) {
+    var x$1$3 = $as_Lwhilelang_syntax_Program$BExpr$Less(b);
+    var x51 = x$1$3.Lwhilelang_syntax_Program$BExpr$Less__f_e1;
+    var x52 = x$1$3.Lwhilelang_syntax_Program$BExpr$Less__f_e2;
+    return ((this.apply__Lwhilelang_syntax_Program$IExpr__T(x51) + "<") + this.apply__Lwhilelang_syntax_Program$IExpr__T(x52))
+  };
+  if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Greater)) {
+    var x$1$4 = $as_Lwhilelang_syntax_Program$BExpr$Greater(b);
+    var x47 = x$1$4.Lwhilelang_syntax_Program$BExpr$Greater__f_e1;
+    var x48 = x$1$4.Lwhilelang_syntax_Program$BExpr$Greater__f_e2;
+    return ((this.apply__Lwhilelang_syntax_Program$IExpr__T(x47) + ">") + this.apply__Lwhilelang_syntax_Program$IExpr__T(x48))
+  };
+  if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Eq)) {
+    var x$1$5 = $as_Lwhilelang_syntax_Program$BExpr$Eq(b);
+    var x43 = x$1$5.Lwhilelang_syntax_Program$BExpr$Eq__f_e1;
+    var x44 = x$1$5.Lwhilelang_syntax_Program$BExpr$Eq__f_e2;
+    return ((this.apply__Lwhilelang_syntax_Program$IExpr__T(x43) + "=") + this.apply__Lwhilelang_syntax_Program$IExpr__T(x44))
+  };
+  throw new $c_s_MatchError(b)
+});
+$c_Lwhilelang_syntax_Show$.prototype.applyAnd__Lwhilelang_syntax_Program$BExpr__T = (function(expr) {
+  return ((expr instanceof $c_Lwhilelang_syntax_Program$BExpr$Or) ? (("(" + this.apply__Lwhilelang_syntax_Program$BExpr__T(expr)) + ")") : ("" + this.apply__Lwhilelang_syntax_Program$BExpr__T(expr)))
+});
+$c_Lwhilelang_syntax_Show$.prototype.applyNot__Lwhilelang_syntax_Program$BExpr__T = (function(expr) {
+  return (((expr instanceof $c_Lwhilelang_syntax_Program$BExpr$Or) || (expr instanceof $c_Lwhilelang_syntax_Program$BExpr$And)) ? (("(" + this.apply__Lwhilelang_syntax_Program$BExpr__T(expr)) + ")") : ("" + this.apply__Lwhilelang_syntax_Program$BExpr__T(expr)))
 });
 $c_Lwhilelang_syntax_Show$.prototype.indent__T__I__T = (function(str, n) {
   var s = $f_T__repeat__I__T("  ", n);
@@ -19275,7 +19360,7 @@ function $c_Lwhilelang_frontend_CaosConfig$() {
     var x$1 = $as_T2(x);
     var $$x1 = $m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$Command__T($as_Lwhilelang_syntax_Program$Command(x$1._1__O()));
     var this$16 = $as_sc_IterableOnceOps(x$1._2__O());
-    return (($$x1 + " - ") + $f_sc_IterableOnceOps__mkString__T__T__T__T(this$16, "", ",", ""))
+    return (($$x1 + "\t\t") + $f_sc_IterableOnceOps__mkString__T__T__T__T(this$16, "[", ",", "]"))
   }))(this)), $m_Lcaos_view_Text$());
   var elems$3 = $$x5.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([$$x4, $$x3, $$x2, new $c_T2("Run pretty", y$3)]));
   this.Lwhilelang_frontend_CaosConfig$__f_widgets = $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems$3)
