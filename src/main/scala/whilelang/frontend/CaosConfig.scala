@@ -17,10 +17,14 @@ object CaosConfig extends Configurator[Command]:
     whilelang.syntax.Parser.parseProgram
 
   val examples = List(
-     Example("x:=27; while x>5 do x:=x-5",
-       "mod 5", "Keeps subtracting 5"),
-     Example("x:=5*2+10;\nif x<10\nthen {skip;x:=x+20; x:=2*x}\nelse x:=x*(0-1)",
-       "if-then-else","")
+    Example("x:=27; while x>5 do x:=x-5",
+     "mod 5", "Keeps subtracting 5"),
+    Example("x:=5*2+10;\nif x<10\nthen {skip;x:=x+20; x:=2*x}\nelse x:=x*(0-1)",
+      "if-then-else",""),
+    Example("if x>0 then {x:=2*x;\n   while x<10 do x:=2*x }\nelse skip",
+      "Ex5.5","From RSD book"),
+    Example("if x<=y then { z:=x ; w:=y } else { w:=x ; z:=y }",
+      "Sort2","Example 5.7 from RSD book")
   )
 
   val widgets: Iterable[(String,Widget[Command])] = List(
@@ -28,6 +32,7 @@ object CaosConfig extends Configurator[Command]:
     "Pretty" -> view(Show.apply , Text),
     "Run" -> steps(com=>(com,Map()),whilelang.backend.Semantics,_.toString,Text),
     "Run pretty" -> steps(com=>(com,Map()),whilelang.backend.Semantics,
+      x=>Show(x._1)+"\t\t"+x._2.mkString("[",",","]"),Text),
+    "Run Maybe" -> steps(com=>(com,Map()),whilelang.backend.MaybeSemantics,
       x=>Show(x._1)+"\t\t"+x._2.mkString("[",",","]"),Text)
-
   )

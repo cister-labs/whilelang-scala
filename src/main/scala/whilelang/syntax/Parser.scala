@@ -44,7 +44,7 @@ object Parser :
   /** Parser for a sequence of spaces or comments */
   val whitespace: P[Unit] = P.charIn(" \t\r\n").void
   val comment: P[Unit] = string("//") *> P.charWhere(_!='\n').rep0.void
-  val sps: P0[Unit] = (whitespace orElse comment).rep0.void
+  val sps: P0[Unit] = (whitespace | comment).rep0.void
 
   // Parsing smaller tokens
   def alphaDigit: P[Char] =
@@ -53,7 +53,7 @@ object Parser :
     (charIn('a' to 'z') ~ alphaDigit.rep0).string
   def symbols: P[String] = // symbols starting with "--" are meant for syntactic sugar of arrows, and ignored as sybmols of terms
     P.not(string("--")).with1 *>
-    (oneOf("+-><!%/*=|&".toList.map(char)).rep).string
+    oneOf("+-><!%/*=|&".toList.map(char)).rep.string
 
 
   /** A program is a command with possible spaces or comments around. */
@@ -99,6 +99,8 @@ object Parser :
     def insideBrackets:P[BExpr] =
       bexprRec.backtrack | ineq
     def op:P[(IExpr,IExpr)=>BExpr] =
+      string("<=").as((x:IExpr,y:IExpr) => Or(Less(x,y),Eq(x,y))) |
+      string(">=").as((x:IExpr,y:IExpr) => Or(Greater(x,y),Eq(x,y))) |
       char('<').as(Less.apply) |
       char('>').as(Greater.apply) |
       char('=').as(Eq.apply)
@@ -135,8 +137,8 @@ object Parser :
     (elem ~ (op.surroundedBy(sps).backtrack~elem).rep0)
       .map(x=>
         val pairlist = x._2
-        val first = x._1
-          pairlist.foldLeft(first)((rest,pair) => pair._1(rest,pair._2))
+        val first = x._1;
+        pairlist.foldLeft(first)((rest,pair) => pair._1(rest,pair._2))
       )
 
   /** Pair of elements with a separator */

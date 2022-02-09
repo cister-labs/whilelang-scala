@@ -24,7 +24,7 @@ object Semantics extends SOS[String,St]:
     case Seq(Skip,c2) => next(c2->st._2)
     case Seq(c1,c2) =>
       for (by,st) <- next(c1->st._2) yield
-        (by,(Seq(st._1,c2)->st._2))
+        (by, Seq(st._1,c2)->st._2)
     case While(b,c) =>
       if eval(b,st._2)
       then Set("while-true"->(Seq(c,While(b,c)),st._2))
@@ -58,5 +58,6 @@ object Semantics extends SOS[String,St]:
     case Plus(e1, e2)  => eval(e1,env) + eval(e2,env)
     case Times(e1, e2) => eval(e1,env) * eval(e2,env)
     case Minus(e1, e2) => eval(e1,env) - eval(e2,env)
+
 
 
