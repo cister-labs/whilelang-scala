@@ -1,14 +1,17 @@
 package whilelang.backend
 
 import caos.sos.SOS
-import whilelang.backend.MaybeSemantics.St
+import whilelang.backend.PartialSemantics.St
 import whilelang.syntax.Program.{BExpr, Command, IExpr}
 import Command.*
 import IExpr.*
 import BExpr.*
 import whilelang.syntax.Show
 
-object MaybeSemantics extends SOS[String,St]:
+/** Small-step semantics for commands, big-step for expressions,
+ * with partial evaluation. I.e., a boolean expression with unknown variables
+ * can be evaluated to either cases. */
+object PartialSemantics extends SOS[String,St]:
 
   type Env = Map[String,Int]
   type St = (Command,Env)

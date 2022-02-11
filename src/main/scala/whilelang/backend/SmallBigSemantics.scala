@@ -3,13 +3,14 @@ package whilelang.backend
 import whilelang.syntax.Program
 import whilelang.syntax.Program.{BExpr, Command, IExpr}
 import Command.*
-import Semantics.St
+import SmallBigSemantics.St
 import caos.sos.SOS
 import BExpr.*
 import IExpr.*
 
-/** Small-step semantics for commands  */
-object Semantics extends SOS[String,St]:
+/** Small-step semantics for commands, and big-step semantics
+ * for boolean/integer expressions.  */
+object SmallBigSemantics extends SOS[String,St]:
 
   type Env = Map[String,Int]
   type St = (Command,Env)
@@ -43,7 +44,7 @@ object Semantics extends SOS[String,St]:
     case BFalse => false
     case And(b1, b2)     => eval(b1,env) && eval(b2,env)
     case Or(b1, b2)      => eval(b1,env) || eval(b2,env)
-    case Not(b)          => eval(b,env)
+    case Not(b)          => !eval(b,env)
     case Less(e1, e2)    => eval(e1,env) < eval(e2,env)
     case Greater(e1, e2) => eval(e1,env) > eval(e2,env)
     case Eq(e1, e2)      => eval(e1,env) == eval(e2,env)

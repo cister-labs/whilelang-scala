@@ -8,6 +8,7 @@ import caos.view.Mermaid
 import whilelang.syntax.Show
 import whilelang.syntax.Program
 import whilelang.syntax.Program.Command
+import whilelang.backend.*
 
 /** Object used to configure which analysis appear in the browser */
 object CaosConfig extends Configurator[Command]:
@@ -28,11 +29,20 @@ object CaosConfig extends Configurator[Command]:
   )
 
   val widgets: Iterable[(String,Widget[Command])] = List(
-    "Parsed data" -> view(_.toString , Text),
-    "Pretty" -> view(Show.apply , Text),
-    "Run" -> steps(com=>(com,Map()),whilelang.backend.Semantics,_.toString,Text),
-    "Run pretty" -> steps(com=>(com,Map()),whilelang.backend.Semantics,
-      x=>Show(x._1)+"\t\t"+x._2.mkString("[",",","]"),Text),
-    "Run Maybe" -> steps(com=>(com,Map()),whilelang.backend.MaybeSemantics,
-      x=>Show(x._1)+"\t\t"+x._2.mkString("[",",","]"),Text)
+    "View parsed data" -> view(_.toString , Text),
+    "View pretty data" -> view(Show.apply , Text),
+    "Run big-steps" -> steps(
+      com=>(com,Map()), SmallBigSemantics,
+      (nxt,state) => Show(nxt)+"\t\t"+state.mkString("[",",","]"),
+      Text),
+    "Run partial-semantics" -> steps(
+      com=>(com,Map()), PartialSemantics,
+      (nxt,state) => Show(nxt)+"\t\t"+state.mkString("[",",","]"),
+      Text),
+    "Run small-steps" -> steps(
+      com=>(com,Map()), // build initial state from a program
+      SmallSemantics, // which SOS semantics to use
+      (nxt,state) => Show(nxt)+"\t\t"+state.mkString("[",",","]"), // how to represent the state
+      Text // represent as text or as mermaid diagram
+    )
   )
