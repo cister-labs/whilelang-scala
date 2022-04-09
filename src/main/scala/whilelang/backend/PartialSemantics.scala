@@ -23,6 +23,7 @@ object PartialSemantics extends SOS[String,St]:
   /** What are the set of possible evolutions (label and new state) */
   override def next(st: St): Set[(String, St)] = st._1 match
     case Skip => Set()
+    case Fail => Set()
     case Seq(Skip,c2) => next(c2->st._2)
     case Seq(c1,c2) =>
       for (by,st) <- next(c1->st._2) yield
@@ -32,6 +33,10 @@ object PartialSemantics extends SOS[String,St]:
                           s"${Show(b)}-false?"->(Skip,st._2))
       case Some(true)  => Set("while-true" ->(Seq(c,While(b,c)),st._2))
       case Some(false) => Set("while-false"->(Skip,st._2))
+    case Assert(b) => eval(b,st._2) match
+      case None => Set()
+      case Some(true) => Set("assert-true"->(Skip,st._2))
+      case Some(false) => Set("assert-false"->(Fail,st._2))
     case ITE(b,ct,cf) => eval(b,st._2) match
       case None => Set(s"${Show(b)}-true?" ->(ct,st._2),
                           s"${Show(b)}-false?"->(cf,st._2))

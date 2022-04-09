@@ -14,6 +14,8 @@ object Program:
     case Assign(ident:String, e:IExpr)
     case ITE(b:BExpr, ct:Command, cf:Command)
     case While(b:BExpr, c:Command)
+    case Assert(b:BExpr)
+    case Fail
   
   /** An integer expression in the while language */
   enum IExpr:

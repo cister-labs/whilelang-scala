@@ -23,20 +23,26 @@ object SmallSemantics extends SOS[String,St]:
     val (comm,env) = st
     comm match
       case Skip => Set()
+      case Fail => Set()
       case Seq(Skip,c2) => Set("Skip" -> (c2,env))
       case Seq(c1,c2) =>
         for (by,st) <- next(c1->env) yield
           (by, Seq(st._1,c2)->st._2)
       case While(b,c) => Set("while-if" -> (ITE(b,Seq(c,While(b,c)),Skip), env))
-      case ITE(b,ct,cf) => b match
-        case BTrue  => Set("if-true" -> (ct, env))
-        case BFalse => Set("if-false" -> (cf, env))
+      case Assert(b) => b match
+        case BTrue => Set("assert-true"->(Skip,env))
+        case BFalse => Set("assert-false"->(Fail,env))
         case _ => nextBool(b)(using env).map((s,b3) =>
-                    (s, (ITE(b3,ct,cf),env))).toSet
+          (s,(Assert(b3),env))).toSet
+      case ITE(b, ct, cf) => b match
+        case BTrue => Set("if-true" -> (ct, env))
+        case BFalse => Set("if-false" -> (cf, env))
+        case _ => nextBool(b)(using env).map((s, b3) =>
+          (s, (ITE(b3, ct, cf), env))).toSet
       case Assign(ident, e) => e match
         case N(n) => Set(s"Assign $ident:=$n" -> (Skip, env + (ident -> n)))
-        case _ => nextInt(e)(using env).map((s,e2) =>
-                    (s, (Assign(ident,e2),env))).toSet
+        case _ => nextInt(e)(using env).map((s, e2) =>
+          (s, (Assign(ident, e2), env))).toSet
 
   /** Evaluation of the next rewrite for a boolean expression */
   def nextBool(b: BExpr)(using env: Env): Option[(String, BExpr)] = b match
@@ -55,11 +61,11 @@ object SmallSemantics extends SOS[String,St]:
     case Not(BTrue) => Some("Not-true", BFalse)
     case Not(BFalse) => Some("Not-true", BTrue)
     case Less(N(i1), N(i2)) => if i1 < i2
-      then Some("Less-true", BTrue) else Some("Less-false", BFalse)
+    then Some("Less-true", BTrue) else Some("Less-false", BFalse)
     case Greater(N(i1), N(i2)) => if i1 > i2
-      then Some("Greater-true", BTrue) else Some("Greater-false", BFalse)
+    then Some("Greater-true", BTrue) else Some("Greater-false", BFalse)
     case Eq(N(i1), N(i2)) => if i1 == i2
-      then Some("Eq-true", BTrue) else Some("Eq-false", BFalse)
+    then Some("Eq-true", BTrue) else Some("Eq-false", BFalse)
     // the general case
     case Not(b1) => nextBool(b1).map((s, b1b) => (s, Not(b1b)))
     case And(b1, b2) => mbNext(nextBool, And.apply)(b1, b2)
@@ -73,12 +79,12 @@ object SmallSemantics extends SOS[String,St]:
     // nothing to reduce
     case N(n) => None
     case Var(ident) => if env contains ident
-      then Some(s"Var-$ident"-> N(env(ident)))
+      then Some(s"Var-$ident" -> N(env(ident)))
       else None
     // base cases
     case Plus(N(n1), N(n2)) => Some("Plus", N(n1 + n2))
     case Minus(N(n1), N(n2)) => Some("Minus", N(n1 - n2))
-    case Times(N(n1), N(n2)) => Some("Times", N(n1 - n2))
+    case Times(N(n1), N(n2)) => Some("Times", N(n1 * n2))
     case Plus(N(0), e) => Some("Plus-0", e)
     case Plus(e, N(0)) => Some("Plus-0", e)
     case Minus(e, N(0)) => Some("Minus-0", e)

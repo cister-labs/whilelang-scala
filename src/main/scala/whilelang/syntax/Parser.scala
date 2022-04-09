@@ -62,7 +62,7 @@ object Parser :
   /** (Recursive) Parser for a command in the while language */
   def command: P[Command] = P.recursive(commRec =>
     def basicCommand:P[Command] =
-      skip | ite | whilec | assign
+      skip | ite | whilec | assert | assign
 
     def skip: P[Skip.type] =
       string("skip").as(Skip)
@@ -75,6 +75,9 @@ object Parser :
       (string("while") ~ bexpr.surroundedBy(sps) ~
         string("do") ~ sps ~ commBlock)
         .map(x => While(x._1._1._1._2, x._2))
+    def assert: P[Assert] =
+      (string("assert") *> bexpr.surroundedBy(sps))
+        .map(Assert.apply)
     def commBlock =
       char('{')*>commRec.surroundedBy(sps)<*char('}') |
         commRec

@@ -1,7 +1,7 @@
 package whilelang.syntax
 
 import whilelang.syntax.Program
-import whilelang.syntax.Program.{BExpr, Command, IExpr}
+import Program.{BExpr, Command, IExpr}
 import Command.*
 import IExpr.*
 import BExpr.*
@@ -18,6 +18,8 @@ object Show:
     case Assign(ident, e) => s"$ident:=${apply(e)}"
     case ITE(b, ct, cf) => s"if ${apply(b)} then\n${indent(apply(ct))}\nelse\n${indent(apply(cf))}"
     case While(b, c) => s"while ${apply(b)} do\n${indent(apply(c))}"
+    case Assert(b) => s"assert ${apply(b)}"
+    case Fail => "FAIL"
 
   def apply(e: IExpr): String = e match
     case N(n) => n.toString
@@ -50,5 +52,5 @@ object Show:
 
   def indent(str: String, n: Int = 1): String =
     val s = "  ".repeat(n)
-    s + str.replaceAll("\n", s"\n${s}")
+    s + str.replaceAll("\n", s"\n$s")
 

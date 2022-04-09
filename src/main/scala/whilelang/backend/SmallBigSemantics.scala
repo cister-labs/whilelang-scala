@@ -1,6 +1,6 @@
 package whilelang.backend
 
-import whilelang.syntax.Program
+import whilelang.syntax.{Program, Show}
 import whilelang.syntax.Program.{BExpr, Command, IExpr}
 import Command.*
 import SmallBigSemantics.St
@@ -22,6 +22,7 @@ object SmallBigSemantics extends SOS[String,St]:
   /** What are the set of possible evolutions (label and new state) */
   override def next(st: St): Set[(String, St)] = st._1 match
     case Skip => Set()
+    case Fail => Set()
     case Seq(Skip,c2) => next(c2->st._2)
     case Seq(c1,c2) =>
       for (by,st) <- next(c1->st._2) yield
@@ -30,6 +31,10 @@ object SmallBigSemantics extends SOS[String,St]:
       if eval(b,st._2)
       then Set("while-true"->(Seq(c,While(b,c)),st._2))
       else Set("while-false"->(Skip,st._2))
+    case Assert(b) =>
+      if eval(b,st._2)
+      then Set("assert-true"->(Skip,st._2))
+      else sys.error(s"assert failed (${Show(b)})")
     case ITE(b,ct,cf) =>
       if eval(b,st._2)
       then Set("if-true"->(ct,st._2))

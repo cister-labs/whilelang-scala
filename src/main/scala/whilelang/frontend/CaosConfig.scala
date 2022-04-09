@@ -2,7 +2,7 @@ package whilelang.frontend
 
 import caos.common.Example
 import caos.frontend.Configurator
-import caos.frontend.Configurator.{Visualize, Widget, steps, view}
+import Configurator.*
 import caos.view.{Mermaid, Text, View}
 import caos.view.Mermaid
 import whilelang.syntax.Show
@@ -12,7 +12,8 @@ import whilelang.backend.*
 
 /** Object used to configure which analysis appear in the browser */
 object CaosConfig extends Configurator[Command]:
-  val name = "WhileLang"
+  val name = "Animator of a simple While-language"
+  override val languageName: String = "WhileLang"
 
   val parser: String=>Command =
     whilelang.syntax.Parser.parseProgram
@@ -22,13 +23,15 @@ object CaosConfig extends Configurator[Command]:
      "mod 5", "Keeps subtracting 5"),
     Example("x:=5*2+10;\nif x<10\nthen {skip;x:=x+20; x:=2*x}\nelse x:=x*(0-1)",
       "if-then-else",""),
+    Example("x:=5;\nassert x<8;\nx:=3;\nassert (x>=5);\nx:=0",
+      "asserts",""),
     Example("if x>0 then {x:=2*x;\n   while x<10 do x:=2*x }\nelse skip",
       "Ex5.5","From RSD book"),
     Example("if x<=y then { z:=x ; w:=y } else { w:=x ; z:=y }",
       "Sort2","Example 5.7 from RSD book")
   )
 
-  val widgets: Iterable[(String,Widget[Command])] = List(
+  val widgets = List(
     "View parsed data" -> view(_.toString , Text),
     "View pretty data" -> view(Show.apply , Text),
     "Run big-steps" -> steps(
@@ -44,5 +47,11 @@ object CaosConfig extends Configurator[Command]:
       SmallSemantics, // which SOS semantics to use
       (nxt,state) => Show(nxt)+"\t\t"+state.mkString("[",",","]"), // how to represent the state
       Text // represent as text or as mermaid diagram
-    )
+    ),
+    "LTS big-steps" -> lts(
+      com=>(com,Map()), SmallBigSemantics, x=>Show(x._1), _.toString),
+    "LTS partial-semantics" -> lts(
+      com=>(com,Map()), PartialSemantics, x=>Show(x._1), _.toString),
+    "LTS small-steps" -> lts(
+      com=>(com,Map()), SmallSemantics, x=>Show(x._1), _.toString)
   )
