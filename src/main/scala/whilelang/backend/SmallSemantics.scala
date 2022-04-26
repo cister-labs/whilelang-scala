@@ -61,7 +61,7 @@ object SmallSemantics extends SOS[String,St]:
     case Not(BTrue) => Some("Not-true", BFalse)
     case Not(BFalse) => Some("Not-true", BTrue)
     case Less(N(i1), N(i2)) => if i1 < i2
-    then Some("Less-true", BTrue) else Some("Less-false", BFalse)
+      then Some("Less-true", BTrue) else Some("Less-false", BFalse)
     case Greater(N(i1), N(i2)) => if i1 > i2
     then Some("Greater-true", BTrue) else Some("Greater-false", BFalse)
     case Eq(N(i1), N(i2)) => if i1 == i2

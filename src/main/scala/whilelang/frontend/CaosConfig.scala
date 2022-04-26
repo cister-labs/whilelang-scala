@@ -2,13 +2,11 @@ package whilelang.frontend
 
 import caos.common.Example
 import caos.frontend.Configurator
-import Configurator.*
+import caos.frontend.Configurator.*
 import caos.view.{Mermaid, Text, View}
-import caos.view.Mermaid
-import whilelang.syntax.Show
-import whilelang.syntax.Program
-import whilelang.syntax.Program.Command
 import whilelang.backend.*
+import whilelang.syntax.Program.Command
+import whilelang.syntax.{Program, Show}
 
 /** Object used to configure which analysis appear in the browser */
 object CaosConfig extends Configurator[Command]:
@@ -19,16 +17,16 @@ object CaosConfig extends Configurator[Command]:
     whilelang.syntax.Parser.parseProgram
 
   val examples = List(
-    Example("x:=27; while x>5 do x:=x-5",
-     "mod 5", "Keeps subtracting 5"),
-    Example("x:=5*2+10;\nif x<10\nthen {skip;x:=x+20; x:=2*x}\nelse x:=x*(0-1)",
-      "if-then-else",""),
-    Example("x:=5;\nassert x<8;\nx:=3;\nassert (x>=5);\nx:=0",
-      "asserts",""),
-    Example("if x>0 then {x:=2*x;\n   while x<10 do x:=2*x }\nelse skip",
-      "Ex5.5","From RSD book"),
-    Example("if x<=y then { z:=x ; w:=y } else { w:=x ; z:=y }",
-      "Sort2","Example 5.7 from RSD book")
+    "mod 5" -> "x:=27; while x>5 do x:=x-5" ->
+      "Keeps subtracting 5",
+    "if-then-else" ->
+      "x:=5*2+10;\nif x<10\nthen {skip;x:=x+20; x:=2*x}\nelse x:=x*(0-1)",
+    "asserts" ->
+      "x:=5;\nassert x<8;\nx:=3;\nassert (x>=5);\nx:=0",
+    "Ex5.5" -> "if x>0 then {x:=2*x;\n   while x<10 do x:=2*x }\nelse skip" ->
+      "From RSD book",
+    "Sort2" -> "if x<=y then { z:=x ; w:=y } else { w:=x ; z:=y }" ->
+      "Example 5.7 from RSD book"
   )
 
   val widgets = List(
