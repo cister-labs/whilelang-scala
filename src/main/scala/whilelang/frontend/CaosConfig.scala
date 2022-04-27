@@ -3,6 +3,7 @@ package whilelang.frontend
 import caos.common.Example
 import caos.frontend.Configurator
 import caos.frontend.Configurator.*
+import caos.frontend.widgets.WidgetInfo
 import caos.view.{Mermaid, Text, View}
 import whilelang.backend.*
 import whilelang.syntax.Program.Command
@@ -17,19 +18,27 @@ object CaosConfig extends Configurator[Command]:
     whilelang.syntax.Parser.parseProgram
 
   val examples = List(
-    "mod 5" -> "x:=27; while x>5 do x:=x-5" ->
+    "mod 5" ->
+      "x:=27; while x>5 do x:=x-5" ->
       "Keeps subtracting 5",
     "if-then-else" ->
       "x:=5*2+10;\nif x<10\nthen {skip;x:=x+20; x:=2*x}\nelse x:=x*(0-1)",
     "asserts" ->
       "x:=5;\nassert x<8;\nx:=3;\nassert (x>=5);\nx:=0",
-    "Ex5.5" -> "if x>0 then {x:=2*x;\n   while x<10 do x:=2*x }\nelse skip" ->
+    "Ex5.5" ->
+      "if x>0 then {x:=2*x;\n   while x<10 do x:=2*x }\nelse skip" ->
       "From RSD book",
-    "Sort2" -> "if x<=y then { z:=x ; w:=y } else { w:=x ; z:=y }" ->
+    "Sort2" ->
+      "if x<=y then { z:=x ; w:=y } else { w:=x ; z:=y }" ->
       "Example 5.7 from RSD book"
   )
 
+  override val smallWidgets = List(
+    "Parsing works" -> check(_ => Nil)
+  )
+
   val widgets = List(
+//    "Parsing works" -> check(_ => (Nil,Nil)),
     "View parsed data" -> view(_.toString , Text),
     "View pretty data" -> view(Show.apply , Text),
     "Run big-steps" -> steps(
