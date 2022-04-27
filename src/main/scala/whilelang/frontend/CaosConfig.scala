@@ -30,7 +30,10 @@ object CaosConfig extends Configurator[Command]:
       "From RSD book",
     "Sort2" ->
       "if x<=y then { z:=x ; w:=y } else { w:=x ; z:=y }" ->
-      "Example 5.7 from RSD book"
+      "Example 5.7 from RSD book",
+    "Contract" ->
+      "{x = 5 && y = 10}\naux := y ;\ny := x ;\nx := x + aux\n{x > 10 && y = 5}" ->
+      "Simple contract, used in the lecture slides"
   )
 
   override val smallWidgets = List(
@@ -41,6 +44,8 @@ object CaosConfig extends Configurator[Command]:
 //    "Parsing works" -> check(_ => (Nil,Nil)),
     "View parsed data" -> view(_.toString , Text),
     "View pretty data" -> view(Show.apply , Text),
+    "VCGen" -> view(x => VCGen(x).map(Show.apply).mkString("\n"), Text),
+    "wprec" -> view(x => Show(VCGen.wprec(x)(using Program.BExpr.BTrue)), Text),
     "Run big-steps" -> steps(
       com=>(com,Map()), SmallBigSemantics,
       (nxt,state) => Show(nxt)+"\t\t"+state.mkString("[",",","]"),

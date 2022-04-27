@@ -14607,26 +14607,292 @@ $c_s_util_hashing_MurmurHash3.prototype.arrayHash$mVc$sp__Ajl_Void__I__I = (func
     }
   }
 });
+/** @constructor */
+function $c_Lwhilelang_backend_VCGen$() {
+  /*<skip>*/
+}
+$c_Lwhilelang_backend_VCGen$.prototype = new $h_O();
+$c_Lwhilelang_backend_VCGen$.prototype.constructor = $c_Lwhilelang_backend_VCGen$;
+/** @constructor */
+function $h_Lwhilelang_backend_VCGen$() {
+  /*<skip>*/
+}
+$h_Lwhilelang_backend_VCGen$.prototype = $c_Lwhilelang_backend_VCGen$.prototype;
+$c_Lwhilelang_backend_VCGen$.prototype.vcgen__Lwhilelang_syntax_Program$Command__Lwhilelang_syntax_Program$BExpr__sci_Set = (function(c, q) {
+  var x = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
+  if (((x === null) ? (c === null) : x.equals__O__Z(c))) {
+    var this$1 = $m_s_Predef$().s_Predef$__f_Set;
+    var elems = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_Lwhilelang_syntax_Program$BExpr.getArrayOf().constr)([]));
+    return this$1.from__sc_IterableOnce__sci_Set(elems)
+  };
+  if ((c instanceof $c_Lwhilelang_syntax_Program$Command$Assign)) {
+    var x$1 = $as_Lwhilelang_syntax_Program$Command$Assign(c);
+    var this$3 = $m_s_Predef$().s_Predef$__f_Set;
+    var elems$1 = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_Lwhilelang_syntax_Program$BExpr.getArrayOf().constr)([]));
+    return this$3.from__sc_IterableOnce__sci_Set(elems$1)
+  };
+  if ((c instanceof $c_Lwhilelang_syntax_Program$Command$Seq)) {
+    var x$1$1 = $as_Lwhilelang_syntax_Program$Command$Seq(c);
+    var x22 = x$1$1.Lwhilelang_syntax_Program$Command$Seq__f_c1;
+    var x23 = x$1$1.Lwhilelang_syntax_Program$Command$Seq__f_c2;
+    var this$5 = this.vcgen__Lwhilelang_syntax_Program$Command__Lwhilelang_syntax_Program$BExpr__sci_Set(x22, this.wprec__Lwhilelang_syntax_Program$Command__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr(x23, q));
+    var that = this.vcgen__Lwhilelang_syntax_Program$Command__Lwhilelang_syntax_Program$BExpr__sci_Set(x23, q);
+    return $as_sci_Set(this$5.concat__sc_IterableOnce__sc_SetOps(that))
+  };
+  if ((c instanceof $c_Lwhilelang_syntax_Program$Command$ITE)) {
+    var x$1$2 = $as_Lwhilelang_syntax_Program$Command$ITE(c);
+    var x18 = x$1$2.Lwhilelang_syntax_Program$Command$ITE__f_ct;
+    var x19 = x$1$2.Lwhilelang_syntax_Program$Command$ITE__f_cf;
+    var this$7 = this.vcgen__Lwhilelang_syntax_Program$Command__Lwhilelang_syntax_Program$BExpr__sci_Set(x18, q);
+    var that$1 = this.vcgen__Lwhilelang_syntax_Program$Command__Lwhilelang_syntax_Program$BExpr__sci_Set(x19, q);
+    return $as_sci_Set(this$7.concat__sc_IterableOnce__sc_SetOps(that$1))
+  };
+  if ((c instanceof $c_Lwhilelang_syntax_Program$Command$While)) {
+    var x$1$3 = $as_Lwhilelang_syntax_Program$Command$While(c);
+    var x12 = x$1$3.Lwhilelang_syntax_Program$Command$While__f_b;
+    var x13 = x$1$3.Lwhilelang_syntax_Program$Command$While__f_c;
+    var x14 = x$1$3.Lwhilelang_syntax_Program$Command$While__f_inv;
+    var this$14 = this.vcgen__Lwhilelang_syntax_Program$Command__Lwhilelang_syntax_Program$BExpr__sci_Set(x13, x14);
+    var this$13 = $m_s_Predef$().s_Predef$__f_Set;
+    var $$x2 = $m_sr_ScalaRunTime$();
+    $m_Lwhilelang_syntax_Program$BExpr$();
+    var b1 = $m_Lwhilelang_syntax_Program$BExpr$().and__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr(x14, x12);
+    var b2 = this.wprec__Lwhilelang_syntax_Program$Command__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr(x13, q);
+    var $$x1 = new $c_Lwhilelang_syntax_Program$BExpr$Impl(b1, b2);
+    $m_Lwhilelang_syntax_Program$BExpr$();
+    var b1$1 = $m_Lwhilelang_syntax_Program$BExpr$().and__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr(x14, $m_Lwhilelang_syntax_Program$BExpr$().not__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr(x12));
+    var elems$2 = $$x2.wrapRefArray__AO__sci_ArraySeq(new ($d_Lwhilelang_syntax_Program$BExpr.getArrayOf().constr)([$$x1, new $c_Lwhilelang_syntax_Program$BExpr$Impl(b1$1, q)]));
+    var that$2 = this$13.from__sc_IterableOnce__sci_Set(elems$2);
+    return $as_sci_Set(this$14.concat__sc_IterableOnce__sc_SetOps(that$2))
+  };
+  if ((c instanceof $c_Lwhilelang_syntax_Program$Command$Assert)) {
+    var x$1$4 = $as_Lwhilelang_syntax_Program$Command$Assert(c);
+    var x9 = x$1$4.Lwhilelang_syntax_Program$Command$Assert__f_b;
+    var this$16 = $m_s_Predef$().s_Predef$__f_Set;
+    var elems$3 = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_Lwhilelang_syntax_Program$BExpr.getArrayOf().constr)([x9]));
+    return this$16.from__sc_IterableOnce__sci_Set(elems$3)
+  };
+  var x$3 = $s_Lwhilelang_syntax_Program$Command$__Fail__Lwhilelang_syntax_Program$Command();
+  if (((x$3 === null) ? (c === null) : x$3.equals__O__Z(c))) {
+    $m_s_sys_package$().error__T__E("fail VCGen")
+  };
+  if ((c instanceof $c_Lwhilelang_syntax_Program$Command$Contract)) {
+    var x$1$5 = $as_Lwhilelang_syntax_Program$Command$Contract(c);
+    var x4 = x$1$5.Lwhilelang_syntax_Program$Command$Contract__f_pre;
+    var x5 = x$1$5.Lwhilelang_syntax_Program$Command$Contract__f_c;
+    var x6 = x$1$5.Lwhilelang_syntax_Program$Command$Contract__f_pos;
+    var this$20 = this.vcgen__Lwhilelang_syntax_Program$Command__Lwhilelang_syntax_Program$BExpr__sci_Set(x5, q);
+    $m_Lwhilelang_syntax_Program$BExpr$();
+    var b2$1 = this.wprec__Lwhilelang_syntax_Program$Command__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr(x5, $m_Lwhilelang_syntax_Program$BExpr$().and__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr(q, x6));
+    var elem = new $c_Lwhilelang_syntax_Program$BExpr$Impl(x4, b2$1);
+    return $as_sci_Set(this$20.incl__O__sci_SetOps(elem))
+  };
+  throw new $c_s_MatchError(c)
+});
+$c_Lwhilelang_backend_VCGen$.prototype.wprec__Lwhilelang_syntax_Program$Command__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr = (function(c, q) {
+  var q$tailLocal1 = q;
+  var c$tailLocal1 = c;
+  while (true) {
+    var x28 = c$tailLocal1;
+    var x = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
+    if (((x === null) ? (x28 === null) : x.equals__O__Z(x28))) {
+      return q$tailLocal1
+    };
+    if ((x28 instanceof $c_Lwhilelang_syntax_Program$Command$Assign)) {
+      var x$1 = $as_Lwhilelang_syntax_Program$Command$Assign(x28);
+      var x53 = x$1.Lwhilelang_syntax_Program$Command$Assign__f_ident;
+      var x54 = x$1.Lwhilelang_syntax_Program$Command$Assign__f_e;
+      var $$x1 = q$tailLocal1;
+      var this$4 = $m_s_Predef$().s_Predef$__f_Map;
+      var elems = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2(x53, x54)]));
+      return this.subst__Lwhilelang_syntax_Program$BExpr__sci_Map__Lwhilelang_syntax_Program$BExpr($$x1, this$4.from__sc_IterableOnce__sci_Map(elems))
+    };
+    if ((x28 instanceof $c_Lwhilelang_syntax_Program$Command$Seq)) {
+      var x$1$1 = $as_Lwhilelang_syntax_Program$Command$Seq(x28);
+      var x49 = x$1$1.Lwhilelang_syntax_Program$Command$Seq__f_c1;
+      var x50 = x$1$1.Lwhilelang_syntax_Program$Command$Seq__f_c2;
+      var q$tailLocal1$tmp1 = this.wprec__Lwhilelang_syntax_Program$Command__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr(x50, q$tailLocal1);
+      c$tailLocal1 = x49;
+      q$tailLocal1 = q$tailLocal1$tmp1;
+      continue
+    };
+    if ((x28 instanceof $c_Lwhilelang_syntax_Program$Command$ITE)) {
+      var x$1$2 = $as_Lwhilelang_syntax_Program$Command$ITE(x28);
+      var x44 = x$1$2.Lwhilelang_syntax_Program$Command$ITE__f_b;
+      var x45 = x$1$2.Lwhilelang_syntax_Program$Command$ITE__f_ct;
+      var x46 = x$1$2.Lwhilelang_syntax_Program$Command$ITE__f_cf;
+      var $$x3 = $m_Lwhilelang_syntax_Program$BExpr$();
+      $m_Lwhilelang_syntax_Program$BExpr$();
+      var b2 = this.wprec__Lwhilelang_syntax_Program$Command__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr(x45, q$tailLocal1);
+      var $$x2 = new $c_Lwhilelang_syntax_Program$BExpr$Impl(x44, b2);
+      $m_Lwhilelang_syntax_Program$BExpr$();
+      var b1 = $m_Lwhilelang_syntax_Program$BExpr$().not__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr(x44);
+      var b2$1 = this.wprec__Lwhilelang_syntax_Program$Command__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr(x46, q$tailLocal1);
+      return $$x3.and__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr($$x2, new $c_Lwhilelang_syntax_Program$BExpr$Impl(b1, b2$1))
+    };
+    if ((x28 instanceof $c_Lwhilelang_syntax_Program$Command$While)) {
+      var x$1$3 = $as_Lwhilelang_syntax_Program$Command$While(x28);
+      var x41 = x$1$3.Lwhilelang_syntax_Program$Command$While__f_inv;
+      return x41
+    };
+    if ((x28 instanceof $c_Lwhilelang_syntax_Program$Command$Assert)) {
+      var x$1$4 = $as_Lwhilelang_syntax_Program$Command$Assert(x28);
+      var x36 = x$1$4.Lwhilelang_syntax_Program$Command$Assert__f_b;
+      return $m_Lwhilelang_syntax_Program$BExpr$().and__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr(q$tailLocal1, x36)
+    };
+    var x$4 = $s_Lwhilelang_syntax_Program$Command$__Fail__Lwhilelang_syntax_Program$Command();
+    if (((x$4 === null) ? (x28 === null) : x$4.equals__O__Z(x28))) {
+      $m_s_sys_package$().error__T__E("fail wprec")
+    };
+    if ((x28 instanceof $c_Lwhilelang_syntax_Program$Command$Contract)) {
+      var x$1$5 = $as_Lwhilelang_syntax_Program$Command$Contract(x28);
+      var x32 = x$1$5.Lwhilelang_syntax_Program$Command$Contract__f_c;
+      var x33 = x$1$5.Lwhilelang_syntax_Program$Command$Contract__f_pos;
+      var q$tailLocal1$tmp2 = $m_Lwhilelang_syntax_Program$BExpr$().and__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr(q$tailLocal1, x33);
+      c$tailLocal1 = x32;
+      q$tailLocal1 = q$tailLocal1$tmp2;
+      continue
+    };
+    throw new $c_s_MatchError(x28)
+  }
+});
+$c_Lwhilelang_backend_VCGen$.prototype.subst__Lwhilelang_syntax_Program$BExpr__sci_Map__Lwhilelang_syntax_Program$BExpr = (function(b, q) {
+  var x = $s_Lwhilelang_syntax_Program$BExpr$__BTrue__Lwhilelang_syntax_Program$BExpr();
+  if (((x === null) ? (b === null) : x.equals__O__Z(b))) {
+    return b
+  };
+  var x$3 = $s_Lwhilelang_syntax_Program$BExpr$__BFalse__Lwhilelang_syntax_Program$BExpr();
+  if (((x$3 === null) ? (b === null) : x$3.equals__O__Z(b))) {
+    return b
+  };
+  if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$And)) {
+    var x$1 = $as_Lwhilelang_syntax_Program$BExpr$And(b);
+    var x81 = x$1.Lwhilelang_syntax_Program$BExpr$And__f_b1;
+    var x82 = x$1.Lwhilelang_syntax_Program$BExpr$And__f_b2;
+    var b1 = this.subst__Lwhilelang_syntax_Program$BExpr__sci_Map__Lwhilelang_syntax_Program$BExpr(x81, q);
+    var b2 = this.subst__Lwhilelang_syntax_Program$BExpr__sci_Map__Lwhilelang_syntax_Program$BExpr(x82, q);
+    return new $c_Lwhilelang_syntax_Program$BExpr$And(b1, b2)
+  };
+  if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Or)) {
+    var x$1$1 = $as_Lwhilelang_syntax_Program$BExpr$Or(b);
+    var x77 = x$1$1.Lwhilelang_syntax_Program$BExpr$Or__f_b1;
+    var x78 = x$1$1.Lwhilelang_syntax_Program$BExpr$Or__f_b2;
+    var b1$1 = this.subst__Lwhilelang_syntax_Program$BExpr__sci_Map__Lwhilelang_syntax_Program$BExpr(x77, q);
+    var b2$1 = this.subst__Lwhilelang_syntax_Program$BExpr__sci_Map__Lwhilelang_syntax_Program$BExpr(x78, q);
+    return new $c_Lwhilelang_syntax_Program$BExpr$Or(b1$1, b2$1)
+  };
+  if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Impl)) {
+    var x$1$2 = $as_Lwhilelang_syntax_Program$BExpr$Impl(b);
+    var x73 = x$1$2.Lwhilelang_syntax_Program$BExpr$Impl__f_e1;
+    var x74 = x$1$2.Lwhilelang_syntax_Program$BExpr$Impl__f_e2;
+    var e1 = this.subst__Lwhilelang_syntax_Program$BExpr__sci_Map__Lwhilelang_syntax_Program$BExpr(x73, q);
+    var e2 = this.subst__Lwhilelang_syntax_Program$BExpr__sci_Map__Lwhilelang_syntax_Program$BExpr(x74, q);
+    return new $c_Lwhilelang_syntax_Program$BExpr$Impl(e1, e2)
+  };
+  if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Not)) {
+    var x$1$3 = $as_Lwhilelang_syntax_Program$BExpr$Not(b);
+    var x70 = x$1$3.Lwhilelang_syntax_Program$BExpr$Not__f_b;
+    var b$1 = this.subst__Lwhilelang_syntax_Program$BExpr__sci_Map__Lwhilelang_syntax_Program$BExpr(x70, q);
+    return new $c_Lwhilelang_syntax_Program$BExpr$Not(b$1)
+  };
+  if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Less)) {
+    var x$1$4 = $as_Lwhilelang_syntax_Program$BExpr$Less(b);
+    var x66 = x$1$4.Lwhilelang_syntax_Program$BExpr$Less__f_e1;
+    var x67 = x$1$4.Lwhilelang_syntax_Program$BExpr$Less__f_e2;
+    var e1$1 = this.subst__Lwhilelang_syntax_Program$IExpr__sci_Map__Lwhilelang_syntax_Program$IExpr(x66, q);
+    var e2$1 = this.subst__Lwhilelang_syntax_Program$IExpr__sci_Map__Lwhilelang_syntax_Program$IExpr(x67, q);
+    return new $c_Lwhilelang_syntax_Program$BExpr$Less(e1$1, e2$1)
+  };
+  if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Greater)) {
+    var x$1$5 = $as_Lwhilelang_syntax_Program$BExpr$Greater(b);
+    var x62 = x$1$5.Lwhilelang_syntax_Program$BExpr$Greater__f_e1;
+    var x63 = x$1$5.Lwhilelang_syntax_Program$BExpr$Greater__f_e2;
+    var e1$2 = this.subst__Lwhilelang_syntax_Program$IExpr__sci_Map__Lwhilelang_syntax_Program$IExpr(x62, q);
+    var e2$2 = this.subst__Lwhilelang_syntax_Program$IExpr__sci_Map__Lwhilelang_syntax_Program$IExpr(x63, q);
+    return new $c_Lwhilelang_syntax_Program$BExpr$Greater(e1$2, e2$2)
+  };
+  if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Eq)) {
+    var x$1$6 = $as_Lwhilelang_syntax_Program$BExpr$Eq(b);
+    var x58 = x$1$6.Lwhilelang_syntax_Program$BExpr$Eq__f_e1;
+    var x59 = x$1$6.Lwhilelang_syntax_Program$BExpr$Eq__f_e2;
+    var e1$3 = this.subst__Lwhilelang_syntax_Program$IExpr__sci_Map__Lwhilelang_syntax_Program$IExpr(x58, q);
+    var e2$3 = this.subst__Lwhilelang_syntax_Program$IExpr__sci_Map__Lwhilelang_syntax_Program$IExpr(x59, q);
+    return new $c_Lwhilelang_syntax_Program$BExpr$Eq(e1$3, e2$3)
+  };
+  throw new $c_s_MatchError(b)
+});
+$c_Lwhilelang_backend_VCGen$.prototype.subst__Lwhilelang_syntax_Program$IExpr__sci_Map__Lwhilelang_syntax_Program$IExpr = (function(e, q) {
+  if ((e instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
+    var x$1 = $as_Lwhilelang_syntax_Program$IExpr$N(e);
+    return e
+  };
+  if ((e instanceof $c_Lwhilelang_syntax_Program$IExpr$Var)) {
+    var x$1$1 = $as_Lwhilelang_syntax_Program$IExpr$Var(e);
+    var x98 = x$1$1.Lwhilelang_syntax_Program$IExpr$Var__f_ident;
+    return $as_Lwhilelang_syntax_Program$IExpr(q.getOrElse__O__F0__O(x98, new $c_sjsr_AnonFunction0(((this$3, e$2) => (() => e$2))(this, e))))
+  };
+  if ((e instanceof $c_Lwhilelang_syntax_Program$IExpr$Plus)) {
+    var x$1$2 = $as_Lwhilelang_syntax_Program$IExpr$Plus(e);
+    var x94 = x$1$2.Lwhilelang_syntax_Program$IExpr$Plus__f_e1;
+    var x95 = x$1$2.Lwhilelang_syntax_Program$IExpr$Plus__f_e2;
+    var e1 = this.subst__Lwhilelang_syntax_Program$IExpr__sci_Map__Lwhilelang_syntax_Program$IExpr(x94, q);
+    var e2 = this.subst__Lwhilelang_syntax_Program$IExpr__sci_Map__Lwhilelang_syntax_Program$IExpr(x95, q);
+    return new $c_Lwhilelang_syntax_Program$IExpr$Plus(e1, e2)
+  };
+  if ((e instanceof $c_Lwhilelang_syntax_Program$IExpr$Times)) {
+    var x$1$3 = $as_Lwhilelang_syntax_Program$IExpr$Times(e);
+    var x90 = x$1$3.Lwhilelang_syntax_Program$IExpr$Times__f_e1;
+    var x91 = x$1$3.Lwhilelang_syntax_Program$IExpr$Times__f_e2;
+    var e1$1 = this.subst__Lwhilelang_syntax_Program$IExpr__sci_Map__Lwhilelang_syntax_Program$IExpr(x90, q);
+    var e2$1 = this.subst__Lwhilelang_syntax_Program$IExpr__sci_Map__Lwhilelang_syntax_Program$IExpr(x91, q);
+    return new $c_Lwhilelang_syntax_Program$IExpr$Times(e1$1, e2$1)
+  };
+  if ((e instanceof $c_Lwhilelang_syntax_Program$IExpr$Minus)) {
+    var x$1$4 = $as_Lwhilelang_syntax_Program$IExpr$Minus(e);
+    var x86 = x$1$4.Lwhilelang_syntax_Program$IExpr$Minus__f_e1;
+    var x87 = x$1$4.Lwhilelang_syntax_Program$IExpr$Minus__f_e2;
+    var e1$2 = this.subst__Lwhilelang_syntax_Program$IExpr__sci_Map__Lwhilelang_syntax_Program$IExpr(x86, q);
+    var e2$2 = this.subst__Lwhilelang_syntax_Program$IExpr__sci_Map__Lwhilelang_syntax_Program$IExpr(x87, q);
+    return new $c_Lwhilelang_syntax_Program$IExpr$Minus(e1$2, e2$2)
+  };
+  throw new $c_s_MatchError(e)
+});
+var $d_Lwhilelang_backend_VCGen$ = new $TypeData().initClass({
+  Lwhilelang_backend_VCGen$: 0
+}, false, "whilelang.backend.VCGen$", {
+  Lwhilelang_backend_VCGen$: 1,
+  O: 1
+});
+$c_Lwhilelang_backend_VCGen$.prototype.$classData = $d_Lwhilelang_backend_VCGen$;
+var $n_Lwhilelang_backend_VCGen$;
+function $m_Lwhilelang_backend_VCGen$() {
+  if ((!$n_Lwhilelang_backend_VCGen$)) {
+    $n_Lwhilelang_backend_VCGen$ = new $c_Lwhilelang_backend_VCGen$()
+  };
+  return $n_Lwhilelang_backend_VCGen$
+}
 function $s_Lwhilelang_frontend_Main__main__AT__V(args) {
   $m_Lcaos_frontend_Site$().initSite__Lcaos_frontend_Configurator__V($m_Lwhilelang_frontend_CaosConfig$())
 }
-function $p_Lwhilelang_syntax_Parser$__basicCommand$1__Lcats_parse_Parser__Lcats_parse_Parser($thiz, commRec$4) {
-  var this$1 = $p_Lwhilelang_syntax_Parser$__skip$1__Lcats_parse_Parser($thiz);
-  var that = $p_Lwhilelang_syntax_Parser$__ite$1__Lcats_parse_Parser__Lcats_parse_Parser($thiz, commRec$4);
+function $p_Lwhilelang_syntax_Parser$__basicCommand$1__Lcats_parse_Parser__Lcats_parse_Parser($thiz, commRec$3) {
+  var this$1 = $p_Lwhilelang_syntax_Parser$__contract$1__Lcats_parse_Parser__Lcats_parse_Parser($thiz, commRec$3);
+  var that = $p_Lwhilelang_syntax_Parser$__skip$1__Lcats_parse_Parser($thiz);
   var this$2 = this$1.orElse__Lcats_parse_Parser__Lcats_parse_Parser(that);
-  var that$1 = $p_Lwhilelang_syntax_Parser$__whilec$1__Lcats_parse_Parser__Lcats_parse_Parser($thiz, commRec$4);
+  var that$1 = $p_Lwhilelang_syntax_Parser$__ite$1__Lcats_parse_Parser__Lcats_parse_Parser($thiz, commRec$3);
   var this$3 = this$2.orElse__Lcats_parse_Parser__Lcats_parse_Parser(that$1);
-  var that$2 = $p_Lwhilelang_syntax_Parser$__assert$1__Lcats_parse_Parser($thiz);
+  var that$2 = $p_Lwhilelang_syntax_Parser$__whilec$1__Lcats_parse_Parser__Lcats_parse_Parser($thiz, commRec$3);
   var this$4 = this$3.orElse__Lcats_parse_Parser__Lcats_parse_Parser(that$2);
-  var that$3 = $p_Lwhilelang_syntax_Parser$__assign$1__Lcats_parse_Parser($thiz);
-  return this$4.orElse__Lcats_parse_Parser__Lcats_parse_Parser(that$3)
+  var that$3 = $p_Lwhilelang_syntax_Parser$__assert$1__Lcats_parse_Parser($thiz);
+  var this$5 = this$4.orElse__Lcats_parse_Parser__Lcats_parse_Parser(that$3);
+  var that$4 = $p_Lwhilelang_syntax_Parser$__assign$1__Lcats_parse_Parser($thiz);
+  return this$5.orElse__Lcats_parse_Parser__Lcats_parse_Parser(that$4)
 }
 function $p_Lwhilelang_syntax_Parser$__skip$1__Lcats_parse_Parser($thiz) {
   var this$1 = $m_Lcats_parse_Parser$().string__T__Lcats_parse_Parser("skip");
   var b = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
   return $m_Lcats_parse_Parser$().as__Lcats_parse_Parser__O__Lcats_parse_Parser(this$1, b)
 }
-function $p_Lwhilelang_syntax_Parser$__ite$1__Lcats_parse_Parser__Lcats_parse_Parser($thiz, commRec$2) {
+function $p_Lwhilelang_syntax_Parser$__ite$1__Lcats_parse_Parser__Lcats_parse_Parser($thiz, commRec$4) {
   var this$2 = $m_Lcats_parse_Parser$().string__T__Lcats_parse_Parser("if");
   var this$1 = $thiz.bexpr__Lcats_parse_Parser();
   var b = $thiz.Lwhilelang_syntax_Parser$__f_sps;
@@ -14636,7 +14902,7 @@ function $p_Lwhilelang_syntax_Parser$__ite$1__Lcats_parse_Parser__Lcats_parse_Pa
   var that$1 = $m_Lcats_parse_Parser$().string__T__Lcats_parse_Parser("then");
   $m_Lcats_parse_Parser$();
   var this$9 = new $c_Lcats_parse_Parser$Impl$Prod(this$5, that$1);
-  var this$8 = $p_Lwhilelang_syntax_Parser$__commBlock$1__Lcats_parse_Parser__Lcats_parse_Parser($thiz, commRec$2);
+  var this$8 = $p_Lwhilelang_syntax_Parser$__commBlock$1__Lcats_parse_Parser__Lcats_parse_Parser($thiz, commRec$4);
   var b$1 = $thiz.Lwhilelang_syntax_Parser$__f_sps;
   var that$2 = this$8.between__Lcats_parse_Parser0__Lcats_parse_Parser0__Lcats_parse_Parser(b$1, b$1);
   $m_Lcats_parse_Parser$();
@@ -14647,7 +14913,7 @@ function $p_Lwhilelang_syntax_Parser$__ite$1__Lcats_parse_Parser__Lcats_parse_Pa
   var that$4 = $thiz.Lwhilelang_syntax_Parser$__f_sps;
   $m_Lcats_parse_Parser$();
   var this$18 = new $c_Lcats_parse_Parser$Impl$Prod(this$15, that$4);
-  var that$5 = $p_Lwhilelang_syntax_Parser$__commBlock$1__Lcats_parse_Parser__Lcats_parse_Parser($thiz, commRec$2);
+  var that$5 = $p_Lwhilelang_syntax_Parser$__commBlock$1__Lcats_parse_Parser__Lcats_parse_Parser($thiz, commRec$4);
   $m_Lcats_parse_Parser$();
   var this$23 = new $c_Lcats_parse_Parser$Impl$Prod(this$18, that$5);
   var fn = new $c_sjsr_AnonFunction1(((this$21) => ((x) => {
@@ -14659,29 +14925,37 @@ function $p_Lwhilelang_syntax_Parser$__ite$1__Lcats_parse_Parser__Lcats_parse_Pa
   }))($thiz));
   return $m_Lcats_parse_Parser$().map__Lcats_parse_Parser__F1__Lcats_parse_Parser(this$23, fn)
 }
-function $p_Lwhilelang_syntax_Parser$__whilec$1__Lcats_parse_Parser__Lcats_parse_Parser($thiz, commRec$3) {
+function $p_Lwhilelang_syntax_Parser$__whilec$1__Lcats_parse_Parser__Lcats_parse_Parser($thiz, commRec$5) {
   var this$2 = $m_Lcats_parse_Parser$().string__T__Lcats_parse_Parser("while");
   var this$1 = $thiz.bexpr__Lcats_parse_Parser();
   var b = $thiz.Lwhilelang_syntax_Parser$__f_sps;
   var that = this$1.between__Lcats_parse_Parser0__Lcats_parse_Parser0__Lcats_parse_Parser(b, b);
   $m_Lcats_parse_Parser$();
   var this$5 = new $c_Lcats_parse_Parser$Impl$Prod(this$2, that);
-  var that$1 = $m_Lcats_parse_Parser$().string__T__Lcats_parse_Parser("do");
+  var that$1 = $thiz.invariant__Lcats_parse_Parser().$qmark__Lcats_parse_Parser0();
   $m_Lcats_parse_Parser$();
   var this$8 = new $c_Lcats_parse_Parser$Impl$Prod(this$5, that$1);
   var that$2 = $thiz.Lwhilelang_syntax_Parser$__f_sps;
   $m_Lcats_parse_Parser$();
   var this$11 = new $c_Lcats_parse_Parser$Impl$Prod(this$8, that$2);
-  var that$3 = $p_Lwhilelang_syntax_Parser$__commBlock$1__Lcats_parse_Parser__Lcats_parse_Parser($thiz, commRec$3);
+  var that$3 = $m_Lcats_parse_Parser$().string__T__Lcats_parse_Parser("do");
   $m_Lcats_parse_Parser$();
-  var this$16 = new $c_Lcats_parse_Parser$Impl$Prod(this$11, that$3);
-  var fn = new $c_sjsr_AnonFunction1(((this$14) => ((x) => {
+  var this$14 = new $c_Lcats_parse_Parser$Impl$Prod(this$11, that$3);
+  var that$4 = $thiz.Lwhilelang_syntax_Parser$__f_sps;
+  $m_Lcats_parse_Parser$();
+  var this$17 = new $c_Lcats_parse_Parser$Impl$Prod(this$14, that$4);
+  var that$5 = $p_Lwhilelang_syntax_Parser$__commBlock$1__Lcats_parse_Parser__Lcats_parse_Parser($thiz, commRec$5);
+  $m_Lcats_parse_Parser$();
+  var this$23 = new $c_Lcats_parse_Parser$Impl$Prod(this$17, that$5);
+  var fn = new $c_sjsr_AnonFunction1(((this$20) => ((x) => {
     var x$1 = $as_T2(x);
-    var b$1 = $as_Lwhilelang_syntax_Program$BExpr($as_T2($as_T2($as_T2(x$1._1__O())._1__O())._1__O())._2__O());
+    var b$1 = $as_Lwhilelang_syntax_Program$BExpr($as_T2($as_T2($as_T2($as_T2($as_T2(x$1._1__O())._1__O())._1__O())._1__O())._1__O())._2__O());
     var c = $as_Lwhilelang_syntax_Program$Command(x$1._2__O());
-    return new $c_Lwhilelang_syntax_Program$Command$While(b$1, c)
+    var this$21 = $as_s_Option($as_T2($as_T2($as_T2($as_T2(x$1._1__O())._1__O())._1__O())._1__O())._2__O());
+    var inv = $as_Lwhilelang_syntax_Program$BExpr((this$21.isEmpty__Z() ? $s_Lwhilelang_syntax_Program$BExpr$__BTrue__Lwhilelang_syntax_Program$BExpr() : this$21.get__O()));
+    return new $c_Lwhilelang_syntax_Program$Command$While(b$1, c, inv)
   }))($thiz));
-  return $m_Lcats_parse_Parser$().map__Lcats_parse_Parser__F1__Lcats_parse_Parser(this$16, fn)
+  return $m_Lcats_parse_Parser$().map__Lcats_parse_Parser__F1__Lcats_parse_Parser(this$23, fn)
 }
 function $p_Lwhilelang_syntax_Parser$__assert$1__Lcats_parse_Parser($thiz) {
   var $$x1 = $m_Lcats_parse_Parser$().string__T__Lcats_parse_Parser("assert");
@@ -14717,6 +14991,24 @@ function $p_Lwhilelang_syntax_Parser$__assign$1__Lcats_parse_Parser($thiz) {
     return new $c_Lwhilelang_syntax_Program$Command$Assign(ident, e)
   }))($thiz));
   return $m_Lcats_parse_Parser$().map__Lcats_parse_Parser__F1__Lcats_parse_Parser(this$10, fn)
+}
+function $p_Lwhilelang_syntax_Parser$__contract$1__Lcats_parse_Parser__Lcats_parse_Parser($thiz, commRec$2) {
+  var this$1 = $thiz.invariant__Lcats_parse_Parser();
+  var b = $thiz.Lwhilelang_syntax_Parser$__f_sps;
+  var that = commRec$2.between__Lcats_parse_Parser0__Lcats_parse_Parser0__Lcats_parse_Parser(b, b);
+  $m_Lcats_parse_Parser$();
+  var this$4 = new $c_Lcats_parse_Parser$Impl$Prod(this$1, that);
+  var that$1 = $thiz.invariant__Lcats_parse_Parser();
+  $m_Lcats_parse_Parser$();
+  var this$9 = new $c_Lcats_parse_Parser$Impl$Prod(this$4, that$1);
+  var fn = new $c_sjsr_AnonFunction1(((this$7) => ((x) => {
+    var x$1 = $as_T2(x);
+    var pre = $as_Lwhilelang_syntax_Program$BExpr($as_T2(x$1._1__O())._1__O());
+    var c = $as_Lwhilelang_syntax_Program$Command($as_T2(x$1._1__O())._2__O());
+    var pos = $as_Lwhilelang_syntax_Program$BExpr(x$1._2__O());
+    return new $c_Lwhilelang_syntax_Program$Command$Contract(pre, c, pos)
+  }))($thiz));
+  return $m_Lcats_parse_Parser$().map__Lcats_parse_Parser__F1__Lcats_parse_Parser(this$9, fn)
 }
 function $p_Lwhilelang_syntax_Parser$__seqOp$1__Lcats_parse_Parser($thiz) {
   var this$3 = $m_Lcats_parse_Parser$().char__C__Lcats_parse_Parser(59);
@@ -15021,6 +15313,12 @@ $c_Lwhilelang_syntax_Parser$.prototype.command__Lcats_parse_Parser = (function()
     return this$1.listSep__Lcats_parse_Parser__Lcats_parse_Parser__Lcats_parse_Parser($p_Lwhilelang_syntax_Parser$__basicCommand$1__Lcats_parse_Parser__Lcats_parse_Parser(this$1, commRec$1), $p_Lwhilelang_syntax_Parser$__seqOp$1__Lcats_parse_Parser(this$1))
   }))(this)))
 });
+$c_Lwhilelang_syntax_Parser$.prototype.invariant__Lcats_parse_Parser = (function() {
+  var $$x1 = $m_Lcats_parse_Parser$().char__C__Lcats_parse_Parser(123);
+  var this$1 = this.bexpr__Lcats_parse_Parser();
+  var b = this.Lwhilelang_syntax_Parser$__f_sps;
+  return $$x1.$times$greater__Lcats_parse_Parser0__Lcats_parse_Parser(this$1.between__Lcats_parse_Parser0__Lcats_parse_Parser0__Lcats_parse_Parser(b, b)).$less$times__Lcats_parse_Parser0__Lcats_parse_Parser($m_Lcats_parse_Parser$().char__C__Lcats_parse_Parser(125))
+});
 $c_Lwhilelang_syntax_Parser$.prototype.bexpr__Lcats_parse_Parser = (function() {
   return $m_Lcats_parse_Parser$().recursive__F1__Lcats_parse_Parser(new $c_sjsr_AnonFunction1(((this$1) => ((bexprRec) => {
     var bexprRec$1 = $as_Lcats_parse_Parser(bexprRec);
@@ -15094,68 +15392,78 @@ $c_Lwhilelang_syntax_Show$.prototype.apply__Lwhilelang_syntax_Program$Command__T
   };
   if ((com instanceof $c_Lwhilelang_syntax_Program$Command$Seq)) {
     var x$1 = $as_Lwhilelang_syntax_Program$Command$Seq(com);
-    var x20 = x$1.Lwhilelang_syntax_Program$Command$Seq__f_c1;
-    var x21 = x$1.Lwhilelang_syntax_Program$Command$Seq__f_c2;
-    return ((this.apply__Lwhilelang_syntax_Program$Command__T(x20) + ";\n") + this.apply__Lwhilelang_syntax_Program$Command__T(x21))
+    var x26 = x$1.Lwhilelang_syntax_Program$Command$Seq__f_c1;
+    var x27 = x$1.Lwhilelang_syntax_Program$Command$Seq__f_c2;
+    return ((this.apply__Lwhilelang_syntax_Program$Command__T(x26) + ";\n") + this.apply__Lwhilelang_syntax_Program$Command__T(x27))
   };
   if ((com instanceof $c_Lwhilelang_syntax_Program$Command$Assign)) {
     var x$1$1 = $as_Lwhilelang_syntax_Program$Command$Assign(com);
-    var x16 = x$1$1.Lwhilelang_syntax_Program$Command$Assign__f_ident;
-    var x17 = x$1$1.Lwhilelang_syntax_Program$Command$Assign__f_e;
-    return ((x16 + ":=") + this.apply__Lwhilelang_syntax_Program$IExpr__T(x17))
+    var x22 = x$1$1.Lwhilelang_syntax_Program$Command$Assign__f_ident;
+    var x23 = x$1$1.Lwhilelang_syntax_Program$Command$Assign__f_e;
+    return ((x22 + ":=") + this.apply__Lwhilelang_syntax_Program$IExpr__T(x23))
   };
   if ((com instanceof $c_Lwhilelang_syntax_Program$Command$ITE)) {
     var x$1$2 = $as_Lwhilelang_syntax_Program$Command$ITE(com);
-    var x11 = x$1$2.Lwhilelang_syntax_Program$Command$ITE__f_b;
-    var x12 = x$1$2.Lwhilelang_syntax_Program$Command$ITE__f_ct;
-    var x13 = x$1$2.Lwhilelang_syntax_Program$Command$ITE__f_cf;
-    return ((((("if " + this.apply__Lwhilelang_syntax_Program$BExpr__T(x11)) + " then\n") + this.indent__T__I__T(this.apply__Lwhilelang_syntax_Program$Command__T(x12), 1)) + "\nelse\n") + this.indent__T__I__T(this.apply__Lwhilelang_syntax_Program$Command__T(x13), 1))
+    var x17 = x$1$2.Lwhilelang_syntax_Program$Command$ITE__f_b;
+    var x18 = x$1$2.Lwhilelang_syntax_Program$Command$ITE__f_ct;
+    var x19 = x$1$2.Lwhilelang_syntax_Program$Command$ITE__f_cf;
+    return ((((("if " + this.apply__Lwhilelang_syntax_Program$BExpr__T(x17)) + " then\n") + this.indent__T__I__T(this.apply__Lwhilelang_syntax_Program$Command__T(x18), 1)) + "\nelse\n") + this.indent__T__I__T(this.apply__Lwhilelang_syntax_Program$Command__T(x19), 1))
   };
   if ((com instanceof $c_Lwhilelang_syntax_Program$Command$While)) {
     var x$1$3 = $as_Lwhilelang_syntax_Program$Command$While(com);
-    var x7 = x$1$3.Lwhilelang_syntax_Program$Command$While__f_b;
-    var x8 = x$1$3.Lwhilelang_syntax_Program$Command$While__f_c;
-    return ((("while " + this.apply__Lwhilelang_syntax_Program$BExpr__T(x7)) + " do\n") + this.indent__T__I__T(this.apply__Lwhilelang_syntax_Program$Command__T(x8), 1))
+    var x12 = x$1$3.Lwhilelang_syntax_Program$Command$While__f_b;
+    var x13 = x$1$3.Lwhilelang_syntax_Program$Command$While__f_c;
+    var x14 = x$1$3.Lwhilelang_syntax_Program$Command$While__f_inv;
+    var $$x1 = this.apply__Lwhilelang_syntax_Program$BExpr__T(x12);
+    var x$4 = $s_Lwhilelang_syntax_Program$BExpr$__BTrue__Lwhilelang_syntax_Program$BExpr();
+    return ((((("while " + $$x1) + " ") + ((!((x14 === null) ? (x$4 === null) : x14.equals__O__Z(x$4))) ? (("{" + this.apply__Lwhilelang_syntax_Program$BExpr__T(x14)) + "} ") : "")) + "do\n") + this.indent__T__I__T(this.apply__Lwhilelang_syntax_Program$Command__T(x13), 1))
   };
   if ((com instanceof $c_Lwhilelang_syntax_Program$Command$Assert)) {
     var x$1$4 = $as_Lwhilelang_syntax_Program$Command$Assert(com);
-    var x4 = x$1$4.Lwhilelang_syntax_Program$Command$Assert__f_b;
-    return ("assert " + this.apply__Lwhilelang_syntax_Program$BExpr__T(x4))
+    var x9 = x$1$4.Lwhilelang_syntax_Program$Command$Assert__f_b;
+    return ("assert " + this.apply__Lwhilelang_syntax_Program$BExpr__T(x9))
   };
-  var x$3 = $s_Lwhilelang_syntax_Program$Command$__Fail__Lwhilelang_syntax_Program$Command();
-  if (((x$3 === null) ? (com === null) : x$3.equals__O__Z(com))) {
+  var x$5 = $s_Lwhilelang_syntax_Program$Command$__Fail__Lwhilelang_syntax_Program$Command();
+  if (((x$5 === null) ? (com === null) : x$5.equals__O__Z(com))) {
     return "FAIL"
+  };
+  if ((com instanceof $c_Lwhilelang_syntax_Program$Command$Contract)) {
+    var x$1$5 = $as_Lwhilelang_syntax_Program$Command$Contract(com);
+    var x4 = x$1$5.Lwhilelang_syntax_Program$Command$Contract__f_pre;
+    var x5 = x$1$5.Lwhilelang_syntax_Program$Command$Contract__f_c;
+    var x6 = x$1$5.Lwhilelang_syntax_Program$Command$Contract__f_pos;
+    return (((((("{" + this.apply__Lwhilelang_syntax_Program$BExpr__T(x4)) + "} ") + this.apply__Lwhilelang_syntax_Program$Command__T(x5)) + " {") + this.apply__Lwhilelang_syntax_Program$BExpr__T(x6)) + "}")
   };
   throw new $c_s_MatchError(com)
 });
 $c_Lwhilelang_syntax_Show$.prototype.apply__Lwhilelang_syntax_Program$IExpr__T = (function(e) {
   if ((e instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
     var x$1 = $as_Lwhilelang_syntax_Program$IExpr$N(e);
-    var x40 = x$1.Lwhilelang_syntax_Program$IExpr$N__f_n;
-    return ("" + x40)
+    var x46 = x$1.Lwhilelang_syntax_Program$IExpr$N__f_n;
+    return ("" + x46)
   };
   if ((e instanceof $c_Lwhilelang_syntax_Program$IExpr$Var)) {
     var x$1$1 = $as_Lwhilelang_syntax_Program$IExpr$Var(e);
-    var x37 = x$1$1.Lwhilelang_syntax_Program$IExpr$Var__f_ident;
-    return x37
+    var x43 = x$1$1.Lwhilelang_syntax_Program$IExpr$Var__f_ident;
+    return x43
   };
   if ((e instanceof $c_Lwhilelang_syntax_Program$IExpr$Plus)) {
     var x$1$2 = $as_Lwhilelang_syntax_Program$IExpr$Plus(e);
-    var x33 = x$1$2.Lwhilelang_syntax_Program$IExpr$Plus__f_e1;
-    var x34 = x$1$2.Lwhilelang_syntax_Program$IExpr$Plus__f_e2;
-    return ((this.apply__Lwhilelang_syntax_Program$IExpr__T(x33) + "+") + this.apply__Lwhilelang_syntax_Program$IExpr__T(x34))
+    var x39 = x$1$2.Lwhilelang_syntax_Program$IExpr$Plus__f_e1;
+    var x40 = x$1$2.Lwhilelang_syntax_Program$IExpr$Plus__f_e2;
+    return ((this.apply__Lwhilelang_syntax_Program$IExpr__T(x39) + "+") + this.apply__Lwhilelang_syntax_Program$IExpr__T(x40))
   };
   if ((e instanceof $c_Lwhilelang_syntax_Program$IExpr$Times)) {
     var x$1$3 = $as_Lwhilelang_syntax_Program$IExpr$Times(e);
-    var x29 = x$1$3.Lwhilelang_syntax_Program$IExpr$Times__f_e1;
-    var x30 = x$1$3.Lwhilelang_syntax_Program$IExpr$Times__f_e2;
-    return ((this.applyPar__Lwhilelang_syntax_Program$IExpr__T(x29) + "*") + this.applyPar__Lwhilelang_syntax_Program$IExpr__T(x30))
+    var x35 = x$1$3.Lwhilelang_syntax_Program$IExpr$Times__f_e1;
+    var x36 = x$1$3.Lwhilelang_syntax_Program$IExpr$Times__f_e2;
+    return ((this.applyPar__Lwhilelang_syntax_Program$IExpr__T(x35) + "*") + this.applyPar__Lwhilelang_syntax_Program$IExpr__T(x36))
   };
   if ((e instanceof $c_Lwhilelang_syntax_Program$IExpr$Minus)) {
     var x$1$4 = $as_Lwhilelang_syntax_Program$IExpr$Minus(e);
-    var x25 = x$1$4.Lwhilelang_syntax_Program$IExpr$Minus__f_e1;
-    var x26 = x$1$4.Lwhilelang_syntax_Program$IExpr$Minus__f_e2;
-    return ((this.apply__Lwhilelang_syntax_Program$IExpr__T(x25) + "-") + this.apply__Lwhilelang_syntax_Program$IExpr__T(x26))
+    var x31 = x$1$4.Lwhilelang_syntax_Program$IExpr$Minus__f_e1;
+    var x32 = x$1$4.Lwhilelang_syntax_Program$IExpr$Minus__f_e2;
+    return ((this.apply__Lwhilelang_syntax_Program$IExpr__T(x31) + "-") + this.apply__Lwhilelang_syntax_Program$IExpr__T(x32))
   };
   throw new $c_s_MatchError(e)
 });
@@ -15171,40 +15479,46 @@ $c_Lwhilelang_syntax_Show$.prototype.apply__Lwhilelang_syntax_Program$BExpr__T =
   if (((x$3 === null) ? (b === null) : x$3.equals__O__Z(b))) {
     return "false"
   };
+  if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Impl)) {
+    var x$1 = $as_Lwhilelang_syntax_Program$BExpr$Impl(b);
+    var x75 = x$1.Lwhilelang_syntax_Program$BExpr$Impl__f_e1;
+    var x76 = x$1.Lwhilelang_syntax_Program$BExpr$Impl__f_e2;
+    return (((("(" + this.apply__Lwhilelang_syntax_Program$BExpr__T(x75)) + ") -> (") + this.apply__Lwhilelang_syntax_Program$BExpr__T(x76)) + ")")
+  };
   if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$And)) {
-    var x$1 = $as_Lwhilelang_syntax_Program$BExpr$And(b);
-    var x65 = x$1.Lwhilelang_syntax_Program$BExpr$And__f_b1;
-    var x66 = x$1.Lwhilelang_syntax_Program$BExpr$And__f_b2;
-    return ((this.applyAnd__Lwhilelang_syntax_Program$BExpr__T(x65) + " && ") + this.applyAnd__Lwhilelang_syntax_Program$BExpr__T(x66))
+    var x$1$1 = $as_Lwhilelang_syntax_Program$BExpr$And(b);
+    var x71 = x$1$1.Lwhilelang_syntax_Program$BExpr$And__f_b1;
+    var x72 = x$1$1.Lwhilelang_syntax_Program$BExpr$And__f_b2;
+    return ((this.applyAnd__Lwhilelang_syntax_Program$BExpr__T(x71) + " && ") + this.applyAnd__Lwhilelang_syntax_Program$BExpr__T(x72))
   };
   if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Or)) {
-    var x$1$1 = $as_Lwhilelang_syntax_Program$BExpr$Or(b);
-    var x61 = x$1$1.Lwhilelang_syntax_Program$BExpr$Or__f_b1;
-    var x62 = x$1$1.Lwhilelang_syntax_Program$BExpr$Or__f_b2;
-    return ((this.apply__Lwhilelang_syntax_Program$BExpr__T(x61) + " || ") + this.apply__Lwhilelang_syntax_Program$BExpr__T(x62))
+    var x$1$2 = $as_Lwhilelang_syntax_Program$BExpr$Or(b);
+    var x67 = x$1$2.Lwhilelang_syntax_Program$BExpr$Or__f_b1;
+    var x68 = x$1$2.Lwhilelang_syntax_Program$BExpr$Or__f_b2;
+    return ((this.apply__Lwhilelang_syntax_Program$BExpr__T(x67) + " || ") + this.apply__Lwhilelang_syntax_Program$BExpr__T(x68))
   };
   if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Not)) {
-    var x$1$2 = $as_Lwhilelang_syntax_Program$BExpr$Not(b);
-    var x58 = x$1$2.Lwhilelang_syntax_Program$BExpr$Not__f_b;
-    return ("!" + this.applyNot__Lwhilelang_syntax_Program$BExpr__T(x58))
+    var x$1$3 = $as_Lwhilelang_syntax_Program$BExpr$Not(b);
+    var x64 = x$1$3.Lwhilelang_syntax_Program$BExpr$Not__f_b;
+    return ("!" + this.applyNot__Lwhilelang_syntax_Program$BExpr__T(x64))
   };
   if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Less)) {
-    var x$1$3 = $as_Lwhilelang_syntax_Program$BExpr$Less(b);
-    var x54 = x$1$3.Lwhilelang_syntax_Program$BExpr$Less__f_e1;
-    var x55 = x$1$3.Lwhilelang_syntax_Program$BExpr$Less__f_e2;
-    return ((this.apply__Lwhilelang_syntax_Program$IExpr__T(x54) + "<") + this.apply__Lwhilelang_syntax_Program$IExpr__T(x55))
+    var x$1$4 = $as_Lwhilelang_syntax_Program$BExpr$Less(b);
+    var x60 = x$1$4.Lwhilelang_syntax_Program$BExpr$Less__f_e1;
+    var x61 = x$1$4.Lwhilelang_syntax_Program$BExpr$Less__f_e2;
+    return ((this.apply__Lwhilelang_syntax_Program$IExpr__T(x60) + "<") + this.apply__Lwhilelang_syntax_Program$IExpr__T(x61))
   };
   if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Greater)) {
-    var x$1$4 = $as_Lwhilelang_syntax_Program$BExpr$Greater(b);
-    var x50 = x$1$4.Lwhilelang_syntax_Program$BExpr$Greater__f_e1;
-    var x51 = x$1$4.Lwhilelang_syntax_Program$BExpr$Greater__f_e2;
-    return ((this.apply__Lwhilelang_syntax_Program$IExpr__T(x50) + ">") + this.apply__Lwhilelang_syntax_Program$IExpr__T(x51))
+    var x$1$5 = $as_Lwhilelang_syntax_Program$BExpr$Greater(b);
+    var x56 = x$1$5.Lwhilelang_syntax_Program$BExpr$Greater__f_e1;
+    var x57 = x$1$5.Lwhilelang_syntax_Program$BExpr$Greater__f_e2;
+    return ((this.apply__Lwhilelang_syntax_Program$IExpr__T(x56) + ">") + this.apply__Lwhilelang_syntax_Program$IExpr__T(x57))
   };
   if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Eq)) {
-    var x$1$5 = $as_Lwhilelang_syntax_Program$BExpr$Eq(b);
-    var x46 = x$1$5.Lwhilelang_syntax_Program$BExpr$Eq__f_e1;
-    var x47 = x$1$5.Lwhilelang_syntax_Program$BExpr$Eq__f_e2;
-    return ((this.apply__Lwhilelang_syntax_Program$IExpr__T(x46) + "=") + this.apply__Lwhilelang_syntax_Program$IExpr__T(x47))
+    var x$1$6 = $as_Lwhilelang_syntax_Program$BExpr$Eq(b);
+    var x52 = x$1$6.Lwhilelang_syntax_Program$BExpr$Eq__f_e1;
+    var x53 = x$1$6.Lwhilelang_syntax_Program$BExpr$Eq__f_e2;
+    return ((this.apply__Lwhilelang_syntax_Program$IExpr__T(x52) + "=") + this.apply__Lwhilelang_syntax_Program$IExpr__T(x53))
   };
   throw new $c_s_MatchError(b)
 });
@@ -20229,17 +20543,17 @@ $c_Lwhilelang_backend_PartialSemantics$.prototype.next__T2__sci_Set = (function(
     };
     if ((x25 instanceof $c_Lwhilelang_syntax_Program$Command$Seq)) {
       var x$1 = $as_Lwhilelang_syntax_Program$Command$Seq(x25);
-      var x48 = x$1.Lwhilelang_syntax_Program$Command$Seq__f_c1;
-      var x49 = x$1.Lwhilelang_syntax_Program$Command$Seq__f_c2;
+      var x54 = x$1.Lwhilelang_syntax_Program$Command$Seq__f_c1;
+      var x55 = x$1.Lwhilelang_syntax_Program$Command$Seq__f_c2;
       var x$5 = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
-      if (((x$5 === null) ? (x48 === null) : x$5.equals__O__Z(x48))) {
+      if (((x$5 === null) ? (x54 === null) : x$5.equals__O__Z(x54))) {
         var y = st$tailLocal1._2__O();
-        st$tailLocal1 = new $c_T2(x49, y);
+        st$tailLocal1 = new $c_T2(x55, y);
         continue
       };
       var y$1 = st$tailLocal1._2__O();
       var $$x1;
-      var st$tailLocal1$1___1 = x48;
+      var st$tailLocal1$1___1 = x54;
       var st$tailLocal1$1___2 = y$1;
       while (true) {
         var x25$1 = $as_Lwhilelang_syntax_Program$Command(st$tailLocal1$1___1);
@@ -20259,19 +20573,19 @@ $c_Lwhilelang_backend_PartialSemantics$.prototype.next__T2__sci_Set = (function(
         };
         if ((x25$1 instanceof $c_Lwhilelang_syntax_Program$Command$Seq)) {
           var x$1$1 = $as_Lwhilelang_syntax_Program$Command$Seq(x25$1);
-          var x48$1 = x$1$1.Lwhilelang_syntax_Program$Command$Seq__f_c1;
-          var x49$1 = x$1$1.Lwhilelang_syntax_Program$Command$Seq__f_c2;
+          var x54$1 = x$1$1.Lwhilelang_syntax_Program$Command$Seq__f_c1;
+          var x55$1 = x$1$1.Lwhilelang_syntax_Program$Command$Seq__f_c2;
           var x$5$1 = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
-          if (((x$5$1 === null) ? (x48$1 === null) : x$5$1.equals__O__Z(x48$1))) {
+          if (((x$5$1 === null) ? (x54$1 === null) : x$5$1.equals__O__Z(x54$1))) {
             var y$2 = st$tailLocal1$1___2;
-            var $$x2___1 = x49$1;
+            var $$x2___1 = x55$1;
             var $$x2___2 = y$2;
             st$tailLocal1$1___1 = $$x2___1;
             st$tailLocal1$1___2 = $$x2___2;
             continue
           };
           var y$3 = st$tailLocal1$1___2;
-          var $$x1 = $as_sci_Set(this.next__T2__sci_Set(new $c_T2(x48$1, y$3)).withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((this$15) => ((x$1$2) => {
+          var $$x1 = $as_sci_Set(this.next__T2__sci_Set(new $c_T2(x54$1, y$3)).withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((this$15) => ((x$1$2) => {
             var x$1$3 = $as_T2(x$1$2);
             return ((x$1$3 !== null) && ($as_T(x$1$3._1__O()), $as_T2(x$1$3._2__O()), true))
           }))(this))).map__F1__O(new $c_sjsr_AnonFunction1(((this$2$1, c2$3) => ((x$1$2$1) => {
@@ -20286,25 +20600,26 @@ $c_Lwhilelang_backend_PartialSemantics$.prototype.next__T2__sci_Set = (function(
               return new $c_T2(by$1, _2)
             };
             throw new $c_s_MatchError(x$1$4)
-          }))(this, x49$1))));
+          }))(this, x55$1))));
           break
         };
         if ((x25$1 instanceof $c_Lwhilelang_syntax_Program$Command$While)) {
           var x$1$5 = $as_Lwhilelang_syntax_Program$Command$While(x25$1);
-          var x40 = x$1$5.Lwhilelang_syntax_Program$Command$While__f_b;
-          var x41 = x$1$5.Lwhilelang_syntax_Program$Command$While__f_c;
-          var x7 = this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option(x40, $as_sci_Map(st$tailLocal1$1___2));
+          var x45 = x$1$5.Lwhilelang_syntax_Program$Command$While__f_b;
+          var x46 = x$1$5.Lwhilelang_syntax_Program$Command$While__f_c;
+          var x47 = x$1$5.Lwhilelang_syntax_Program$Command$While__f_inv;
+          var x7 = this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option(x45, $as_sci_Map(st$tailLocal1$1___2));
           var x$7 = $m_s_None$();
           if ((x$7 === x7)) {
             var this$29 = $m_s_Predef$().s_Predef$__f_Set;
             var $$x4 = $m_sr_ScalaRunTime$();
-            var self$1 = ($m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$BExpr__T(x40) + "-true?");
-            var c2 = new $c_Lwhilelang_syntax_Program$Command$While(x40, x41);
-            var _1 = new $c_Lwhilelang_syntax_Program$Command$Seq(x41, c2);
+            var self$1 = ($m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$BExpr__T(x45) + "-true?");
+            var c2 = new $c_Lwhilelang_syntax_Program$Command$While(x45, x46, x47);
+            var _1 = new $c_Lwhilelang_syntax_Program$Command$Seq(x46, c2);
             var _2$1 = st$tailLocal1$1___2;
             var y$5 = new $c_T2(_1, _2$1);
             var $$x3 = new $c_T2(self$1, y$5);
-            var self$2 = ($m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$BExpr__T(x40) + "-false?");
+            var self$2 = ($m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$BExpr__T(x45) + "-false?");
             var _1$1 = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
             var _2$2 = st$tailLocal1$1___2;
             var y$6 = new $c_T2(_1$1, _2$2);
@@ -20317,8 +20632,8 @@ $c_Lwhilelang_backend_PartialSemantics$.prototype.next__T2__sci_Set = (function(
             if ((x11 === true)) {
               var this$35 = $m_s_Predef$().s_Predef$__f_Set;
               var $$x5 = $m_sr_ScalaRunTime$();
-              var c2$1 = new $c_Lwhilelang_syntax_Program$Command$While(x40, x41);
-              var _1$2 = new $c_Lwhilelang_syntax_Program$Command$Seq(x41, c2$1);
+              var c2$1 = new $c_Lwhilelang_syntax_Program$Command$While(x45, x46, x47);
+              var _1$2 = new $c_Lwhilelang_syntax_Program$Command$Seq(x46, c2$1);
               var _2$3 = st$tailLocal1$1___2;
               var y$7 = new $c_T2(_1$2, _2$3);
               var elems$5 = $$x5.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("while-true", y$7)]));
@@ -20340,8 +20655,8 @@ $c_Lwhilelang_backend_PartialSemantics$.prototype.next__T2__sci_Set = (function(
         };
         if ((x25$1 instanceof $c_Lwhilelang_syntax_Program$Command$Assert)) {
           var x$1$6 = $as_Lwhilelang_syntax_Program$Command$Assert(x25$1);
-          var x37 = x$1$6.Lwhilelang_syntax_Program$Command$Assert__f_b;
-          var x12 = this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option(x37, $as_sci_Map(st$tailLocal1$1___2));
+          var x42 = x$1$6.Lwhilelang_syntax_Program$Command$Assert__f_b;
+          var x12 = this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option(x42, $as_sci_Map(st$tailLocal1$1___2));
           var x$9 = $m_s_None$();
           if ((x$9 === x12)) {
             var this$41 = $m_s_Predef$().s_Predef$__f_Set;
@@ -20376,21 +20691,21 @@ $c_Lwhilelang_backend_PartialSemantics$.prototype.next__T2__sci_Set = (function(
         };
         if ((x25$1 instanceof $c_Lwhilelang_syntax_Program$Command$ITE)) {
           var x$1$7 = $as_Lwhilelang_syntax_Program$Command$ITE(x25$1);
-          var x32 = x$1$7.Lwhilelang_syntax_Program$Command$ITE__f_b;
-          var x33 = x$1$7.Lwhilelang_syntax_Program$Command$ITE__f_ct;
-          var x34 = x$1$7.Lwhilelang_syntax_Program$Command$ITE__f_cf;
-          var x17 = this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option(x32, $as_sci_Map(st$tailLocal1$1___2));
+          var x37 = x$1$7.Lwhilelang_syntax_Program$Command$ITE__f_b;
+          var x38 = x$1$7.Lwhilelang_syntax_Program$Command$ITE__f_ct;
+          var x39 = x$1$7.Lwhilelang_syntax_Program$Command$ITE__f_cf;
+          var x17 = this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option(x37, $as_sci_Map(st$tailLocal1$1___2));
           var x$11 = $m_s_None$();
           if ((x$11 === x17)) {
             var this$57 = $m_s_Predef$().s_Predef$__f_Set;
             var $$x10 = $m_sr_ScalaRunTime$();
-            var self$3 = ($m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$BExpr__T(x32) + "-true?");
+            var self$3 = ($m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$BExpr__T(x37) + "-true?");
             var _2$7 = st$tailLocal1$1___2;
-            var y$11 = new $c_T2(x33, _2$7);
+            var y$11 = new $c_T2(x38, _2$7);
             var $$x9 = new $c_T2(self$3, y$11);
-            var self$4 = ($m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$BExpr__T(x32) + "-false?");
+            var self$4 = ($m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$BExpr__T(x37) + "-false?");
             var _2$8 = st$tailLocal1$1___2;
-            var y$12 = new $c_T2(x34, _2$8);
+            var y$12 = new $c_T2(x39, _2$8);
             var elems$10 = $$x10.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([$$x9, new $c_T2(self$4, y$12)]));
             var $$x1 = this$57.from__sc_IterableOnce__sci_Set(elems$10);
             break
@@ -20401,7 +20716,7 @@ $c_Lwhilelang_backend_PartialSemantics$.prototype.next__T2__sci_Set = (function(
               var this$61 = $m_s_Predef$().s_Predef$__f_Set;
               var $$x11 = $m_sr_ScalaRunTime$();
               var _2$9 = st$tailLocal1$1___2;
-              var y$13 = new $c_T2(x33, _2$9);
+              var y$13 = new $c_T2(x38, _2$9);
               var elems$11 = $$x11.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("if-true", y$13)]));
               var $$x1 = this$61.from__sc_IterableOnce__sci_Set(elems$11);
               break
@@ -20410,7 +20725,7 @@ $c_Lwhilelang_backend_PartialSemantics$.prototype.next__T2__sci_Set = (function(
               var this$65 = $m_s_Predef$().s_Predef$__f_Set;
               var $$x12 = $m_sr_ScalaRunTime$();
               var _2$10 = st$tailLocal1$1___2;
-              var y$14 = new $c_T2(x34, _2$10);
+              var y$14 = new $c_T2(x39, _2$10);
               var elems$12 = $$x12.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("if-false", y$14)]));
               var $$x1 = this$65.from__sc_IterableOnce__sci_Set(elems$12);
               break
@@ -20420,14 +20735,14 @@ $c_Lwhilelang_backend_PartialSemantics$.prototype.next__T2__sci_Set = (function(
         };
         if ((x25$1 instanceof $c_Lwhilelang_syntax_Program$Command$Assign)) {
           var x$1$8 = $as_Lwhilelang_syntax_Program$Command$Assign(x25$1);
-          var x28 = x$1$8.Lwhilelang_syntax_Program$Command$Assign__f_ident;
-          var x29 = x$1$8.Lwhilelang_syntax_Program$Command$Assign__f_e;
-          var x22 = this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(x29, $as_sci_Map(st$tailLocal1$1___2));
+          var x33 = x$1$8.Lwhilelang_syntax_Program$Command$Assign__f_ident;
+          var x34 = x$1$8.Lwhilelang_syntax_Program$Command$Assign__f_e;
+          var x22 = this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(x34, $as_sci_Map(st$tailLocal1$1___2));
           var x$13 = $m_s_None$();
           if ((x$13 === x22)) {
             var this$70 = $m_s_Predef$().s_Predef$__f_Set;
             var $$x13 = $m_sr_ScalaRunTime$();
-            var self$5 = ((("Some assign " + x28) + ":=") + $m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$IExpr__T(x29));
+            var self$5 = ((("Some assign " + x33) + ":=") + $m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$IExpr__T(x34));
             var _1$6 = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
             var _2$11 = st$tailLocal1$1___2;
             var y$15 = new $c_T2(_1$6, _2$11);
@@ -20439,9 +20754,9 @@ $c_Lwhilelang_backend_PartialSemantics$.prototype.next__T2__sci_Set = (function(
             var v = $uI($as_s_Some(x22).s_Some__f_value);
             var this$76 = $m_s_Predef$().s_Predef$__f_Set;
             var $$x14 = $m_sr_ScalaRunTime$();
-            var self$6 = ((("Assign " + x28) + ":=") + v);
+            var self$6 = ((("Assign " + x33) + ":=") + v);
             var _1$7 = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
-            var _2$12 = $as_sci_MapOps(st$tailLocal1$1___2).$plus__T2__sci_MapOps(new $c_T2(x28, v));
+            var _2$12 = $as_sci_MapOps(st$tailLocal1$1___2).$plus__T2__sci_MapOps(new $c_T2(x33, v));
             var y$16 = new $c_T2(_1$7, _2$12);
             var elems$14 = $$x14.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2(self$6, y$16)]));
             var $$x1 = this$76.from__sc_IterableOnce__sci_Set(elems$14);
@@ -20449,173 +20764,191 @@ $c_Lwhilelang_backend_PartialSemantics$.prototype.next__T2__sci_Set = (function(
           };
           throw new $c_s_MatchError(x22)
         };
+        if ((x25$1 instanceof $c_Lwhilelang_syntax_Program$Command$Contract)) {
+          var x$1$9 = $as_Lwhilelang_syntax_Program$Command$Contract(x25$1);
+          var x29 = x$1$9.Lwhilelang_syntax_Program$Command$Contract__f_c;
+          var _2$13 = st$tailLocal1$1___2;
+          var $$x15___1 = x29;
+          var $$x15___2 = _2$13;
+          st$tailLocal1$1___1 = $$x15___1;
+          st$tailLocal1$1___2 = $$x15___2;
+          continue
+        };
         throw new $c_s_MatchError(x25$1)
       };
-      return $as_sci_Set($$x1.withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((this$77) => ((x$1$9) => {
-        var x$1$10 = $as_T2(x$1$9);
-        return ((x$1$10 !== null) && ($as_T(x$1$10._1__O()), $as_T2(x$1$10._2__O()), true))
+      return $as_sci_Set($$x1.withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((this$79) => ((x$1$10) => {
+        var x$1$11 = $as_T2(x$1$10);
+        return ((x$1$11 !== null) && ($as_T(x$1$11._1__O()), $as_T2(x$1$11._2__O()), true))
       }))(this))).map__F1__O(new $c_sjsr_AnonFunction1(((this$2$2, c2$3$1) => ((x$1$2$2) => {
-        var x$1$11 = $as_T2(x$1$2$2);
-        if ((x$1$11 !== null)) {
-          var by$3 = $as_T(x$1$11._1__O());
-          var st$4 = $as_T2(x$1$11._2__O());
+        var x$1$12 = $as_T2(x$1$2$2);
+        if ((x$1$12 !== null)) {
+          var by$3 = $as_T(x$1$12._1__O());
+          var st$4 = $as_T2(x$1$12._2__O());
           var c1$1 = $as_Lwhilelang_syntax_Program$Command(st$4._1__O());
           var self$7 = new $c_Lwhilelang_syntax_Program$Command$Seq(c1$1, c2$3$1);
           var y$17 = st$4._2__O();
-          var _2$13 = new $c_T2(self$7, y$17);
-          return new $c_T2(by$3, _2$13)
+          var _2$14 = new $c_T2(self$7, y$17);
+          return new $c_T2(by$3, _2$14)
         };
-        throw new $c_s_MatchError(x$1$11)
-      }))(this, x49))))
+        throw new $c_s_MatchError(x$1$12)
+      }))(this, x55))))
     };
     if ((x25 instanceof $c_Lwhilelang_syntax_Program$Command$While)) {
-      var x$1$12 = $as_Lwhilelang_syntax_Program$Command$While(x25);
-      var x40$1 = x$1$12.Lwhilelang_syntax_Program$Command$While__f_b;
-      var x41$1 = x$1$12.Lwhilelang_syntax_Program$Command$While__f_c;
-      var x7$1 = this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option(x40$1, $as_sci_Map(st$tailLocal1._2__O()));
+      var x$1$13 = $as_Lwhilelang_syntax_Program$Command$While(x25);
+      var x45$1 = x$1$13.Lwhilelang_syntax_Program$Command$While__f_b;
+      var x46$1 = x$1$13.Lwhilelang_syntax_Program$Command$While__f_c;
+      var x47$1 = x$1$13.Lwhilelang_syntax_Program$Command$While__f_inv;
+      var x7$1 = this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option(x45$1, $as_sci_Map(st$tailLocal1._2__O()));
       var x$7$1 = $m_s_None$();
       if ((x$7$1 === x7$1)) {
-        var this$91 = $m_s_Predef$().s_Predef$__f_Set;
-        var $$x16 = $m_sr_ScalaRunTime$();
-        var self$8 = ($m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$BExpr__T(x40$1) + "-true?");
-        var c2$2 = new $c_Lwhilelang_syntax_Program$Command$While(x40$1, x41$1);
-        var _1$8 = new $c_Lwhilelang_syntax_Program$Command$Seq(x41$1, c2$2);
-        var _2$14 = st$tailLocal1._2__O();
-        var y$18 = new $c_T2(_1$8, _2$14);
-        var $$x15 = new $c_T2(self$8, y$18);
-        var self$9 = ($m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$BExpr__T(x40$1) + "-false?");
-        var _1$9 = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
+        var this$93 = $m_s_Predef$().s_Predef$__f_Set;
+        var $$x17 = $m_sr_ScalaRunTime$();
+        var self$8 = ($m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$BExpr__T(x45$1) + "-true?");
+        var c2$2 = new $c_Lwhilelang_syntax_Program$Command$While(x45$1, x46$1, x47$1);
+        var _1$8 = new $c_Lwhilelang_syntax_Program$Command$Seq(x46$1, c2$2);
         var _2$15 = st$tailLocal1._2__O();
-        var y$19 = new $c_T2(_1$9, _2$15);
-        var elems$15 = $$x16.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([$$x15, new $c_T2(self$9, y$19)]));
-        return this$91.from__sc_IterableOnce__sci_Set(elems$15)
+        var y$18 = new $c_T2(_1$8, _2$15);
+        var $$x16 = new $c_T2(self$8, y$18);
+        var self$9 = ($m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$BExpr__T(x45$1) + "-false?");
+        var _1$9 = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
+        var _2$16 = st$tailLocal1._2__O();
+        var y$19 = new $c_T2(_1$9, _2$16);
+        var elems$15 = $$x17.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([$$x16, new $c_T2(self$9, y$19)]));
+        return this$93.from__sc_IterableOnce__sci_Set(elems$15)
       };
       if ((x7$1 instanceof $c_s_Some)) {
         var x11$1 = $uZ($as_s_Some(x7$1).s_Some__f_value);
         if ((x11$1 === true)) {
-          var this$97 = $m_s_Predef$().s_Predef$__f_Set;
-          var $$x17 = $m_sr_ScalaRunTime$();
-          var c2$4 = new $c_Lwhilelang_syntax_Program$Command$While(x40$1, x41$1);
-          var _1$10 = new $c_Lwhilelang_syntax_Program$Command$Seq(x41$1, c2$4);
-          var _2$16 = st$tailLocal1._2__O();
-          var y$20 = new $c_T2(_1$10, _2$16);
-          var elems$16 = $$x17.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("while-true", y$20)]));
-          return this$97.from__sc_IterableOnce__sci_Set(elems$16)
+          var this$99 = $m_s_Predef$().s_Predef$__f_Set;
+          var $$x18 = $m_sr_ScalaRunTime$();
+          var c2$4 = new $c_Lwhilelang_syntax_Program$Command$While(x45$1, x46$1, x47$1);
+          var _1$10 = new $c_Lwhilelang_syntax_Program$Command$Seq(x46$1, c2$4);
+          var _2$17 = st$tailLocal1._2__O();
+          var y$20 = new $c_T2(_1$10, _2$17);
+          var elems$16 = $$x18.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("while-true", y$20)]));
+          return this$99.from__sc_IterableOnce__sci_Set(elems$16)
         };
         if ((x11$1 === false)) {
-          var this$101 = $m_s_Predef$().s_Predef$__f_Set;
-          var $$x18 = $m_sr_ScalaRunTime$();
+          var this$103 = $m_s_Predef$().s_Predef$__f_Set;
+          var $$x19 = $m_sr_ScalaRunTime$();
           var _1$11 = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
-          var _2$17 = st$tailLocal1._2__O();
-          var y$21 = new $c_T2(_1$11, _2$17);
-          var elems$17 = $$x18.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("while-false", y$21)]));
-          return this$101.from__sc_IterableOnce__sci_Set(elems$17)
+          var _2$18 = st$tailLocal1._2__O();
+          var y$21 = new $c_T2(_1$11, _2$18);
+          var elems$17 = $$x19.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("while-false", y$21)]));
+          return this$103.from__sc_IterableOnce__sci_Set(elems$17)
         }
       };
       throw new $c_s_MatchError(x7$1)
     };
     if ((x25 instanceof $c_Lwhilelang_syntax_Program$Command$Assert)) {
-      var x$1$13 = $as_Lwhilelang_syntax_Program$Command$Assert(x25);
-      var x37$1 = x$1$13.Lwhilelang_syntax_Program$Command$Assert__f_b;
-      var x12$1 = this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option(x37$1, $as_sci_Map(st$tailLocal1._2__O()));
+      var x$1$14 = $as_Lwhilelang_syntax_Program$Command$Assert(x25);
+      var x42$1 = x$1$14.Lwhilelang_syntax_Program$Command$Assert__f_b;
+      var x12$1 = this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option(x42$1, $as_sci_Map(st$tailLocal1._2__O()));
       var x$9$1 = $m_s_None$();
       if ((x$9$1 === x12$1)) {
-        var this$103 = $m_s_Predef$().s_Predef$__f_Set;
+        var this$105 = $m_s_Predef$().s_Predef$__f_Set;
         var elems$18 = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([]));
-        return this$103.from__sc_IterableOnce__sci_Set(elems$18)
+        return this$105.from__sc_IterableOnce__sci_Set(elems$18)
       };
       if ((x12$1 instanceof $c_s_Some)) {
         var x16$1 = $uZ($as_s_Some(x12$1).s_Some__f_value);
         if ((x16$1 === true)) {
-          var this$107 = $m_s_Predef$().s_Predef$__f_Set;
-          var $$x19 = $m_sr_ScalaRunTime$();
+          var this$109 = $m_s_Predef$().s_Predef$__f_Set;
+          var $$x20 = $m_sr_ScalaRunTime$();
           var _1$12 = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
-          var _2$18 = st$tailLocal1._2__O();
-          var y$22 = new $c_T2(_1$12, _2$18);
-          var elems$19 = $$x19.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("assert-true", y$22)]));
-          return this$107.from__sc_IterableOnce__sci_Set(elems$19)
+          var _2$19 = st$tailLocal1._2__O();
+          var y$22 = new $c_T2(_1$12, _2$19);
+          var elems$19 = $$x20.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("assert-true", y$22)]));
+          return this$109.from__sc_IterableOnce__sci_Set(elems$19)
         };
         if ((x16$1 === false)) {
-          var this$111 = $m_s_Predef$().s_Predef$__f_Set;
-          var $$x20 = $m_sr_ScalaRunTime$();
+          var this$113 = $m_s_Predef$().s_Predef$__f_Set;
+          var $$x21 = $m_sr_ScalaRunTime$();
           var _1$13 = $s_Lwhilelang_syntax_Program$Command$__Fail__Lwhilelang_syntax_Program$Command();
-          var _2$19 = st$tailLocal1._2__O();
-          var y$23 = new $c_T2(_1$13, _2$19);
-          var elems$20 = $$x20.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("assert-false", y$23)]));
-          return this$111.from__sc_IterableOnce__sci_Set(elems$20)
+          var _2$20 = st$tailLocal1._2__O();
+          var y$23 = new $c_T2(_1$13, _2$20);
+          var elems$20 = $$x21.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("assert-false", y$23)]));
+          return this$113.from__sc_IterableOnce__sci_Set(elems$20)
         }
       };
       throw new $c_s_MatchError(x12$1)
     };
     if ((x25 instanceof $c_Lwhilelang_syntax_Program$Command$ITE)) {
-      var x$1$14 = $as_Lwhilelang_syntax_Program$Command$ITE(x25);
-      var x32$1 = x$1$14.Lwhilelang_syntax_Program$Command$ITE__f_b;
-      var x33$1 = x$1$14.Lwhilelang_syntax_Program$Command$ITE__f_ct;
-      var x34$1 = x$1$14.Lwhilelang_syntax_Program$Command$ITE__f_cf;
-      var x17$1 = this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option(x32$1, $as_sci_Map(st$tailLocal1._2__O()));
+      var x$1$15 = $as_Lwhilelang_syntax_Program$Command$ITE(x25);
+      var x37$1 = x$1$15.Lwhilelang_syntax_Program$Command$ITE__f_b;
+      var x38$1 = x$1$15.Lwhilelang_syntax_Program$Command$ITE__f_ct;
+      var x39$1 = x$1$15.Lwhilelang_syntax_Program$Command$ITE__f_cf;
+      var x17$1 = this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option(x37$1, $as_sci_Map(st$tailLocal1._2__O()));
       var x$11$1 = $m_s_None$();
       if ((x$11$1 === x17$1)) {
-        var this$119 = $m_s_Predef$().s_Predef$__f_Set;
-        var $$x22 = $m_sr_ScalaRunTime$();
-        var self$10 = ($m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$BExpr__T(x32$1) + "-true?");
-        var _2$20 = st$tailLocal1._2__O();
-        var y$24 = new $c_T2(x33$1, _2$20);
-        var $$x21 = new $c_T2(self$10, y$24);
-        var self$11 = ($m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$BExpr__T(x32$1) + "-false?");
+        var this$121 = $m_s_Predef$().s_Predef$__f_Set;
+        var $$x23 = $m_sr_ScalaRunTime$();
+        var self$10 = ($m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$BExpr__T(x37$1) + "-true?");
         var _2$21 = st$tailLocal1._2__O();
-        var y$25 = new $c_T2(x34$1, _2$21);
-        var elems$21 = $$x22.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([$$x21, new $c_T2(self$11, y$25)]));
-        return this$119.from__sc_IterableOnce__sci_Set(elems$21)
+        var y$24 = new $c_T2(x38$1, _2$21);
+        var $$x22 = new $c_T2(self$10, y$24);
+        var self$11 = ($m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$BExpr__T(x37$1) + "-false?");
+        var _2$22 = st$tailLocal1._2__O();
+        var y$25 = new $c_T2(x39$1, _2$22);
+        var elems$21 = $$x23.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([$$x22, new $c_T2(self$11, y$25)]));
+        return this$121.from__sc_IterableOnce__sci_Set(elems$21)
       };
       if ((x17$1 instanceof $c_s_Some)) {
         var x21$1 = $uZ($as_s_Some(x17$1).s_Some__f_value);
         if ((x21$1 === true)) {
-          var this$123 = $m_s_Predef$().s_Predef$__f_Set;
-          var $$x23 = $m_sr_ScalaRunTime$();
-          var _2$22 = st$tailLocal1._2__O();
-          var y$26 = new $c_T2(x33$1, _2$22);
-          var elems$22 = $$x23.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("if-true", y$26)]));
-          return this$123.from__sc_IterableOnce__sci_Set(elems$22)
-        };
-        if ((x21$1 === false)) {
-          var this$127 = $m_s_Predef$().s_Predef$__f_Set;
+          var this$125 = $m_s_Predef$().s_Predef$__f_Set;
           var $$x24 = $m_sr_ScalaRunTime$();
           var _2$23 = st$tailLocal1._2__O();
-          var y$27 = new $c_T2(x34$1, _2$23);
-          var elems$23 = $$x24.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("if-false", y$27)]));
-          return this$127.from__sc_IterableOnce__sci_Set(elems$23)
+          var y$26 = new $c_T2(x38$1, _2$23);
+          var elems$22 = $$x24.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("if-true", y$26)]));
+          return this$125.from__sc_IterableOnce__sci_Set(elems$22)
+        };
+        if ((x21$1 === false)) {
+          var this$129 = $m_s_Predef$().s_Predef$__f_Set;
+          var $$x25 = $m_sr_ScalaRunTime$();
+          var _2$24 = st$tailLocal1._2__O();
+          var y$27 = new $c_T2(x39$1, _2$24);
+          var elems$23 = $$x25.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("if-false", y$27)]));
+          return this$129.from__sc_IterableOnce__sci_Set(elems$23)
         }
       };
       throw new $c_s_MatchError(x17$1)
     };
     if ((x25 instanceof $c_Lwhilelang_syntax_Program$Command$Assign)) {
-      var x$1$15 = $as_Lwhilelang_syntax_Program$Command$Assign(x25);
-      var x28$1 = x$1$15.Lwhilelang_syntax_Program$Command$Assign__f_ident;
-      var x29$1 = x$1$15.Lwhilelang_syntax_Program$Command$Assign__f_e;
-      var x22$1 = this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(x29$1, $as_sci_Map(st$tailLocal1._2__O()));
+      var x$1$16 = $as_Lwhilelang_syntax_Program$Command$Assign(x25);
+      var x33$1 = x$1$16.Lwhilelang_syntax_Program$Command$Assign__f_ident;
+      var x34$1 = x$1$16.Lwhilelang_syntax_Program$Command$Assign__f_e;
+      var x22$1 = this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(x34$1, $as_sci_Map(st$tailLocal1._2__O()));
       var x$13$1 = $m_s_None$();
       if ((x$13$1 === x22$1)) {
-        var this$132 = $m_s_Predef$().s_Predef$__f_Set;
-        var $$x25 = $m_sr_ScalaRunTime$();
-        var self$12 = ((("Some assign " + x28$1) + ":=") + $m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$IExpr__T(x29$1));
+        var this$134 = $m_s_Predef$().s_Predef$__f_Set;
+        var $$x26 = $m_sr_ScalaRunTime$();
+        var self$12 = ((("Some assign " + x33$1) + ":=") + $m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$IExpr__T(x34$1));
         var _1$14 = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
-        var _2$24 = st$tailLocal1._2__O();
-        var y$28 = new $c_T2(_1$14, _2$24);
-        var elems$24 = $$x25.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2(self$12, y$28)]));
-        return this$132.from__sc_IterableOnce__sci_Set(elems$24)
+        var _2$25 = st$tailLocal1._2__O();
+        var y$28 = new $c_T2(_1$14, _2$25);
+        var elems$24 = $$x26.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2(self$12, y$28)]));
+        return this$134.from__sc_IterableOnce__sci_Set(elems$24)
       };
       if ((x22$1 instanceof $c_s_Some)) {
         var v$1 = $uI($as_s_Some(x22$1).s_Some__f_value);
-        var this$138 = $m_s_Predef$().s_Predef$__f_Set;
-        var $$x26 = $m_sr_ScalaRunTime$();
-        var self$13 = ((("Assign " + x28$1) + ":=") + v$1);
+        var this$140 = $m_s_Predef$().s_Predef$__f_Set;
+        var $$x27 = $m_sr_ScalaRunTime$();
+        var self$13 = ((("Assign " + x33$1) + ":=") + v$1);
         var _1$15 = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
-        var _2$25 = $as_sci_MapOps(st$tailLocal1._2__O()).$plus__T2__sci_MapOps(new $c_T2(x28$1, v$1));
-        var y$29 = new $c_T2(_1$15, _2$25);
-        var elems$25 = $$x26.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2(self$13, y$29)]));
-        return this$138.from__sc_IterableOnce__sci_Set(elems$25)
+        var _2$26 = $as_sci_MapOps(st$tailLocal1._2__O()).$plus__T2__sci_MapOps(new $c_T2(x33$1, v$1));
+        var y$29 = new $c_T2(_1$15, _2$26);
+        var elems$25 = $$x27.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2(self$13, y$29)]));
+        return this$140.from__sc_IterableOnce__sci_Set(elems$25)
       };
       throw new $c_s_MatchError(x22$1)
+    };
+    if ((x25 instanceof $c_Lwhilelang_syntax_Program$Command$Contract)) {
+      var x$1$17 = $as_Lwhilelang_syntax_Program$Command$Contract(x25);
+      var x29$1 = x$1$17.Lwhilelang_syntax_Program$Command$Contract__f_c;
+      var _2$27 = st$tailLocal1._2__O();
+      st$tailLocal1 = new $c_T2(x29$1, _2$27);
+      continue
     };
     throw new $c_s_MatchError(x25)
   }
@@ -20623,14 +20956,14 @@ $c_Lwhilelang_backend_PartialSemantics$.prototype.next__T2__sci_Set = (function(
 $c_Lwhilelang_backend_PartialSemantics$.prototype.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option = (function(e, env) {
   if ((e instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
     var x$1 = $as_Lwhilelang_syntax_Program$IExpr$N(e);
-    var x68 = x$1.Lwhilelang_syntax_Program$IExpr$N__f_n;
-    return new $c_s_Some(x68)
+    var x74 = x$1.Lwhilelang_syntax_Program$IExpr$N__f_n;
+    return new $c_s_Some(x74)
   };
   if ((e instanceof $c_Lwhilelang_syntax_Program$IExpr$Var)) {
     var x$1$1 = $as_Lwhilelang_syntax_Program$IExpr$Var(e);
-    var x65 = x$1$1.Lwhilelang_syntax_Program$IExpr$Var__f_ident;
-    if (env.contains__O__Z(x65)) {
-      var value = env.apply__O__O(x65);
+    var x71 = x$1$1.Lwhilelang_syntax_Program$IExpr$Var__f_ident;
+    if (env.contains__O__Z(x71)) {
+      var value = env.apply__O__O(x71);
       return new $c_s_Some(value)
     } else {
       return $m_s_None$()
@@ -20638,15 +20971,15 @@ $c_Lwhilelang_backend_PartialSemantics$.prototype.eval__Lwhilelang_syntax_Progra
   };
   if ((e instanceof $c_Lwhilelang_syntax_Program$IExpr$Plus)) {
     var x$1$2 = $as_Lwhilelang_syntax_Program$IExpr$Plus(e);
-    var x61 = x$1$2.Lwhilelang_syntax_Program$IExpr$Plus__f_e1;
-    var x62 = x$1$2.Lwhilelang_syntax_Program$IExpr$Plus__f_e2;
-    var this$6 = this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(x61, env);
+    var x67 = x$1$2.Lwhilelang_syntax_Program$IExpr$Plus__f_e1;
+    var x68 = x$1$2.Lwhilelang_syntax_Program$IExpr$Plus__f_e2;
+    var this$6 = this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(x67, env);
     if (this$6.isEmpty__Z()) {
       return $m_s_None$()
     } else {
       var arg1 = this$6.get__O();
       var x = $uI(arg1);
-      var this$7 = this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(x62, env);
+      var this$7 = this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(x68, env);
       if (this$7.isEmpty__Z()) {
         return $m_s_None$()
       } else {
@@ -20658,15 +20991,15 @@ $c_Lwhilelang_backend_PartialSemantics$.prototype.eval__Lwhilelang_syntax_Progra
   };
   if ((e instanceof $c_Lwhilelang_syntax_Program$IExpr$Times)) {
     var x$1$3 = $as_Lwhilelang_syntax_Program$IExpr$Times(e);
-    var x57 = x$1$3.Lwhilelang_syntax_Program$IExpr$Times__f_e1;
-    var x58 = x$1$3.Lwhilelang_syntax_Program$IExpr$Times__f_e2;
-    var this$9 = this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(x57, env);
+    var x63 = x$1$3.Lwhilelang_syntax_Program$IExpr$Times__f_e1;
+    var x64 = x$1$3.Lwhilelang_syntax_Program$IExpr$Times__f_e2;
+    var this$9 = this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(x63, env);
     if (this$9.isEmpty__Z()) {
       return $m_s_None$()
     } else {
       var arg1$2 = this$9.get__O();
       var x$2 = $uI(arg1$2);
-      var this$10 = this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(x58, env);
+      var this$10 = this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(x64, env);
       if (this$10.isEmpty__Z()) {
         return $m_s_None$()
       } else {
@@ -20678,15 +21011,15 @@ $c_Lwhilelang_backend_PartialSemantics$.prototype.eval__Lwhilelang_syntax_Progra
   };
   if ((e instanceof $c_Lwhilelang_syntax_Program$IExpr$Minus)) {
     var x$1$4 = $as_Lwhilelang_syntax_Program$IExpr$Minus(e);
-    var x53 = x$1$4.Lwhilelang_syntax_Program$IExpr$Minus__f_e1;
-    var x54 = x$1$4.Lwhilelang_syntax_Program$IExpr$Minus__f_e2;
-    var this$12 = this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(x53, env);
+    var x59 = x$1$4.Lwhilelang_syntax_Program$IExpr$Minus__f_e1;
+    var x60 = x$1$4.Lwhilelang_syntax_Program$IExpr$Minus__f_e2;
+    var this$12 = this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(x59, env);
     if (this$12.isEmpty__Z()) {
       return $m_s_None$()
     } else {
       var arg1$4 = this$12.get__O();
       var x$3 = $uI(arg1$4);
-      var this$13 = this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(x54, env);
+      var this$13 = this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(x60, env);
       if (this$13.isEmpty__Z()) {
         return $m_s_None$()
       } else {
@@ -20709,15 +21042,15 @@ $c_Lwhilelang_backend_PartialSemantics$.prototype.eval__Lwhilelang_syntax_Progra
   };
   if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$And)) {
     var x$1 = $as_Lwhilelang_syntax_Program$BExpr$And(b);
-    var x91 = x$1.Lwhilelang_syntax_Program$BExpr$And__f_b1;
-    var x92 = x$1.Lwhilelang_syntax_Program$BExpr$And__f_b2;
-    var this$4 = this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option(x91, env);
+    var x101 = x$1.Lwhilelang_syntax_Program$BExpr$And__f_b1;
+    var x102 = x$1.Lwhilelang_syntax_Program$BExpr$And__f_b2;
+    var this$4 = this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option(x101, env);
     if (this$4.isEmpty__Z()) {
       return $m_s_None$()
     } else {
       var arg1 = this$4.get__O();
       var x$2 = $uZ(arg1);
-      var this$5 = this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option(x92, env);
+      var this$5 = this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option(x102, env);
       if (this$5.isEmpty__Z()) {
         return $m_s_None$()
       } else {
@@ -20729,15 +21062,15 @@ $c_Lwhilelang_backend_PartialSemantics$.prototype.eval__Lwhilelang_syntax_Progra
   };
   if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Or)) {
     var x$1$1 = $as_Lwhilelang_syntax_Program$BExpr$Or(b);
-    var x87 = x$1$1.Lwhilelang_syntax_Program$BExpr$Or__f_b1;
-    var x88 = x$1$1.Lwhilelang_syntax_Program$BExpr$Or__f_b2;
-    var this$7 = this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option(x87, env);
+    var x97 = x$1$1.Lwhilelang_syntax_Program$BExpr$Or__f_b1;
+    var x98 = x$1$1.Lwhilelang_syntax_Program$BExpr$Or__f_b2;
+    var this$7 = this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option(x97, env);
     if (this$7.isEmpty__Z()) {
       return $m_s_None$()
     } else {
       var arg1$2 = this$7.get__O();
       var x$4 = $uZ(arg1$2);
-      var this$8 = this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option(x88, env);
+      var this$8 = this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option(x98, env);
       if (this$8.isEmpty__Z()) {
         return $m_s_None$()
       } else {
@@ -20747,75 +21080,95 @@ $c_Lwhilelang_backend_PartialSemantics$.prototype.eval__Lwhilelang_syntax_Progra
       }
     }
   };
-  if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Not)) {
-    var x$1$2 = $as_Lwhilelang_syntax_Program$BExpr$Not(b);
-    var x84 = x$1$2.Lwhilelang_syntax_Program$BExpr$Not__f_b;
-    var this$10 = this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option(x84, env);
+  if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Impl)) {
+    var x$1$2 = $as_Lwhilelang_syntax_Program$BExpr$Impl(b);
+    var x93 = x$1$2.Lwhilelang_syntax_Program$BExpr$Impl__f_e1;
+    var x94 = x$1$2.Lwhilelang_syntax_Program$BExpr$Impl__f_e2;
+    var this$10 = this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option(x93, env);
     if (this$10.isEmpty__Z()) {
       return $m_s_None$()
     } else {
       var arg1$4 = this$10.get__O();
       var x$5 = $uZ(arg1$4);
-      return new $c_s_Some((!x$5))
-    }
-  };
-  if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Less)) {
-    var x$1$3 = $as_Lwhilelang_syntax_Program$BExpr$Less(b);
-    var x80 = x$1$3.Lwhilelang_syntax_Program$BExpr$Less__f_e1;
-    var x81 = x$1$3.Lwhilelang_syntax_Program$BExpr$Less__f_e2;
-    var this$12 = this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(x80, env);
-    if (this$12.isEmpty__Z()) {
-      return $m_s_None$()
-    } else {
-      var arg1$5 = this$12.get__O();
-      var x$6 = $uI(arg1$5);
-      var this$13 = this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(x81, env);
-      if (this$13.isEmpty__Z()) {
+      var this$11 = this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option(x94, env);
+      if (this$11.isEmpty__Z()) {
         return $m_s_None$()
       } else {
-        var arg1$6 = this$13.get__O();
-        var y$2 = $uI(arg1$6);
-        return new $c_s_Some((x$6 < y$2))
+        var arg1$5 = this$11.get__O();
+        var y$2 = $uZ(arg1$5);
+        return new $c_s_Some(((!x$5) || y$2))
       }
     }
   };
-  if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Greater)) {
-    var x$1$4 = $as_Lwhilelang_syntax_Program$BExpr$Greater(b);
-    var x76 = x$1$4.Lwhilelang_syntax_Program$BExpr$Greater__f_e1;
-    var x77 = x$1$4.Lwhilelang_syntax_Program$BExpr$Greater__f_e2;
-    var this$15 = this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(x76, env);
+  if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Not)) {
+    var x$1$3 = $as_Lwhilelang_syntax_Program$BExpr$Not(b);
+    var x90 = x$1$3.Lwhilelang_syntax_Program$BExpr$Not__f_b;
+    var this$13 = this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option(x90, env);
+    if (this$13.isEmpty__Z()) {
+      return $m_s_None$()
+    } else {
+      var arg1$6 = this$13.get__O();
+      var x$6 = $uZ(arg1$6);
+      return new $c_s_Some((!x$6))
+    }
+  };
+  if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Less)) {
+    var x$1$4 = $as_Lwhilelang_syntax_Program$BExpr$Less(b);
+    var x86 = x$1$4.Lwhilelang_syntax_Program$BExpr$Less__f_e1;
+    var x87 = x$1$4.Lwhilelang_syntax_Program$BExpr$Less__f_e2;
+    var this$15 = this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(x86, env);
     if (this$15.isEmpty__Z()) {
       return $m_s_None$()
     } else {
       var arg1$7 = this$15.get__O();
       var x$7 = $uI(arg1$7);
-      var this$16 = this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(x77, env);
+      var this$16 = this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(x87, env);
       if (this$16.isEmpty__Z()) {
         return $m_s_None$()
       } else {
         var arg1$8 = this$16.get__O();
         var y$3 = $uI(arg1$8);
-        return new $c_s_Some((x$7 > y$3))
+        return new $c_s_Some((x$7 < y$3))
       }
     }
   };
-  if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Eq)) {
-    var x$1$5 = $as_Lwhilelang_syntax_Program$BExpr$Eq(b);
-    var x72 = x$1$5.Lwhilelang_syntax_Program$BExpr$Eq__f_e1;
-    var x73 = x$1$5.Lwhilelang_syntax_Program$BExpr$Eq__f_e2;
-    var this$18 = this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(x72, env);
+  if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Greater)) {
+    var x$1$5 = $as_Lwhilelang_syntax_Program$BExpr$Greater(b);
+    var x82 = x$1$5.Lwhilelang_syntax_Program$BExpr$Greater__f_e1;
+    var x83 = x$1$5.Lwhilelang_syntax_Program$BExpr$Greater__f_e2;
+    var this$18 = this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(x82, env);
     if (this$18.isEmpty__Z()) {
       return $m_s_None$()
     } else {
       var arg1$9 = this$18.get__O();
       var x$8 = $uI(arg1$9);
-      var this$19 = this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(x73, env);
+      var this$19 = this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(x83, env);
       if (this$19.isEmpty__Z()) {
         return $m_s_None$()
       } else {
         var arg1$10 = this$19.get__O();
         var y$4 = $uI(arg1$10);
-        return new $c_s_Some((x$8 === y$4))
+        return new $c_s_Some((x$8 > y$4))
+      }
+    }
+  };
+  if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Eq)) {
+    var x$1$6 = $as_Lwhilelang_syntax_Program$BExpr$Eq(b);
+    var x78 = x$1$6.Lwhilelang_syntax_Program$BExpr$Eq__f_e1;
+    var x79 = x$1$6.Lwhilelang_syntax_Program$BExpr$Eq__f_e2;
+    var this$21 = this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(x78, env);
+    if (this$21.isEmpty__Z()) {
+      return $m_s_None$()
+    } else {
+      var arg1$11 = this$21.get__O();
+      var x$9 = $uI(arg1$11);
+      var this$22 = this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(x79, env);
+      if (this$22.isEmpty__Z()) {
+        return $m_s_None$()
+      } else {
+        var arg1$12 = this$22.get__O();
+        var y$5 = $uI(arg1$12);
+        return new $c_s_Some((x$9 === y$5))
       }
     }
   };
@@ -20870,17 +21223,17 @@ $c_Lwhilelang_backend_SmallBigSemantics$.prototype.next__T2__sci_Set = (function
     };
     if ((x7 instanceof $c_Lwhilelang_syntax_Program$Command$Seq)) {
       var x$1 = $as_Lwhilelang_syntax_Program$Command$Seq(x7);
-      var x30 = x$1.Lwhilelang_syntax_Program$Command$Seq__f_c1;
-      var x31 = x$1.Lwhilelang_syntax_Program$Command$Seq__f_c2;
+      var x36 = x$1.Lwhilelang_syntax_Program$Command$Seq__f_c1;
+      var x37 = x$1.Lwhilelang_syntax_Program$Command$Seq__f_c2;
       var x$5 = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
-      if (((x$5 === null) ? (x30 === null) : x$5.equals__O__Z(x30))) {
+      if (((x$5 === null) ? (x36 === null) : x$5.equals__O__Z(x36))) {
         var y = st$tailLocal1._2__O();
-        st$tailLocal1 = new $c_T2(x31, y);
+        st$tailLocal1 = new $c_T2(x37, y);
         continue
       };
       var y$1 = st$tailLocal1._2__O();
       var $$x1;
-      var st$tailLocal1$1___1 = x30;
+      var st$tailLocal1$1___1 = x36;
       var st$tailLocal1$1___2 = y$1;
       while (true) {
         var x7$1 = $as_Lwhilelang_syntax_Program$Command(st$tailLocal1$1___1);
@@ -20900,19 +21253,19 @@ $c_Lwhilelang_backend_SmallBigSemantics$.prototype.next__T2__sci_Set = (function
         };
         if ((x7$1 instanceof $c_Lwhilelang_syntax_Program$Command$Seq)) {
           var x$1$1 = $as_Lwhilelang_syntax_Program$Command$Seq(x7$1);
-          var x30$1 = x$1$1.Lwhilelang_syntax_Program$Command$Seq__f_c1;
-          var x31$1 = x$1$1.Lwhilelang_syntax_Program$Command$Seq__f_c2;
+          var x36$1 = x$1$1.Lwhilelang_syntax_Program$Command$Seq__f_c1;
+          var x37$1 = x$1$1.Lwhilelang_syntax_Program$Command$Seq__f_c2;
           var x$5$1 = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
-          if (((x$5$1 === null) ? (x30$1 === null) : x$5$1.equals__O__Z(x30$1))) {
+          if (((x$5$1 === null) ? (x36$1 === null) : x$5$1.equals__O__Z(x36$1))) {
             var y$2 = st$tailLocal1$1___2;
-            var $$x2___1 = x31$1;
+            var $$x2___1 = x37$1;
             var $$x2___2 = y$2;
             st$tailLocal1$1___1 = $$x2___1;
             st$tailLocal1$1___2 = $$x2___2;
             continue
           };
           var y$3 = st$tailLocal1$1___2;
-          var $$x1 = $as_sci_Set(this.next__T2__sci_Set(new $c_T2(x30$1, y$3)).withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((this$15) => ((x$1$2) => {
+          var $$x1 = $as_sci_Set(this.next__T2__sci_Set(new $c_T2(x36$1, y$3)).withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((this$15) => ((x$1$2) => {
             var x$1$3 = $as_T2(x$1$2);
             return ((x$1$3 !== null) && ($as_T(x$1$3._1__O()), $as_T2(x$1$3._2__O()), true))
           }))(this))).map__F1__O(new $c_sjsr_AnonFunction1(((this$2$1, c2$3) => ((x$1$2$1) => {
@@ -20927,18 +21280,19 @@ $c_Lwhilelang_backend_SmallBigSemantics$.prototype.next__T2__sci_Set = (function
               return new $c_T2(by$1, _2)
             };
             throw new $c_s_MatchError(x$1$4)
-          }))(this, x31$1))));
+          }))(this, x37$1))));
           break
         };
         if ((x7$1 instanceof $c_Lwhilelang_syntax_Program$Command$While)) {
           var x$1$5 = $as_Lwhilelang_syntax_Program$Command$While(x7$1);
-          var x22 = x$1$5.Lwhilelang_syntax_Program$Command$While__f_b;
-          var x23 = x$1$5.Lwhilelang_syntax_Program$Command$While__f_c;
-          if (this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__Z(x22, $as_sci_Map(st$tailLocal1$1___2))) {
+          var x27 = x$1$5.Lwhilelang_syntax_Program$Command$While__f_b;
+          var x28 = x$1$5.Lwhilelang_syntax_Program$Command$While__f_c;
+          var x29 = x$1$5.Lwhilelang_syntax_Program$Command$While__f_inv;
+          if (this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__Z(x27, $as_sci_Map(st$tailLocal1$1___2))) {
             var this$26 = $m_s_Predef$().s_Predef$__f_Set;
             var $$x3 = $m_sr_ScalaRunTime$();
-            var c2 = new $c_Lwhilelang_syntax_Program$Command$While(x22, x23);
-            var _1 = new $c_Lwhilelang_syntax_Program$Command$Seq(x23, c2);
+            var c2 = new $c_Lwhilelang_syntax_Program$Command$While(x27, x28, x29);
+            var _1 = new $c_Lwhilelang_syntax_Program$Command$Seq(x28, c2);
             var _2$1 = st$tailLocal1$1___2;
             var y$5 = new $c_T2(_1, _2$1);
             var elems$4 = $$x3.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("while-true", y$5)]));
@@ -20957,9 +21311,9 @@ $c_Lwhilelang_backend_SmallBigSemantics$.prototype.next__T2__sci_Set = (function
         };
         if ((x7$1 instanceof $c_Lwhilelang_syntax_Program$Command$Assert)) {
           var x$1$6 = $as_Lwhilelang_syntax_Program$Command$Assert(x7$1);
-          var x19 = x$1$6.Lwhilelang_syntax_Program$Command$Assert__f_b;
-          if ((!this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__Z(x19, $as_sci_Map(st$tailLocal1$1___2)))) {
-            $m_s_sys_package$().error__T__E((("assert failed (" + $m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$BExpr__T(x19)) + ")"))
+          var x24 = x$1$6.Lwhilelang_syntax_Program$Command$Assert__f_b;
+          if ((!this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__Z(x24, $as_sci_Map(st$tailLocal1$1___2)))) {
+            $m_s_sys_package$().error__T__E((("assert failed (" + $m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$BExpr__T(x24)) + ")"))
           };
           var this$35 = $m_s_Predef$().s_Predef$__f_Set;
           var $$x5 = $m_sr_ScalaRunTime$();
@@ -20972,14 +21326,14 @@ $c_Lwhilelang_backend_SmallBigSemantics$.prototype.next__T2__sci_Set = (function
         };
         if ((x7$1 instanceof $c_Lwhilelang_syntax_Program$Command$ITE)) {
           var x$1$7 = $as_Lwhilelang_syntax_Program$Command$ITE(x7$1);
-          var x14 = x$1$7.Lwhilelang_syntax_Program$Command$ITE__f_b;
-          var x15 = x$1$7.Lwhilelang_syntax_Program$Command$ITE__f_ct;
-          var x16 = x$1$7.Lwhilelang_syntax_Program$Command$ITE__f_cf;
-          if (this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__Z(x14, $as_sci_Map(st$tailLocal1$1___2))) {
+          var x19 = x$1$7.Lwhilelang_syntax_Program$Command$ITE__f_b;
+          var x20 = x$1$7.Lwhilelang_syntax_Program$Command$ITE__f_ct;
+          var x21 = x$1$7.Lwhilelang_syntax_Program$Command$ITE__f_cf;
+          if (this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__Z(x19, $as_sci_Map(st$tailLocal1$1___2))) {
             var this$40 = $m_s_Predef$().s_Predef$__f_Set;
             var $$x6 = $m_sr_ScalaRunTime$();
             var _2$4 = st$tailLocal1$1___2;
-            var y$8 = new $c_T2(x15, _2$4);
+            var y$8 = new $c_T2(x20, _2$4);
             var elems$7 = $$x6.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("if-true", y$8)]));
             var $$x1 = this$40.from__sc_IterableOnce__sci_Set(elems$7);
             break
@@ -20987,7 +21341,7 @@ $c_Lwhilelang_backend_SmallBigSemantics$.prototype.next__T2__sci_Set = (function
             var this$44 = $m_s_Predef$().s_Predef$__f_Set;
             var $$x7 = $m_sr_ScalaRunTime$();
             var _2$5 = st$tailLocal1$1___2;
-            var y$9 = new $c_T2(x16, _2$5);
+            var y$9 = new $c_T2(x21, _2$5);
             var elems$8 = $$x7.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("if-false", y$9)]));
             var $$x1 = this$44.from__sc_IterableOnce__sci_Set(elems$8);
             break
@@ -20995,110 +21349,128 @@ $c_Lwhilelang_backend_SmallBigSemantics$.prototype.next__T2__sci_Set = (function
         };
         if ((x7$1 instanceof $c_Lwhilelang_syntax_Program$Command$Assign)) {
           var x$1$8 = $as_Lwhilelang_syntax_Program$Command$Assign(x7$1);
-          var x10 = x$1$8.Lwhilelang_syntax_Program$Command$Assign__f_ident;
-          var x11 = x$1$8.Lwhilelang_syntax_Program$Command$Assign__f_e;
-          var v = this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__I(x11, $as_sci_Map(st$tailLocal1$1___2));
+          var x15 = x$1$8.Lwhilelang_syntax_Program$Command$Assign__f_ident;
+          var x16 = x$1$8.Lwhilelang_syntax_Program$Command$Assign__f_e;
+          var v = this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__I(x16, $as_sci_Map(st$tailLocal1$1___2));
           var this$51 = $m_s_Predef$().s_Predef$__f_Set;
           var $$x8 = $m_sr_ScalaRunTime$();
-          var self$1 = ((("Assign " + x10) + ":=") + v);
+          var self$1 = ((("Assign " + x15) + ":=") + v);
           var _1$3 = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
-          var _2$6 = $as_sci_MapOps(st$tailLocal1$1___2).$plus__T2__sci_MapOps(new $c_T2(x10, v));
+          var _2$6 = $as_sci_MapOps(st$tailLocal1$1___2).$plus__T2__sci_MapOps(new $c_T2(x15, v));
           var y$10 = new $c_T2(_1$3, _2$6);
           var elems$9 = $$x8.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2(self$1, y$10)]));
           var $$x1 = this$51.from__sc_IterableOnce__sci_Set(elems$9);
           break
         };
+        if ((x7$1 instanceof $c_Lwhilelang_syntax_Program$Command$Contract)) {
+          var x$1$9 = $as_Lwhilelang_syntax_Program$Command$Contract(x7$1);
+          var x11 = x$1$9.Lwhilelang_syntax_Program$Command$Contract__f_c;
+          var _2$7 = st$tailLocal1$1___2;
+          var $$x9___1 = x11;
+          var $$x9___2 = _2$7;
+          st$tailLocal1$1___1 = $$x9___1;
+          st$tailLocal1$1___2 = $$x9___2;
+          continue
+        };
         throw new $c_s_MatchError(x7$1)
       };
-      return $as_sci_Set($$x1.withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((this$52) => ((x$1$9) => {
-        var x$1$10 = $as_T2(x$1$9);
-        return ((x$1$10 !== null) && ($as_T(x$1$10._1__O()), $as_T2(x$1$10._2__O()), true))
+      return $as_sci_Set($$x1.withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((this$54) => ((x$1$10) => {
+        var x$1$11 = $as_T2(x$1$10);
+        return ((x$1$11 !== null) && ($as_T(x$1$11._1__O()), $as_T2(x$1$11._2__O()), true))
       }))(this))).map__F1__O(new $c_sjsr_AnonFunction1(((this$2$2, c2$3$1) => ((x$1$2$2) => {
-        var x$1$11 = $as_T2(x$1$2$2);
-        if ((x$1$11 !== null)) {
-          var by$3 = $as_T(x$1$11._1__O());
-          var st$4 = $as_T2(x$1$11._2__O());
+        var x$1$12 = $as_T2(x$1$2$2);
+        if ((x$1$12 !== null)) {
+          var by$3 = $as_T(x$1$12._1__O());
+          var st$4 = $as_T2(x$1$12._2__O());
           var c1$1 = $as_Lwhilelang_syntax_Program$Command(st$4._1__O());
           var self$2 = new $c_Lwhilelang_syntax_Program$Command$Seq(c1$1, c2$3$1);
           var y$11 = st$4._2__O();
-          var _2$7 = new $c_T2(self$2, y$11);
-          return new $c_T2(by$3, _2$7)
+          var _2$8 = new $c_T2(self$2, y$11);
+          return new $c_T2(by$3, _2$8)
         };
-        throw new $c_s_MatchError(x$1$11)
-      }))(this, x31))))
+        throw new $c_s_MatchError(x$1$12)
+      }))(this, x37))))
     };
     if ((x7 instanceof $c_Lwhilelang_syntax_Program$Command$While)) {
-      var x$1$12 = $as_Lwhilelang_syntax_Program$Command$While(x7);
-      var x22$1 = x$1$12.Lwhilelang_syntax_Program$Command$While__f_b;
-      var x23$1 = x$1$12.Lwhilelang_syntax_Program$Command$While__f_c;
-      if (this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__Z(x22$1, $as_sci_Map(st$tailLocal1._2__O()))) {
-        var this$63 = $m_s_Predef$().s_Predef$__f_Set;
-        var $$x9 = $m_sr_ScalaRunTime$();
-        var c2$1 = new $c_Lwhilelang_syntax_Program$Command$While(x22$1, x23$1);
-        var _1$4 = new $c_Lwhilelang_syntax_Program$Command$Seq(x23$1, c2$1);
-        var _2$8 = st$tailLocal1._2__O();
-        var y$12 = new $c_T2(_1$4, _2$8);
-        var elems$10 = $$x9.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("while-true", y$12)]));
-        return this$63.from__sc_IterableOnce__sci_Set(elems$10)
-      } else {
-        var this$67 = $m_s_Predef$().s_Predef$__f_Set;
+      var x$1$13 = $as_Lwhilelang_syntax_Program$Command$While(x7);
+      var x27$1 = x$1$13.Lwhilelang_syntax_Program$Command$While__f_b;
+      var x28$1 = x$1$13.Lwhilelang_syntax_Program$Command$While__f_c;
+      var x29$1 = x$1$13.Lwhilelang_syntax_Program$Command$While__f_inv;
+      if (this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__Z(x27$1, $as_sci_Map(st$tailLocal1._2__O()))) {
+        var this$65 = $m_s_Predef$().s_Predef$__f_Set;
         var $$x10 = $m_sr_ScalaRunTime$();
-        var _1$5 = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
+        var c2$1 = new $c_Lwhilelang_syntax_Program$Command$While(x27$1, x28$1, x29$1);
+        var _1$4 = new $c_Lwhilelang_syntax_Program$Command$Seq(x28$1, c2$1);
         var _2$9 = st$tailLocal1._2__O();
-        var y$13 = new $c_T2(_1$5, _2$9);
-        var elems$11 = $$x10.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("while-false", y$13)]));
-        return this$67.from__sc_IterableOnce__sci_Set(elems$11)
+        var y$12 = new $c_T2(_1$4, _2$9);
+        var elems$10 = $$x10.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("while-true", y$12)]));
+        return this$65.from__sc_IterableOnce__sci_Set(elems$10)
+      } else {
+        var this$69 = $m_s_Predef$().s_Predef$__f_Set;
+        var $$x11 = $m_sr_ScalaRunTime$();
+        var _1$5 = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
+        var _2$10 = st$tailLocal1._2__O();
+        var y$13 = new $c_T2(_1$5, _2$10);
+        var elems$11 = $$x11.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("while-false", y$13)]));
+        return this$69.from__sc_IterableOnce__sci_Set(elems$11)
       }
     };
     if ((x7 instanceof $c_Lwhilelang_syntax_Program$Command$Assert)) {
-      var x$1$13 = $as_Lwhilelang_syntax_Program$Command$Assert(x7);
-      var x19$1 = x$1$13.Lwhilelang_syntax_Program$Command$Assert__f_b;
-      if (this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__Z(x19$1, $as_sci_Map(st$tailLocal1._2__O()))) {
-        var this$72 = $m_s_Predef$().s_Predef$__f_Set;
-        var $$x11 = $m_sr_ScalaRunTime$();
+      var x$1$14 = $as_Lwhilelang_syntax_Program$Command$Assert(x7);
+      var x24$1 = x$1$14.Lwhilelang_syntax_Program$Command$Assert__f_b;
+      if (this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__Z(x24$1, $as_sci_Map(st$tailLocal1._2__O()))) {
+        var this$74 = $m_s_Predef$().s_Predef$__f_Set;
+        var $$x12 = $m_sr_ScalaRunTime$();
         var _1$6 = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
-        var _2$10 = st$tailLocal1._2__O();
-        var y$14 = new $c_T2(_1$6, _2$10);
-        var elems$12 = $$x11.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("assert-true", y$14)]));
-        return this$72.from__sc_IterableOnce__sci_Set(elems$12)
+        var _2$11 = st$tailLocal1._2__O();
+        var y$14 = new $c_T2(_1$6, _2$11);
+        var elems$12 = $$x12.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("assert-true", y$14)]));
+        return this$74.from__sc_IterableOnce__sci_Set(elems$12)
       } else {
-        $m_s_sys_package$().error__T__E((("assert failed (" + $m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$BExpr__T(x19$1)) + ")"))
+        $m_s_sys_package$().error__T__E((("assert failed (" + $m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$BExpr__T(x24$1)) + ")"))
       }
     };
     if ((x7 instanceof $c_Lwhilelang_syntax_Program$Command$ITE)) {
-      var x$1$14 = $as_Lwhilelang_syntax_Program$Command$ITE(x7);
-      var x14$1 = x$1$14.Lwhilelang_syntax_Program$Command$ITE__f_b;
-      var x15$1 = x$1$14.Lwhilelang_syntax_Program$Command$ITE__f_ct;
-      var x16$1 = x$1$14.Lwhilelang_syntax_Program$Command$ITE__f_cf;
-      if (this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__Z(x14$1, $as_sci_Map(st$tailLocal1._2__O()))) {
-        var this$77 = $m_s_Predef$().s_Predef$__f_Set;
-        var $$x12 = $m_sr_ScalaRunTime$();
-        var _2$11 = st$tailLocal1._2__O();
-        var y$15 = new $c_T2(x15$1, _2$11);
-        var elems$13 = $$x12.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("if-true", y$15)]));
-        return this$77.from__sc_IterableOnce__sci_Set(elems$13)
-      } else {
-        var this$81 = $m_s_Predef$().s_Predef$__f_Set;
+      var x$1$15 = $as_Lwhilelang_syntax_Program$Command$ITE(x7);
+      var x19$1 = x$1$15.Lwhilelang_syntax_Program$Command$ITE__f_b;
+      var x20$1 = x$1$15.Lwhilelang_syntax_Program$Command$ITE__f_ct;
+      var x21$1 = x$1$15.Lwhilelang_syntax_Program$Command$ITE__f_cf;
+      if (this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__Z(x19$1, $as_sci_Map(st$tailLocal1._2__O()))) {
+        var this$79 = $m_s_Predef$().s_Predef$__f_Set;
         var $$x13 = $m_sr_ScalaRunTime$();
         var _2$12 = st$tailLocal1._2__O();
-        var y$16 = new $c_T2(x16$1, _2$12);
-        var elems$14 = $$x13.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("if-false", y$16)]));
-        return this$81.from__sc_IterableOnce__sci_Set(elems$14)
+        var y$15 = new $c_T2(x20$1, _2$12);
+        var elems$13 = $$x13.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("if-true", y$15)]));
+        return this$79.from__sc_IterableOnce__sci_Set(elems$13)
+      } else {
+        var this$83 = $m_s_Predef$().s_Predef$__f_Set;
+        var $$x14 = $m_sr_ScalaRunTime$();
+        var _2$13 = st$tailLocal1._2__O();
+        var y$16 = new $c_T2(x21$1, _2$13);
+        var elems$14 = $$x14.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("if-false", y$16)]));
+        return this$83.from__sc_IterableOnce__sci_Set(elems$14)
       }
     };
     if ((x7 instanceof $c_Lwhilelang_syntax_Program$Command$Assign)) {
-      var x$1$15 = $as_Lwhilelang_syntax_Program$Command$Assign(x7);
-      var x10$1 = x$1$15.Lwhilelang_syntax_Program$Command$Assign__f_ident;
-      var x11$1 = x$1$15.Lwhilelang_syntax_Program$Command$Assign__f_e;
-      var v$1 = this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__I(x11$1, $as_sci_Map(st$tailLocal1._2__O()));
-      var this$88 = $m_s_Predef$().s_Predef$__f_Set;
-      var $$x14 = $m_sr_ScalaRunTime$();
-      var self$3 = ((("Assign " + x10$1) + ":=") + v$1);
+      var x$1$16 = $as_Lwhilelang_syntax_Program$Command$Assign(x7);
+      var x15$1 = x$1$16.Lwhilelang_syntax_Program$Command$Assign__f_ident;
+      var x16$1 = x$1$16.Lwhilelang_syntax_Program$Command$Assign__f_e;
+      var v$1 = this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__I(x16$1, $as_sci_Map(st$tailLocal1._2__O()));
+      var this$90 = $m_s_Predef$().s_Predef$__f_Set;
+      var $$x15 = $m_sr_ScalaRunTime$();
+      var self$3 = ((("Assign " + x15$1) + ":=") + v$1);
       var _1$7 = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
-      var _2$13 = $as_sci_MapOps(st$tailLocal1._2__O()).$plus__T2__sci_MapOps(new $c_T2(x10$1, v$1));
-      var y$17 = new $c_T2(_1$7, _2$13);
-      var elems$15 = $$x14.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2(self$3, y$17)]));
-      return this$88.from__sc_IterableOnce__sci_Set(elems$15)
+      var _2$14 = $as_sci_MapOps(st$tailLocal1._2__O()).$plus__T2__sci_MapOps(new $c_T2(x15$1, v$1));
+      var y$17 = new $c_T2(_1$7, _2$14);
+      var elems$15 = $$x15.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2(self$3, y$17)]));
+      return this$90.from__sc_IterableOnce__sci_Set(elems$15)
+    };
+    if ((x7 instanceof $c_Lwhilelang_syntax_Program$Command$Contract)) {
+      var x$1$17 = $as_Lwhilelang_syntax_Program$Command$Contract(x7);
+      var x11$1 = x$1$17.Lwhilelang_syntax_Program$Command$Contract__f_c;
+      var _2$15 = st$tailLocal1._2__O();
+      st$tailLocal1 = new $c_T2(x11$1, _2$15);
+      continue
     };
     throw new $c_s_MatchError(x7)
   }
@@ -21106,91 +21478,102 @@ $c_Lwhilelang_backend_SmallBigSemantics$.prototype.next__T2__sci_Set = (function
 $c_Lwhilelang_backend_SmallBigSemantics$.prototype.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__Z = (function(b, env) {
   var b$tailLocal1 = b;
   while (true) {
-    var x32 = b$tailLocal1;
+    var x38 = b$tailLocal1;
     var x = $s_Lwhilelang_syntax_Program$BExpr$__BTrue__Lwhilelang_syntax_Program$BExpr();
-    if (((x === null) ? (x32 === null) : x.equals__O__Z(x32))) {
+    if (((x === null) ? (x38 === null) : x.equals__O__Z(x38))) {
       return true
     };
     var x$3 = $s_Lwhilelang_syntax_Program$BExpr$__BFalse__Lwhilelang_syntax_Program$BExpr();
-    if (((x$3 === null) ? (x32 === null) : x$3.equals__O__Z(x32))) {
+    if (((x$3 === null) ? (x38 === null) : x$3.equals__O__Z(x38))) {
       return false
     };
-    if ((x32 instanceof $c_Lwhilelang_syntax_Program$BExpr$And)) {
-      var x$1 = $as_Lwhilelang_syntax_Program$BExpr$And(x32);
-      var x54 = x$1.Lwhilelang_syntax_Program$BExpr$And__f_b1;
-      var x55 = x$1.Lwhilelang_syntax_Program$BExpr$And__f_b2;
-      if (this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__Z(x54, env)) {
-        b$tailLocal1 = x55;
+    if ((x38 instanceof $c_Lwhilelang_syntax_Program$BExpr$And)) {
+      var x$1 = $as_Lwhilelang_syntax_Program$BExpr$And(x38);
+      var x64 = x$1.Lwhilelang_syntax_Program$BExpr$And__f_b1;
+      var x65 = x$1.Lwhilelang_syntax_Program$BExpr$And__f_b2;
+      if (this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__Z(x64, env)) {
+        b$tailLocal1 = x65;
         continue
       } else {
         return false
       }
     };
-    if ((x32 instanceof $c_Lwhilelang_syntax_Program$BExpr$Or)) {
-      var x$1$1 = $as_Lwhilelang_syntax_Program$BExpr$Or(x32);
-      var x50 = x$1$1.Lwhilelang_syntax_Program$BExpr$Or__f_b1;
-      var x51 = x$1$1.Lwhilelang_syntax_Program$BExpr$Or__f_b2;
-      if (this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__Z(x50, env)) {
+    if ((x38 instanceof $c_Lwhilelang_syntax_Program$BExpr$Or)) {
+      var x$1$1 = $as_Lwhilelang_syntax_Program$BExpr$Or(x38);
+      var x60 = x$1$1.Lwhilelang_syntax_Program$BExpr$Or__f_b1;
+      var x61 = x$1$1.Lwhilelang_syntax_Program$BExpr$Or__f_b2;
+      if (this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__Z(x60, env)) {
         return true
       } else {
-        b$tailLocal1 = x51;
+        b$tailLocal1 = x61;
         continue
       }
     };
-    if ((x32 instanceof $c_Lwhilelang_syntax_Program$BExpr$Not)) {
-      var x$1$2 = $as_Lwhilelang_syntax_Program$BExpr$Not(x32);
-      var x47 = x$1$2.Lwhilelang_syntax_Program$BExpr$Not__f_b;
-      return (!this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__Z(x47, env))
+    if ((x38 instanceof $c_Lwhilelang_syntax_Program$BExpr$Impl)) {
+      var x$1$2 = $as_Lwhilelang_syntax_Program$BExpr$Impl(x38);
+      var x56 = x$1$2.Lwhilelang_syntax_Program$BExpr$Impl__f_e1;
+      var x57 = x$1$2.Lwhilelang_syntax_Program$BExpr$Impl__f_e2;
+      if ((!this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__Z(x56, env))) {
+        return true
+      } else {
+        b$tailLocal1 = x57;
+        continue
+      }
     };
-    if ((x32 instanceof $c_Lwhilelang_syntax_Program$BExpr$Less)) {
-      var x$1$3 = $as_Lwhilelang_syntax_Program$BExpr$Less(x32);
-      var x43 = x$1$3.Lwhilelang_syntax_Program$BExpr$Less__f_e1;
-      var x44 = x$1$3.Lwhilelang_syntax_Program$BExpr$Less__f_e2;
-      return (this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__I(x43, env) < this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__I(x44, env))
+    if ((x38 instanceof $c_Lwhilelang_syntax_Program$BExpr$Not)) {
+      var x$1$3 = $as_Lwhilelang_syntax_Program$BExpr$Not(x38);
+      var x53 = x$1$3.Lwhilelang_syntax_Program$BExpr$Not__f_b;
+      return (!this.eval__Lwhilelang_syntax_Program$BExpr__sci_Map__Z(x53, env))
     };
-    if ((x32 instanceof $c_Lwhilelang_syntax_Program$BExpr$Greater)) {
-      var x$1$4 = $as_Lwhilelang_syntax_Program$BExpr$Greater(x32);
-      var x39 = x$1$4.Lwhilelang_syntax_Program$BExpr$Greater__f_e1;
-      var x40 = x$1$4.Lwhilelang_syntax_Program$BExpr$Greater__f_e2;
-      return (this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__I(x39, env) > this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__I(x40, env))
+    if ((x38 instanceof $c_Lwhilelang_syntax_Program$BExpr$Less)) {
+      var x$1$4 = $as_Lwhilelang_syntax_Program$BExpr$Less(x38);
+      var x49 = x$1$4.Lwhilelang_syntax_Program$BExpr$Less__f_e1;
+      var x50 = x$1$4.Lwhilelang_syntax_Program$BExpr$Less__f_e2;
+      return (this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__I(x49, env) < this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__I(x50, env))
     };
-    if ((x32 instanceof $c_Lwhilelang_syntax_Program$BExpr$Eq)) {
-      var x$1$5 = $as_Lwhilelang_syntax_Program$BExpr$Eq(x32);
-      var x35 = x$1$5.Lwhilelang_syntax_Program$BExpr$Eq__f_e1;
-      var x36 = x$1$5.Lwhilelang_syntax_Program$BExpr$Eq__f_e2;
-      return (this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__I(x35, env) === this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__I(x36, env))
+    if ((x38 instanceof $c_Lwhilelang_syntax_Program$BExpr$Greater)) {
+      var x$1$5 = $as_Lwhilelang_syntax_Program$BExpr$Greater(x38);
+      var x45 = x$1$5.Lwhilelang_syntax_Program$BExpr$Greater__f_e1;
+      var x46 = x$1$5.Lwhilelang_syntax_Program$BExpr$Greater__f_e2;
+      return (this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__I(x45, env) > this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__I(x46, env))
     };
-    throw new $c_s_MatchError(x32)
+    if ((x38 instanceof $c_Lwhilelang_syntax_Program$BExpr$Eq)) {
+      var x$1$6 = $as_Lwhilelang_syntax_Program$BExpr$Eq(x38);
+      var x41 = x$1$6.Lwhilelang_syntax_Program$BExpr$Eq__f_e1;
+      var x42 = x$1$6.Lwhilelang_syntax_Program$BExpr$Eq__f_e2;
+      return (this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__I(x41, env) === this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__I(x42, env))
+    };
+    throw new $c_s_MatchError(x38)
   }
 });
 $c_Lwhilelang_backend_SmallBigSemantics$.prototype.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__I = (function(e, env) {
   if ((e instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
     var x$1 = $as_Lwhilelang_syntax_Program$IExpr$N(e);
-    var x74 = x$1.Lwhilelang_syntax_Program$IExpr$N__f_n;
-    return x74
+    var x84 = x$1.Lwhilelang_syntax_Program$IExpr$N__f_n;
+    return x84
   };
   if ((e instanceof $c_Lwhilelang_syntax_Program$IExpr$Var)) {
     var x$1$1 = $as_Lwhilelang_syntax_Program$IExpr$Var(e);
-    var x71 = x$1$1.Lwhilelang_syntax_Program$IExpr$Var__f_ident;
-    return (env.contains__O__Z(x71) ? $uI(env.apply__O__O(x71)) : $m_s_sys_package$().error__T__E((("Variable " + x71) + " not found.")))
+    var x81 = x$1$1.Lwhilelang_syntax_Program$IExpr$Var__f_ident;
+    return (env.contains__O__Z(x81) ? $uI(env.apply__O__O(x81)) : $m_s_sys_package$().error__T__E((("Variable " + x81) + " not found.")))
   };
   if ((e instanceof $c_Lwhilelang_syntax_Program$IExpr$Plus)) {
     var x$1$2 = $as_Lwhilelang_syntax_Program$IExpr$Plus(e);
-    var x67 = x$1$2.Lwhilelang_syntax_Program$IExpr$Plus__f_e1;
-    var x68 = x$1$2.Lwhilelang_syntax_Program$IExpr$Plus__f_e2;
-    return ((this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__I(x67, env) + this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__I(x68, env)) | 0)
+    var x77 = x$1$2.Lwhilelang_syntax_Program$IExpr$Plus__f_e1;
+    var x78 = x$1$2.Lwhilelang_syntax_Program$IExpr$Plus__f_e2;
+    return ((this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__I(x77, env) + this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__I(x78, env)) | 0)
   };
   if ((e instanceof $c_Lwhilelang_syntax_Program$IExpr$Times)) {
     var x$1$3 = $as_Lwhilelang_syntax_Program$IExpr$Times(e);
-    var x63 = x$1$3.Lwhilelang_syntax_Program$IExpr$Times__f_e1;
-    var x64 = x$1$3.Lwhilelang_syntax_Program$IExpr$Times__f_e2;
-    return $imul(this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__I(x63, env), this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__I(x64, env))
+    var x73 = x$1$3.Lwhilelang_syntax_Program$IExpr$Times__f_e1;
+    var x74 = x$1$3.Lwhilelang_syntax_Program$IExpr$Times__f_e2;
+    return $imul(this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__I(x73, env), this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__I(x74, env))
   };
   if ((e instanceof $c_Lwhilelang_syntax_Program$IExpr$Minus)) {
     var x$1$4 = $as_Lwhilelang_syntax_Program$IExpr$Minus(e);
-    var x59 = x$1$4.Lwhilelang_syntax_Program$IExpr$Minus__f_e1;
-    var x60 = x$1$4.Lwhilelang_syntax_Program$IExpr$Minus__f_e2;
-    return ((this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__I(x59, env) - this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__I(x60, env)) | 0)
+    var x69 = x$1$4.Lwhilelang_syntax_Program$IExpr$Minus__f_e1;
+    var x70 = x$1$4.Lwhilelang_syntax_Program$IExpr$Minus__f_e2;
+    return ((this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__I(x69, env) - this.eval__Lwhilelang_syntax_Program$IExpr__sci_Map__I(x70, env)) | 0)
   };
   throw new $c_s_MatchError(e)
 });
@@ -21226,376 +21609,401 @@ $c_Lwhilelang_backend_SmallSemantics$.prototype.accepting__T2__Z = (function(s) 
   return ((x === null) ? (x$2 === null) : $dp_equals__O__Z(x, x$2))
 });
 $c_Lwhilelang_backend_SmallSemantics$.prototype.next__T2__sci_Set = (function(st) {
-  matchResult1: {
-    var \u03b41$___1;
-    var \u03b41$___2;
-    if ((st !== null)) {
-      var comm = $as_Lwhilelang_syntax_Program$Command(st._1__O());
-      var env = $as_sci_Map(st._2__O());
-      var \u03b41$___1 = comm;
-      var \u03b41$___2 = env;
-      break matchResult1
+  var st$tailLocal1 = st;
+  while (true) {
+    matchResult1: {
+      var \u03b41$___1;
+      var \u03b41$___2;
+      var x1 = st$tailLocal1;
+      if ((x1 !== null)) {
+        var comm = $as_Lwhilelang_syntax_Program$Command(x1._1__O());
+        var env = $as_sci_Map(x1._2__O());
+        var \u03b41$___1 = comm;
+        var \u03b41$___2 = env;
+        break matchResult1
+      };
+      throw new $c_s_MatchError(x1)
     };
-    throw new $c_s_MatchError(st)
-  };
-  var comm$2 = $as_Lwhilelang_syntax_Program$Command(\u03b41$___1);
-  var env$2 = $as_sci_Map(\u03b41$___2);
-  var x = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
-  if (((x === null) ? (comm$2 === null) : x.equals__O__Z(comm$2))) {
-    var this$2 = $m_s_Predef$().s_Predef$__f_Set;
-    var elems = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([]));
-    return this$2.from__sc_IterableOnce__sci_Set(elems)
-  };
-  var x$3 = $s_Lwhilelang_syntax_Program$Command$__Fail__Lwhilelang_syntax_Program$Command();
-  if (((x$3 === null) ? (comm$2 === null) : x$3.equals__O__Z(comm$2))) {
-    var this$3 = $m_s_Predef$().s_Predef$__f_Set;
-    var elems$1 = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([]));
-    return this$3.from__sc_IterableOnce__sci_Set(elems$1)
-  };
-  if ((comm$2 instanceof $c_Lwhilelang_syntax_Program$Command$Seq)) {
-    var x$1 = $as_Lwhilelang_syntax_Program$Command$Seq(comm$2);
-    var x39 = x$1.Lwhilelang_syntax_Program$Command$Seq__f_c1;
-    var x40 = x$1.Lwhilelang_syntax_Program$Command$Seq__f_c2;
-    var x$5 = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
-    if (((x$5 === null) ? (x39 === null) : x$5.equals__O__Z(x39))) {
-      var this$8 = $m_s_Predef$().s_Predef$__f_Set;
-      var $$x1 = $m_sr_ScalaRunTime$();
-      var y = new $c_T2(x40, env$2);
-      var elems$2 = $$x1.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("Skip", y)]));
-      return this$8.from__sc_IterableOnce__sci_Set(elems$2)
+    var comm$2 = $as_Lwhilelang_syntax_Program$Command(\u03b41$___1);
+    var env$2 = $as_sci_Map(\u03b41$___2);
+    var x = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
+    if (((x === null) ? (comm$2 === null) : x.equals__O__Z(comm$2))) {
+      var this$2 = $m_s_Predef$().s_Predef$__f_Set;
+      var elems = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([]));
+      return this$2.from__sc_IterableOnce__sci_Set(elems)
     };
-    var \u03b41$$1___1;
-    var \u03b41$$1___2;
-    var \u03b41$$1___1 = x39;
-    var \u03b41$$1___2 = env$2;
-    var comm$2$1 = $as_Lwhilelang_syntax_Program$Command(\u03b41$$1___1);
-    var env$2$1 = $as_sci_Map(\u03b41$$1___2);
-    matchResult7$1: {
+    var x$3 = $s_Lwhilelang_syntax_Program$Command$__Fail__Lwhilelang_syntax_Program$Command();
+    if (((x$3 === null) ? (comm$2 === null) : x$3.equals__O__Z(comm$2))) {
+      var this$3 = $m_s_Predef$().s_Predef$__f_Set;
+      var elems$1 = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([]));
+      return this$3.from__sc_IterableOnce__sci_Set(elems$1)
+    };
+    if ((comm$2 instanceof $c_Lwhilelang_syntax_Program$Command$Seq)) {
+      var x$1 = $as_Lwhilelang_syntax_Program$Command$Seq(comm$2);
+      var x45 = x$1.Lwhilelang_syntax_Program$Command$Seq__f_c1;
+      var x46 = x$1.Lwhilelang_syntax_Program$Command$Seq__f_c2;
+      var x$5 = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
+      if (((x$5 === null) ? (x45 === null) : x$5.equals__O__Z(x45))) {
+        var this$8 = $m_s_Predef$().s_Predef$__f_Set;
+        var $$x1 = $m_sr_ScalaRunTime$();
+        var y = new $c_T2(x46, env$2);
+        var elems$2 = $$x1.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("Skip", y)]));
+        return this$8.from__sc_IterableOnce__sci_Set(elems$2)
+      };
       var $$x2;
-      var x$2 = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
-      if (((x$2 === null) ? (comm$2$1 === null) : x$2.equals__O__Z(comm$2$1))) {
-        var this$12 = $m_s_Predef$().s_Predef$__f_Set;
-        var elems$3 = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([]));
-        var $$x2 = this$12.from__sc_IterableOnce__sci_Set(elems$3);
-        break matchResult7$1
-      };
-      var x$3$1 = $s_Lwhilelang_syntax_Program$Command$__Fail__Lwhilelang_syntax_Program$Command();
-      if (((x$3$1 === null) ? (comm$2$1 === null) : x$3$1.equals__O__Z(comm$2$1))) {
-        var this$13 = $m_s_Predef$().s_Predef$__f_Set;
-        var elems$4 = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([]));
-        var $$x2 = this$13.from__sc_IterableOnce__sci_Set(elems$4);
-        break matchResult7$1
-      };
-      if ((comm$2$1 instanceof $c_Lwhilelang_syntax_Program$Command$Seq)) {
-        var x$1$1 = $as_Lwhilelang_syntax_Program$Command$Seq(comm$2$1);
-        var x39$1 = x$1$1.Lwhilelang_syntax_Program$Command$Seq__f_c1;
-        var x40$1 = x$1$1.Lwhilelang_syntax_Program$Command$Seq__f_c2;
-        var x$5$1 = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
-        if (((x$5$1 === null) ? (x39$1 === null) : x$5$1.equals__O__Z(x39$1))) {
-          var this$18 = $m_s_Predef$().s_Predef$__f_Set;
-          var $$x3 = $m_sr_ScalaRunTime$();
-          var y$1 = new $c_T2(x40$1, env$2$1);
-          var elems$5 = $$x3.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("Skip", y$1)]));
-          var $$x2 = this$18.from__sc_IterableOnce__sci_Set(elems$5);
-          break matchResult7$1
+      var st$tailLocal1$1___1 = x45;
+      var st$tailLocal1$1___2 = env$2;
+      while (true) {
+        var x1$1___1 = st$tailLocal1$1___1;
+        var x1$1___2 = st$tailLocal1$1___2;
+        var comm$1 = $as_Lwhilelang_syntax_Program$Command(x1$1___1);
+        var env$1 = $as_sci_Map(x1$1___2);
+        var \u03b41$$1___1 = comm$1;
+        var \u03b41$$1___2 = env$1;
+        var comm$2$1 = $as_Lwhilelang_syntax_Program$Command(\u03b41$$1___1);
+        var env$2$1 = $as_sci_Map(\u03b41$$1___2);
+        var x$2 = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
+        if (((x$2 === null) ? (comm$2$1 === null) : x$2.equals__O__Z(comm$2$1))) {
+          var this$12 = $m_s_Predef$().s_Predef$__f_Set;
+          var elems$3 = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([]));
+          var $$x2 = this$12.from__sc_IterableOnce__sci_Set(elems$3);
+          break
         };
-        var $$x2 = $as_sci_Set(this.next__T2__sci_Set(new $c_T2(x39$1, env$2$1)).withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((this$21) => ((x$1$2) => {
-          var x$1$3 = $as_T2(x$1$2);
-          return ((x$1$3 !== null) && ($as_T(x$1$3._1__O()), $as_T2(x$1$3._2__O()), true))
-        }))(this))).map__F1__O(new $c_sjsr_AnonFunction1(((this$2$1, c2$3) => ((x$1$2$1) => {
-          var x$1$4 = $as_T2(x$1$2$1);
-          if ((x$1$4 !== null)) {
-            var by$1 = $as_T(x$1$4._1__O());
-            var st$2 = $as_T2(x$1$4._2__O());
-            var c1 = $as_Lwhilelang_syntax_Program$Command(st$2._1__O());
-            var self = new $c_Lwhilelang_syntax_Program$Command$Seq(c1, c2$3);
-            var y$2 = st$2._2__O();
-            var _2 = new $c_T2(self, y$2);
-            return new $c_T2(by$1, _2)
+        var x$3$1 = $s_Lwhilelang_syntax_Program$Command$__Fail__Lwhilelang_syntax_Program$Command();
+        if (((x$3$1 === null) ? (comm$2$1 === null) : x$3$1.equals__O__Z(comm$2$1))) {
+          var this$13 = $m_s_Predef$().s_Predef$__f_Set;
+          var elems$4 = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([]));
+          var $$x2 = this$13.from__sc_IterableOnce__sci_Set(elems$4);
+          break
+        };
+        if ((comm$2$1 instanceof $c_Lwhilelang_syntax_Program$Command$Seq)) {
+          var x$1$1 = $as_Lwhilelang_syntax_Program$Command$Seq(comm$2$1);
+          var x45$1 = x$1$1.Lwhilelang_syntax_Program$Command$Seq__f_c1;
+          var x46$1 = x$1$1.Lwhilelang_syntax_Program$Command$Seq__f_c2;
+          var x$5$1 = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
+          if (((x$5$1 === null) ? (x45$1 === null) : x$5$1.equals__O__Z(x45$1))) {
+            var this$18 = $m_s_Predef$().s_Predef$__f_Set;
+            var $$x3 = $m_sr_ScalaRunTime$();
+            var y$1 = new $c_T2(x46$1, env$2$1);
+            var elems$5 = $$x3.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("Skip", y$1)]));
+            var $$x2 = this$18.from__sc_IterableOnce__sci_Set(elems$5);
+            break
           };
-          throw new $c_s_MatchError(x$1$4)
-        }))(this, x40$1))));
-        break matchResult7$1
-      };
-      if ((comm$2$1 instanceof $c_Lwhilelang_syntax_Program$Command$While)) {
-        var x$1$5 = $as_Lwhilelang_syntax_Program$Command$While(comm$2$1);
-        var x31 = x$1$5.Lwhilelang_syntax_Program$Command$While__f_b;
-        var x32 = x$1$5.Lwhilelang_syntax_Program$Command$While__f_c;
-        var this$33 = $m_s_Predef$().s_Predef$__f_Set;
-        var $$x4 = $m_sr_ScalaRunTime$();
-        var c2 = new $c_Lwhilelang_syntax_Program$Command$While(x31, x32);
-        var ct = new $c_Lwhilelang_syntax_Program$Command$Seq(x32, c2);
-        var cf = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
-        var _1 = new $c_Lwhilelang_syntax_Program$Command$ITE(x31, ct, cf);
-        var y$3 = new $c_T2(_1, env$2$1);
-        var elems$6 = $$x4.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("while-if", y$3)]));
-        var $$x2 = this$33.from__sc_IterableOnce__sci_Set(elems$6);
-        break matchResult7$1
-      };
-      if ((comm$2$1 instanceof $c_Lwhilelang_syntax_Program$Command$Assert)) {
-        var x$1$6 = $as_Lwhilelang_syntax_Program$Command$Assert(comm$2$1);
-        var x28 = x$1$6.Lwhilelang_syntax_Program$Command$Assert__f_b;
-        var x$7 = $s_Lwhilelang_syntax_Program$BExpr$__BTrue__Lwhilelang_syntax_Program$BExpr();
-        if (((x$7 === null) ? (x28 === null) : x$7.equals__O__Z(x28))) {
-          var this$38 = $m_s_Predef$().s_Predef$__f_Set;
-          var $$x5 = $m_sr_ScalaRunTime$();
-          var _1$1 = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
-          var y$4 = new $c_T2(_1$1, env$2$1);
-          var elems$7 = $$x5.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("assert-true", y$4)]));
-          var $$x2 = this$38.from__sc_IterableOnce__sci_Set(elems$7);
-          break matchResult7$1
-        } else {
-          var x$9 = $s_Lwhilelang_syntax_Program$BExpr$__BFalse__Lwhilelang_syntax_Program$BExpr();
-          if (((x$9 === null) ? (x28 === null) : x$9.equals__O__Z(x28))) {
-            var this$42 = $m_s_Predef$().s_Predef$__f_Set;
-            var $$x6 = $m_sr_ScalaRunTime$();
-            var _1$2 = $s_Lwhilelang_syntax_Program$Command$__Fail__Lwhilelang_syntax_Program$Command();
-            var y$5 = new $c_T2(_1$2, env$2$1);
-            var elems$8 = $$x6.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("assert-false", y$5)]));
-            var $$x2 = this$42.from__sc_IterableOnce__sci_Set(elems$8);
-            break matchResult7$1
-          } else {
-            var $$x8 = $m_s_Option$();
-            var this$43 = this.nextBool__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option(x28, env$2$1);
-            if (this$43.isEmpty__Z()) {
-              var $$x7 = $m_s_None$()
-            } else {
-              var arg1 = this$43.get__O();
-              var x$1$7 = $as_T2(arg1);
-              var _1$4 = $as_T(x$1$7._1__O());
-              var b = $as_Lwhilelang_syntax_Program$BExpr(x$1$7._2__O());
-              var _1$3 = new $c_Lwhilelang_syntax_Program$Command$Assert(b);
-              var _2$1 = new $c_T2(_1$3, env$2$1);
-              var $$x7 = new $c_s_Some(new $c_T2(_1$4, _2$1))
+          var $$x2 = $as_sci_Set(this.next__T2__sci_Set(new $c_T2(x45$1, env$2$1)).withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((this$21) => ((x$1$2) => {
+            var x$1$3 = $as_T2(x$1$2);
+            return ((x$1$3 !== null) && ($as_T(x$1$3._1__O()), $as_T2(x$1$3._2__O()), true))
+          }))(this))).map__F1__O(new $c_sjsr_AnonFunction1(((this$2$1, c2$3) => ((x$1$2$1) => {
+            var x$1$4 = $as_T2(x$1$2$1);
+            if ((x$1$4 !== null)) {
+              var by$1 = $as_T(x$1$4._1__O());
+              var st$2 = $as_T2(x$1$4._2__O());
+              var c1 = $as_Lwhilelang_syntax_Program$Command(st$2._1__O());
+              var self = new $c_Lwhilelang_syntax_Program$Command$Seq(c1, c2$3);
+              var y$2 = st$2._2__O();
+              var _2 = new $c_T2(self, y$2);
+              return new $c_T2(by$1, _2)
             };
-            var this$47 = $$x8.option2Iterable__s_Option__sc_Iterable($$x7);
-            var $$x2 = $m_sci_Set$().from__sc_IterableOnce__sci_Set(this$47);
-            break matchResult7$1
-          }
-        }
-      };
-      if ((comm$2$1 instanceof $c_Lwhilelang_syntax_Program$Command$ITE)) {
-        var x$1$8 = $as_Lwhilelang_syntax_Program$Command$ITE(comm$2$1);
-        var x23 = x$1$8.Lwhilelang_syntax_Program$Command$ITE__f_b;
-        var x24 = x$1$8.Lwhilelang_syntax_Program$Command$ITE__f_ct;
-        var x25 = x$1$8.Lwhilelang_syntax_Program$Command$ITE__f_cf;
-        var x$11 = $s_Lwhilelang_syntax_Program$BExpr$__BTrue__Lwhilelang_syntax_Program$BExpr();
-        if (((x$11 === null) ? (x23 === null) : x$11.equals__O__Z(x23))) {
-          var this$52 = $m_s_Predef$().s_Predef$__f_Set;
-          var $$x9 = $m_sr_ScalaRunTime$();
-          var y$6 = new $c_T2(x24, env$2$1);
-          var elems$9 = $$x9.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("if-true", y$6)]));
-          var $$x2 = this$52.from__sc_IterableOnce__sci_Set(elems$9);
-          break matchResult7$1
-        } else {
-          var x$13 = $s_Lwhilelang_syntax_Program$BExpr$__BFalse__Lwhilelang_syntax_Program$BExpr();
-          if (((x$13 === null) ? (x23 === null) : x$13.equals__O__Z(x23))) {
-            var this$56 = $m_s_Predef$().s_Predef$__f_Set;
-            var $$x10 = $m_sr_ScalaRunTime$();
-            var y$7 = new $c_T2(x25, env$2$1);
-            var elems$10 = $$x10.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("if-false", y$7)]));
-            var $$x2 = this$56.from__sc_IterableOnce__sci_Set(elems$10);
-            break matchResult7$1
+            throw new $c_s_MatchError(x$1$4)
+          }))(this, x46$1))));
+          break
+        };
+        if ((comm$2$1 instanceof $c_Lwhilelang_syntax_Program$Command$While)) {
+          var x$1$5 = $as_Lwhilelang_syntax_Program$Command$While(comm$2$1);
+          var x36 = x$1$5.Lwhilelang_syntax_Program$Command$While__f_b;
+          var x37 = x$1$5.Lwhilelang_syntax_Program$Command$While__f_c;
+          var x38 = x$1$5.Lwhilelang_syntax_Program$Command$While__f_inv;
+          var this$33 = $m_s_Predef$().s_Predef$__f_Set;
+          var $$x4 = $m_sr_ScalaRunTime$();
+          var c2 = new $c_Lwhilelang_syntax_Program$Command$While(x36, x37, x38);
+          var ct = new $c_Lwhilelang_syntax_Program$Command$Seq(x37, c2);
+          var cf = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
+          var _1 = new $c_Lwhilelang_syntax_Program$Command$ITE(x36, ct, cf);
+          var y$3 = new $c_T2(_1, env$2$1);
+          var elems$6 = $$x4.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("while-if", y$3)]));
+          var $$x2 = this$33.from__sc_IterableOnce__sci_Set(elems$6);
+          break
+        };
+        if ((comm$2$1 instanceof $c_Lwhilelang_syntax_Program$Command$Assert)) {
+          var x$1$6 = $as_Lwhilelang_syntax_Program$Command$Assert(comm$2$1);
+          var x33 = x$1$6.Lwhilelang_syntax_Program$Command$Assert__f_b;
+          var x$7 = $s_Lwhilelang_syntax_Program$BExpr$__BTrue__Lwhilelang_syntax_Program$BExpr();
+          if (((x$7 === null) ? (x33 === null) : x$7.equals__O__Z(x33))) {
+            var this$38 = $m_s_Predef$().s_Predef$__f_Set;
+            var $$x5 = $m_sr_ScalaRunTime$();
+            var _1$1 = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
+            var y$4 = new $c_T2(_1$1, env$2$1);
+            var elems$7 = $$x5.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("assert-true", y$4)]));
+            var $$x2 = this$38.from__sc_IterableOnce__sci_Set(elems$7);
+            break
           } else {
-            var $$x12 = $m_s_Option$();
-            var this$57 = this.nextBool__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option(x23, env$2$1);
-            if (this$57.isEmpty__Z()) {
-              var $$x11 = $m_s_None$()
+            var x$9 = $s_Lwhilelang_syntax_Program$BExpr$__BFalse__Lwhilelang_syntax_Program$BExpr();
+            if (((x$9 === null) ? (x33 === null) : x$9.equals__O__Z(x33))) {
+              var this$42 = $m_s_Predef$().s_Predef$__f_Set;
+              var $$x6 = $m_sr_ScalaRunTime$();
+              var _1$2 = $s_Lwhilelang_syntax_Program$Command$__Fail__Lwhilelang_syntax_Program$Command();
+              var y$5 = new $c_T2(_1$2, env$2$1);
+              var elems$8 = $$x6.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("assert-false", y$5)]));
+              var $$x2 = this$42.from__sc_IterableOnce__sci_Set(elems$8);
+              break
             } else {
-              var arg1$1 = this$57.get__O();
-              var x$1$9 = $as_T2(arg1$1);
-              var _1$6 = $as_T(x$1$9._1__O());
-              var b$1 = $as_Lwhilelang_syntax_Program$BExpr(x$1$9._2__O());
-              var _1$5 = new $c_Lwhilelang_syntax_Program$Command$ITE(b$1, x24, x25);
-              var _2$2 = new $c_T2(_1$5, env$2$1);
-              var $$x11 = new $c_s_Some(new $c_T2(_1$6, _2$2))
-            };
-            var this$61 = $$x12.option2Iterable__s_Option__sc_Iterable($$x11);
-            var $$x2 = $m_sci_Set$().from__sc_IterableOnce__sci_Set(this$61);
-            break matchResult7$1
+              var $$x8 = $m_s_Option$();
+              var this$43 = this.nextBool__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option(x33, env$2$1);
+              if (this$43.isEmpty__Z()) {
+                var $$x7 = $m_s_None$()
+              } else {
+                var arg1 = this$43.get__O();
+                var x$1$7 = $as_T2(arg1);
+                var _1$4 = $as_T(x$1$7._1__O());
+                var b = $as_Lwhilelang_syntax_Program$BExpr(x$1$7._2__O());
+                var _1$3 = new $c_Lwhilelang_syntax_Program$Command$Assert(b);
+                var _2$1 = new $c_T2(_1$3, env$2$1);
+                var $$x7 = new $c_s_Some(new $c_T2(_1$4, _2$1))
+              };
+              var this$47 = $$x8.option2Iterable__s_Option__sc_Iterable($$x7);
+              var $$x2 = $m_sci_Set$().from__sc_IterableOnce__sci_Set(this$47);
+              break
+            }
           }
-        }
-      };
-      if ((comm$2$1 instanceof $c_Lwhilelang_syntax_Program$Command$Assign)) {
-        var x$1$10 = $as_Lwhilelang_syntax_Program$Command$Assign(comm$2$1);
-        var x19 = x$1$10.Lwhilelang_syntax_Program$Command$Assign__f_ident;
-        var x20 = x$1$10.Lwhilelang_syntax_Program$Command$Assign__f_e;
-        if ((x20 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
-          var x$1$11 = $as_Lwhilelang_syntax_Program$IExpr$N(x20);
-          var x15 = x$1$11.Lwhilelang_syntax_Program$IExpr$N__f_n;
-          var this$69 = $m_s_Predef$().s_Predef$__f_Set;
-          var $$x13 = $m_sr_ScalaRunTime$();
-          var self$1 = ((("Assign " + x19) + ":=") + x15);
-          var _1$7 = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
-          var _2$3 = env$2$1.$plus__T2__sci_MapOps(new $c_T2(x19, x15));
-          var y$8 = new $c_T2(_1$7, _2$3);
-          var elems$11 = $$x13.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2(self$1, y$8)]));
-          var $$x2 = this$69.from__sc_IterableOnce__sci_Set(elems$11);
-          break matchResult7$1
-        } else {
-          var $$x15 = $m_s_Option$();
-          var this$70 = this.nextInt__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(x20, env$2$1);
-          if (this$70.isEmpty__Z()) {
-            var $$x14 = $m_s_None$()
+        };
+        if ((comm$2$1 instanceof $c_Lwhilelang_syntax_Program$Command$ITE)) {
+          var x$1$8 = $as_Lwhilelang_syntax_Program$Command$ITE(comm$2$1);
+          var x28 = x$1$8.Lwhilelang_syntax_Program$Command$ITE__f_b;
+          var x29 = x$1$8.Lwhilelang_syntax_Program$Command$ITE__f_ct;
+          var x30 = x$1$8.Lwhilelang_syntax_Program$Command$ITE__f_cf;
+          var x$11 = $s_Lwhilelang_syntax_Program$BExpr$__BTrue__Lwhilelang_syntax_Program$BExpr();
+          if (((x$11 === null) ? (x28 === null) : x$11.equals__O__Z(x28))) {
+            var this$52 = $m_s_Predef$().s_Predef$__f_Set;
+            var $$x9 = $m_sr_ScalaRunTime$();
+            var y$6 = new $c_T2(x29, env$2$1);
+            var elems$9 = $$x9.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("if-true", y$6)]));
+            var $$x2 = this$52.from__sc_IterableOnce__sci_Set(elems$9);
+            break
           } else {
-            var arg1$2 = this$70.get__O();
-            var x$1$12 = $as_T2(arg1$2);
-            var _1$9 = $as_T(x$1$12._1__O());
-            var e = $as_Lwhilelang_syntax_Program$IExpr(x$1$12._2__O());
-            var _1$8 = new $c_Lwhilelang_syntax_Program$Command$Assign(x19, e);
-            var _2$4 = new $c_T2(_1$8, env$2$1);
-            var $$x14 = new $c_s_Some(new $c_T2(_1$9, _2$4))
-          };
-          var this$74 = $$x15.option2Iterable__s_Option__sc_Iterable($$x14);
-          var $$x2 = $m_sci_Set$().from__sc_IterableOnce__sci_Set(this$74);
-          break matchResult7$1
-        }
+            var x$13 = $s_Lwhilelang_syntax_Program$BExpr$__BFalse__Lwhilelang_syntax_Program$BExpr();
+            if (((x$13 === null) ? (x28 === null) : x$13.equals__O__Z(x28))) {
+              var this$56 = $m_s_Predef$().s_Predef$__f_Set;
+              var $$x10 = $m_sr_ScalaRunTime$();
+              var y$7 = new $c_T2(x30, env$2$1);
+              var elems$10 = $$x10.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("if-false", y$7)]));
+              var $$x2 = this$56.from__sc_IterableOnce__sci_Set(elems$10);
+              break
+            } else {
+              var $$x12 = $m_s_Option$();
+              var this$57 = this.nextBool__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option(x28, env$2$1);
+              if (this$57.isEmpty__Z()) {
+                var $$x11 = $m_s_None$()
+              } else {
+                var arg1$1 = this$57.get__O();
+                var x$1$9 = $as_T2(arg1$1);
+                var _1$6 = $as_T(x$1$9._1__O());
+                var b$1 = $as_Lwhilelang_syntax_Program$BExpr(x$1$9._2__O());
+                var _1$5 = new $c_Lwhilelang_syntax_Program$Command$ITE(b$1, x29, x30);
+                var _2$2 = new $c_T2(_1$5, env$2$1);
+                var $$x11 = new $c_s_Some(new $c_T2(_1$6, _2$2))
+              };
+              var this$61 = $$x12.option2Iterable__s_Option__sc_Iterable($$x11);
+              var $$x2 = $m_sci_Set$().from__sc_IterableOnce__sci_Set(this$61);
+              break
+            }
+          }
+        };
+        if ((comm$2$1 instanceof $c_Lwhilelang_syntax_Program$Command$Assign)) {
+          var x$1$10 = $as_Lwhilelang_syntax_Program$Command$Assign(comm$2$1);
+          var x24 = x$1$10.Lwhilelang_syntax_Program$Command$Assign__f_ident;
+          var x25 = x$1$10.Lwhilelang_syntax_Program$Command$Assign__f_e;
+          if ((x25 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
+            var x$1$11 = $as_Lwhilelang_syntax_Program$IExpr$N(x25);
+            var x15 = x$1$11.Lwhilelang_syntax_Program$IExpr$N__f_n;
+            var this$69 = $m_s_Predef$().s_Predef$__f_Set;
+            var $$x13 = $m_sr_ScalaRunTime$();
+            var self$1 = ((("Assign " + x24) + ":=") + x15);
+            var _1$7 = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
+            var _2$3 = env$2$1.$plus__T2__sci_MapOps(new $c_T2(x24, x15));
+            var y$8 = new $c_T2(_1$7, _2$3);
+            var elems$11 = $$x13.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2(self$1, y$8)]));
+            var $$x2 = this$69.from__sc_IterableOnce__sci_Set(elems$11);
+            break
+          } else {
+            var $$x15 = $m_s_Option$();
+            var this$70 = this.nextInt__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(x25, env$2$1);
+            if (this$70.isEmpty__Z()) {
+              var $$x14 = $m_s_None$()
+            } else {
+              var arg1$2 = this$70.get__O();
+              var x$1$12 = $as_T2(arg1$2);
+              var _1$9 = $as_T(x$1$12._1__O());
+              var e = $as_Lwhilelang_syntax_Program$IExpr(x$1$12._2__O());
+              var _1$8 = new $c_Lwhilelang_syntax_Program$Command$Assign(x24, e);
+              var _2$4 = new $c_T2(_1$8, env$2$1);
+              var $$x14 = new $c_s_Some(new $c_T2(_1$9, _2$4))
+            };
+            var this$74 = $$x15.option2Iterable__s_Option__sc_Iterable($$x14);
+            var $$x2 = $m_sci_Set$().from__sc_IterableOnce__sci_Set(this$74);
+            break
+          }
+        };
+        if ((comm$2$1 instanceof $c_Lwhilelang_syntax_Program$Command$Contract)) {
+          var x$1$13 = $as_Lwhilelang_syntax_Program$Command$Contract(comm$2$1);
+          var x20 = x$1$13.Lwhilelang_syntax_Program$Command$Contract__f_c;
+          var $$x16___1 = x20;
+          var $$x16___2 = env$2$1;
+          st$tailLocal1$1___1 = $$x16___1;
+          st$tailLocal1$1___2 = $$x16___2;
+          continue
+        };
+        throw new $c_s_MatchError(comm$2$1)
       };
-      throw new $c_s_MatchError(comm$2$1)
+      return $as_sci_Set($$x2.withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((this$77) => ((x$1$14) => {
+        var x$1$15 = $as_T2(x$1$14);
+        return ((x$1$15 !== null) && ($as_T(x$1$15._1__O()), $as_T2(x$1$15._2__O()), true))
+      }))(this))).map__F1__O(new $c_sjsr_AnonFunction1(((this$2$2, c2$3$1) => ((x$1$2$2) => {
+        var x$1$16 = $as_T2(x$1$2$2);
+        if ((x$1$16 !== null)) {
+          var by$3 = $as_T(x$1$16._1__O());
+          var st$4 = $as_T2(x$1$16._2__O());
+          var c1$1 = $as_Lwhilelang_syntax_Program$Command(st$4._1__O());
+          var self$2 = new $c_Lwhilelang_syntax_Program$Command$Seq(c1$1, c2$3$1);
+          var y$9 = st$4._2__O();
+          var _2$5 = new $c_T2(self$2, y$9);
+          return new $c_T2(by$3, _2$5)
+        };
+        throw new $c_s_MatchError(x$1$16)
+      }))(this, x46))))
     };
-    return $as_sci_Set($$x2.withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((this$75) => ((x$1$13) => {
-      var x$1$14 = $as_T2(x$1$13);
-      return ((x$1$14 !== null) && ($as_T(x$1$14._1__O()), $as_T2(x$1$14._2__O()), true))
-    }))(this))).map__F1__O(new $c_sjsr_AnonFunction1(((this$2$2, c2$3$1) => ((x$1$2$2) => {
-      var x$1$15 = $as_T2(x$1$2$2);
-      if ((x$1$15 !== null)) {
-        var by$3 = $as_T(x$1$15._1__O());
-        var st$4 = $as_T2(x$1$15._2__O());
-        var c1$1 = $as_Lwhilelang_syntax_Program$Command(st$4._1__O());
-        var self$2 = new $c_Lwhilelang_syntax_Program$Command$Seq(c1$1, c2$3$1);
-        var y$9 = st$4._2__O();
-        var _2$5 = new $c_T2(self$2, y$9);
-        return new $c_T2(by$3, _2$5)
-      };
-      throw new $c_s_MatchError(x$1$15)
-    }))(this, x40))))
-  };
-  if ((comm$2 instanceof $c_Lwhilelang_syntax_Program$Command$While)) {
-    var x$1$16 = $as_Lwhilelang_syntax_Program$Command$While(comm$2);
-    var x31$1 = x$1$16.Lwhilelang_syntax_Program$Command$While__f_b;
-    var x32$1 = x$1$16.Lwhilelang_syntax_Program$Command$While__f_c;
-    var this$87 = $m_s_Predef$().s_Predef$__f_Set;
-    var $$x16 = $m_sr_ScalaRunTime$();
-    var c2$1 = new $c_Lwhilelang_syntax_Program$Command$While(x31$1, x32$1);
-    var ct$1 = new $c_Lwhilelang_syntax_Program$Command$Seq(x32$1, c2$1);
-    var cf$1 = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
-    var _1$10 = new $c_Lwhilelang_syntax_Program$Command$ITE(x31$1, ct$1, cf$1);
-    var y$10 = new $c_T2(_1$10, env$2);
-    var elems$12 = $$x16.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("while-if", y$10)]));
-    return this$87.from__sc_IterableOnce__sci_Set(elems$12)
-  };
-  if ((comm$2 instanceof $c_Lwhilelang_syntax_Program$Command$Assert)) {
-    var x$1$17 = $as_Lwhilelang_syntax_Program$Command$Assert(comm$2);
-    var x28$1 = x$1$17.Lwhilelang_syntax_Program$Command$Assert__f_b;
-    var x$7$1 = $s_Lwhilelang_syntax_Program$BExpr$__BTrue__Lwhilelang_syntax_Program$BExpr();
-    if (((x$7$1 === null) ? (x28$1 === null) : x$7$1.equals__O__Z(x28$1))) {
-      var this$92 = $m_s_Predef$().s_Predef$__f_Set;
+    if ((comm$2 instanceof $c_Lwhilelang_syntax_Program$Command$While)) {
+      var x$1$17 = $as_Lwhilelang_syntax_Program$Command$While(comm$2);
+      var x36$1 = x$1$17.Lwhilelang_syntax_Program$Command$While__f_b;
+      var x37$1 = x$1$17.Lwhilelang_syntax_Program$Command$While__f_c;
+      var x38$1 = x$1$17.Lwhilelang_syntax_Program$Command$While__f_inv;
+      var this$89 = $m_s_Predef$().s_Predef$__f_Set;
       var $$x17 = $m_sr_ScalaRunTime$();
-      var _1$11 = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
-      var y$11 = new $c_T2(_1$11, env$2);
-      var elems$13 = $$x17.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("assert-true", y$11)]));
-      return this$92.from__sc_IterableOnce__sci_Set(elems$13)
-    } else {
-      var x$9$1 = $s_Lwhilelang_syntax_Program$BExpr$__BFalse__Lwhilelang_syntax_Program$BExpr();
-      if (((x$9$1 === null) ? (x28$1 === null) : x$9$1.equals__O__Z(x28$1))) {
-        var this$96 = $m_s_Predef$().s_Predef$__f_Set;
+      var c2$1 = new $c_Lwhilelang_syntax_Program$Command$While(x36$1, x37$1, x38$1);
+      var ct$1 = new $c_Lwhilelang_syntax_Program$Command$Seq(x37$1, c2$1);
+      var cf$1 = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
+      var _1$10 = new $c_Lwhilelang_syntax_Program$Command$ITE(x36$1, ct$1, cf$1);
+      var y$10 = new $c_T2(_1$10, env$2);
+      var elems$12 = $$x17.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("while-if", y$10)]));
+      return this$89.from__sc_IterableOnce__sci_Set(elems$12)
+    };
+    if ((comm$2 instanceof $c_Lwhilelang_syntax_Program$Command$Assert)) {
+      var x$1$18 = $as_Lwhilelang_syntax_Program$Command$Assert(comm$2);
+      var x33$1 = x$1$18.Lwhilelang_syntax_Program$Command$Assert__f_b;
+      var x$7$1 = $s_Lwhilelang_syntax_Program$BExpr$__BTrue__Lwhilelang_syntax_Program$BExpr();
+      if (((x$7$1 === null) ? (x33$1 === null) : x$7$1.equals__O__Z(x33$1))) {
+        var this$94 = $m_s_Predef$().s_Predef$__f_Set;
         var $$x18 = $m_sr_ScalaRunTime$();
-        var _1$12 = $s_Lwhilelang_syntax_Program$Command$__Fail__Lwhilelang_syntax_Program$Command();
-        var y$12 = new $c_T2(_1$12, env$2);
-        var elems$14 = $$x18.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("assert-false", y$12)]));
-        return this$96.from__sc_IterableOnce__sci_Set(elems$14)
+        var _1$11 = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
+        var y$11 = new $c_T2(_1$11, env$2);
+        var elems$13 = $$x18.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("assert-true", y$11)]));
+        return this$94.from__sc_IterableOnce__sci_Set(elems$13)
       } else {
-        var $$x20 = $m_s_Option$();
-        var this$97 = this.nextBool__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option(x28$1, env$2);
-        if (this$97.isEmpty__Z()) {
-          var $$x19 = $m_s_None$()
+        var x$9$1 = $s_Lwhilelang_syntax_Program$BExpr$__BFalse__Lwhilelang_syntax_Program$BExpr();
+        if (((x$9$1 === null) ? (x33$1 === null) : x$9$1.equals__O__Z(x33$1))) {
+          var this$98 = $m_s_Predef$().s_Predef$__f_Set;
+          var $$x19 = $m_sr_ScalaRunTime$();
+          var _1$12 = $s_Lwhilelang_syntax_Program$Command$__Fail__Lwhilelang_syntax_Program$Command();
+          var y$12 = new $c_T2(_1$12, env$2);
+          var elems$14 = $$x19.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("assert-false", y$12)]));
+          return this$98.from__sc_IterableOnce__sci_Set(elems$14)
         } else {
-          var arg1$3 = this$97.get__O();
-          var x$1$18 = $as_T2(arg1$3);
-          var _1$14 = $as_T(x$1$18._1__O());
-          var b$2 = $as_Lwhilelang_syntax_Program$BExpr(x$1$18._2__O());
-          var _1$13 = new $c_Lwhilelang_syntax_Program$Command$Assert(b$2);
-          var _2$6 = new $c_T2(_1$13, env$2);
-          var $$x19 = new $c_s_Some(new $c_T2(_1$14, _2$6))
-        };
-        var this$101 = $$x20.option2Iterable__s_Option__sc_Iterable($$x19);
-        return $m_sci_Set$().from__sc_IterableOnce__sci_Set(this$101)
+          var $$x21 = $m_s_Option$();
+          var this$99 = this.nextBool__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option(x33$1, env$2);
+          if (this$99.isEmpty__Z()) {
+            var $$x20 = $m_s_None$()
+          } else {
+            var arg1$3 = this$99.get__O();
+            var x$1$19 = $as_T2(arg1$3);
+            var _1$14 = $as_T(x$1$19._1__O());
+            var b$2 = $as_Lwhilelang_syntax_Program$BExpr(x$1$19._2__O());
+            var _1$13 = new $c_Lwhilelang_syntax_Program$Command$Assert(b$2);
+            var _2$6 = new $c_T2(_1$13, env$2);
+            var $$x20 = new $c_s_Some(new $c_T2(_1$14, _2$6))
+          };
+          var this$103 = $$x21.option2Iterable__s_Option__sc_Iterable($$x20);
+          return $m_sci_Set$().from__sc_IterableOnce__sci_Set(this$103)
+        }
       }
-    }
-  };
-  if ((comm$2 instanceof $c_Lwhilelang_syntax_Program$Command$ITE)) {
-    var x$1$19 = $as_Lwhilelang_syntax_Program$Command$ITE(comm$2);
-    var x23$1 = x$1$19.Lwhilelang_syntax_Program$Command$ITE__f_b;
-    var x24$1 = x$1$19.Lwhilelang_syntax_Program$Command$ITE__f_ct;
-    var x25$1 = x$1$19.Lwhilelang_syntax_Program$Command$ITE__f_cf;
-    var x$11$1 = $s_Lwhilelang_syntax_Program$BExpr$__BTrue__Lwhilelang_syntax_Program$BExpr();
-    if (((x$11$1 === null) ? (x23$1 === null) : x$11$1.equals__O__Z(x23$1))) {
-      var this$106 = $m_s_Predef$().s_Predef$__f_Set;
-      var $$x21 = $m_sr_ScalaRunTime$();
-      var y$13 = new $c_T2(x24$1, env$2);
-      var elems$15 = $$x21.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("if-true", y$13)]));
-      return this$106.from__sc_IterableOnce__sci_Set(elems$15)
-    } else {
-      var x$13$1 = $s_Lwhilelang_syntax_Program$BExpr$__BFalse__Lwhilelang_syntax_Program$BExpr();
-      if (((x$13$1 === null) ? (x23$1 === null) : x$13$1.equals__O__Z(x23$1))) {
-        var this$110 = $m_s_Predef$().s_Predef$__f_Set;
+    };
+    if ((comm$2 instanceof $c_Lwhilelang_syntax_Program$Command$ITE)) {
+      var x$1$20 = $as_Lwhilelang_syntax_Program$Command$ITE(comm$2);
+      var x28$1 = x$1$20.Lwhilelang_syntax_Program$Command$ITE__f_b;
+      var x29$1 = x$1$20.Lwhilelang_syntax_Program$Command$ITE__f_ct;
+      var x30$1 = x$1$20.Lwhilelang_syntax_Program$Command$ITE__f_cf;
+      var x$11$1 = $s_Lwhilelang_syntax_Program$BExpr$__BTrue__Lwhilelang_syntax_Program$BExpr();
+      if (((x$11$1 === null) ? (x28$1 === null) : x$11$1.equals__O__Z(x28$1))) {
+        var this$108 = $m_s_Predef$().s_Predef$__f_Set;
         var $$x22 = $m_sr_ScalaRunTime$();
-        var y$14 = new $c_T2(x25$1, env$2);
-        var elems$16 = $$x22.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("if-false", y$14)]));
-        return this$110.from__sc_IterableOnce__sci_Set(elems$16)
+        var y$13 = new $c_T2(x29$1, env$2);
+        var elems$15 = $$x22.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("if-true", y$13)]));
+        return this$108.from__sc_IterableOnce__sci_Set(elems$15)
       } else {
-        var $$x24 = $m_s_Option$();
-        var this$111 = this.nextBool__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option(x23$1, env$2);
-        if (this$111.isEmpty__Z()) {
-          var $$x23 = $m_s_None$()
+        var x$13$1 = $s_Lwhilelang_syntax_Program$BExpr$__BFalse__Lwhilelang_syntax_Program$BExpr();
+        if (((x$13$1 === null) ? (x28$1 === null) : x$13$1.equals__O__Z(x28$1))) {
+          var this$112 = $m_s_Predef$().s_Predef$__f_Set;
+          var $$x23 = $m_sr_ScalaRunTime$();
+          var y$14 = new $c_T2(x30$1, env$2);
+          var elems$16 = $$x23.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("if-false", y$14)]));
+          return this$112.from__sc_IterableOnce__sci_Set(elems$16)
         } else {
-          var arg1$4 = this$111.get__O();
-          var x$1$20 = $as_T2(arg1$4);
-          var _1$16 = $as_T(x$1$20._1__O());
-          var b$3 = $as_Lwhilelang_syntax_Program$BExpr(x$1$20._2__O());
-          var _1$15 = new $c_Lwhilelang_syntax_Program$Command$ITE(b$3, x24$1, x25$1);
-          var _2$7 = new $c_T2(_1$15, env$2);
-          var $$x23 = new $c_s_Some(new $c_T2(_1$16, _2$7))
-        };
-        var this$115 = $$x24.option2Iterable__s_Option__sc_Iterable($$x23);
-        return $m_sci_Set$().from__sc_IterableOnce__sci_Set(this$115)
+          var $$x25 = $m_s_Option$();
+          var this$113 = this.nextBool__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option(x28$1, env$2);
+          if (this$113.isEmpty__Z()) {
+            var $$x24 = $m_s_None$()
+          } else {
+            var arg1$4 = this$113.get__O();
+            var x$1$21 = $as_T2(arg1$4);
+            var _1$16 = $as_T(x$1$21._1__O());
+            var b$3 = $as_Lwhilelang_syntax_Program$BExpr(x$1$21._2__O());
+            var _1$15 = new $c_Lwhilelang_syntax_Program$Command$ITE(b$3, x29$1, x30$1);
+            var _2$7 = new $c_T2(_1$15, env$2);
+            var $$x24 = new $c_s_Some(new $c_T2(_1$16, _2$7))
+          };
+          var this$117 = $$x25.option2Iterable__s_Option__sc_Iterable($$x24);
+          return $m_sci_Set$().from__sc_IterableOnce__sci_Set(this$117)
+        }
       }
-    }
-  };
-  if ((comm$2 instanceof $c_Lwhilelang_syntax_Program$Command$Assign)) {
-    var x$1$21 = $as_Lwhilelang_syntax_Program$Command$Assign(comm$2);
-    var x19$1 = x$1$21.Lwhilelang_syntax_Program$Command$Assign__f_ident;
-    var x20$1 = x$1$21.Lwhilelang_syntax_Program$Command$Assign__f_e;
-    if ((x20$1 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
-      var x$1$22 = $as_Lwhilelang_syntax_Program$IExpr$N(x20$1);
-      var x15$1 = x$1$22.Lwhilelang_syntax_Program$IExpr$N__f_n;
-      var this$123 = $m_s_Predef$().s_Predef$__f_Set;
-      var $$x25 = $m_sr_ScalaRunTime$();
-      var self$3 = ((("Assign " + x19$1) + ":=") + x15$1);
-      var _1$17 = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
-      var _2$8 = env$2.$plus__T2__sci_MapOps(new $c_T2(x19$1, x15$1));
-      var y$15 = new $c_T2(_1$17, _2$8);
-      var elems$17 = $$x25.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2(self$3, y$15)]));
-      return this$123.from__sc_IterableOnce__sci_Set(elems$17)
-    } else {
-      var $$x27 = $m_s_Option$();
-      var this$124 = this.nextInt__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(x20$1, env$2);
-      if (this$124.isEmpty__Z()) {
-        var $$x26 = $m_s_None$()
+    };
+    if ((comm$2 instanceof $c_Lwhilelang_syntax_Program$Command$Assign)) {
+      var x$1$22 = $as_Lwhilelang_syntax_Program$Command$Assign(comm$2);
+      var x24$1 = x$1$22.Lwhilelang_syntax_Program$Command$Assign__f_ident;
+      var x25$1 = x$1$22.Lwhilelang_syntax_Program$Command$Assign__f_e;
+      if ((x25$1 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
+        var x$1$23 = $as_Lwhilelang_syntax_Program$IExpr$N(x25$1);
+        var x15$1 = x$1$23.Lwhilelang_syntax_Program$IExpr$N__f_n;
+        var this$125 = $m_s_Predef$().s_Predef$__f_Set;
+        var $$x26 = $m_sr_ScalaRunTime$();
+        var self$3 = ((("Assign " + x24$1) + ":=") + x15$1);
+        var _1$17 = $s_Lwhilelang_syntax_Program$Command$__Skip__Lwhilelang_syntax_Program$Command();
+        var _2$8 = env$2.$plus__T2__sci_MapOps(new $c_T2(x24$1, x15$1));
+        var y$15 = new $c_T2(_1$17, _2$8);
+        var elems$17 = $$x26.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2(self$3, y$15)]));
+        return this$125.from__sc_IterableOnce__sci_Set(elems$17)
       } else {
-        var arg1$5 = this$124.get__O();
-        var x$1$23 = $as_T2(arg1$5);
-        var _1$19 = $as_T(x$1$23._1__O());
-        var e$1 = $as_Lwhilelang_syntax_Program$IExpr(x$1$23._2__O());
-        var _1$18 = new $c_Lwhilelang_syntax_Program$Command$Assign(x19$1, e$1);
-        var _2$9 = new $c_T2(_1$18, env$2);
-        var $$x26 = new $c_s_Some(new $c_T2(_1$19, _2$9))
-      };
-      var this$128 = $$x27.option2Iterable__s_Option__sc_Iterable($$x26);
-      return $m_sci_Set$().from__sc_IterableOnce__sci_Set(this$128)
-    }
-  };
-  throw new $c_s_MatchError(comm$2)
+        var $$x28 = $m_s_Option$();
+        var this$126 = this.nextInt__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(x25$1, env$2);
+        if (this$126.isEmpty__Z()) {
+          var $$x27 = $m_s_None$()
+        } else {
+          var arg1$5 = this$126.get__O();
+          var x$1$24 = $as_T2(arg1$5);
+          var _1$19 = $as_T(x$1$24._1__O());
+          var e$1 = $as_Lwhilelang_syntax_Program$IExpr(x$1$24._2__O());
+          var _1$18 = new $c_Lwhilelang_syntax_Program$Command$Assign(x24$1, e$1);
+          var _2$9 = new $c_T2(_1$18, env$2);
+          var $$x27 = new $c_s_Some(new $c_T2(_1$19, _2$9))
+        };
+        var this$130 = $$x28.option2Iterable__s_Option__sc_Iterable($$x27);
+        return $m_sci_Set$().from__sc_IterableOnce__sci_Set(this$130)
+      }
+    };
+    if ((comm$2 instanceof $c_Lwhilelang_syntax_Program$Command$Contract)) {
+      var x$1$25 = $as_Lwhilelang_syntax_Program$Command$Contract(comm$2);
+      var x20$1 = x$1$25.Lwhilelang_syntax_Program$Command$Contract__f_c;
+      st$tailLocal1 = new $c_T2(x20$1, env$2);
+      continue
+    };
+    throw new $c_s_MatchError(comm$2)
+  }
 });
 $c_Lwhilelang_backend_SmallSemantics$.prototype.nextBool__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option = (function(b, env) {
   var x = $s_Lwhilelang_syntax_Program$BExpr$__BTrue__Lwhilelang_syntax_Program$BExpr();
@@ -21608,26 +22016,26 @@ $c_Lwhilelang_backend_SmallSemantics$.prototype.nextBool__Lwhilelang_syntax_Prog
   };
   if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$And)) {
     var x$1 = $as_Lwhilelang_syntax_Program$BExpr$And(b);
-    var x131 = x$1.Lwhilelang_syntax_Program$BExpr$And__f_b1;
-    var x132 = x$1.Lwhilelang_syntax_Program$BExpr$And__f_b2;
+    var x141 = x$1.Lwhilelang_syntax_Program$BExpr$And__f_b1;
+    var x142 = x$1.Lwhilelang_syntax_Program$BExpr$And__f_b2;
     var x$5 = $s_Lwhilelang_syntax_Program$BExpr$__BTrue__Lwhilelang_syntax_Program$BExpr();
-    if (((x$5 === null) ? (x131 === null) : x$5.equals__O__Z(x131))) {
-      var value = new $c_T2("And-true1", x132);
+    if (((x$5 === null) ? (x141 === null) : x$5.equals__O__Z(x141))) {
+      var value = new $c_T2("And-true1", x142);
       return new $c_s_Some(value)
     };
     var x$7 = $s_Lwhilelang_syntax_Program$BExpr$__BTrue__Lwhilelang_syntax_Program$BExpr();
-    if (((x$7 === null) ? (x132 === null) : x$7.equals__O__Z(x132))) {
-      var value$1 = new $c_T2("And-true2", x131);
+    if (((x$7 === null) ? (x142 === null) : x$7.equals__O__Z(x142))) {
+      var value$1 = new $c_T2("And-true2", x141);
       return new $c_s_Some(value$1)
     };
     var x$9 = $s_Lwhilelang_syntax_Program$BExpr$__BFalse__Lwhilelang_syntax_Program$BExpr();
-    if (((x$9 === null) ? (x131 === null) : x$9.equals__O__Z(x131))) {
+    if (((x$9 === null) ? (x141 === null) : x$9.equals__O__Z(x141))) {
       var _2 = $s_Lwhilelang_syntax_Program$BExpr$__BFalse__Lwhilelang_syntax_Program$BExpr();
       var value$2 = new $c_T2("And-false1", _2);
       return new $c_s_Some(value$2)
     };
     var x$11 = $s_Lwhilelang_syntax_Program$BExpr$__BFalse__Lwhilelang_syntax_Program$BExpr();
-    if (((x$11 === null) ? (x132 === null) : x$11.equals__O__Z(x132))) {
+    if (((x$11 === null) ? (x142 === null) : x$11.equals__O__Z(x142))) {
       var _2$1 = $s_Lwhilelang_syntax_Program$BExpr$__BFalse__Lwhilelang_syntax_Program$BExpr();
       var value$3 = new $c_T2("And-false2", _2$1);
       return new $c_s_Some(value$3)
@@ -21635,26 +22043,26 @@ $c_Lwhilelang_backend_SmallSemantics$.prototype.nextBool__Lwhilelang_syntax_Prog
   };
   if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Or)) {
     var x$1$1 = $as_Lwhilelang_syntax_Program$BExpr$Or(b);
-    var x115 = x$1$1.Lwhilelang_syntax_Program$BExpr$Or__f_b1;
-    var x116 = x$1$1.Lwhilelang_syntax_Program$BExpr$Or__f_b2;
+    var x125 = x$1$1.Lwhilelang_syntax_Program$BExpr$Or__f_b1;
+    var x126 = x$1$1.Lwhilelang_syntax_Program$BExpr$Or__f_b2;
     var x$13 = $s_Lwhilelang_syntax_Program$BExpr$__BFalse__Lwhilelang_syntax_Program$BExpr();
-    if (((x$13 === null) ? (x115 === null) : x$13.equals__O__Z(x115))) {
-      var value$4 = new $c_T2("Or-false1", x116);
+    if (((x$13 === null) ? (x125 === null) : x$13.equals__O__Z(x125))) {
+      var value$4 = new $c_T2("Or-false1", x126);
       return new $c_s_Some(value$4)
     };
     var x$15 = $s_Lwhilelang_syntax_Program$BExpr$__BFalse__Lwhilelang_syntax_Program$BExpr();
-    if (((x$15 === null) ? (x116 === null) : x$15.equals__O__Z(x116))) {
-      var value$5 = new $c_T2("Or-false2", x115);
+    if (((x$15 === null) ? (x126 === null) : x$15.equals__O__Z(x126))) {
+      var value$5 = new $c_T2("Or-false2", x125);
       return new $c_s_Some(value$5)
     };
     var x$17 = $s_Lwhilelang_syntax_Program$BExpr$__BTrue__Lwhilelang_syntax_Program$BExpr();
-    if (((x$17 === null) ? (x115 === null) : x$17.equals__O__Z(x115))) {
+    if (((x$17 === null) ? (x125 === null) : x$17.equals__O__Z(x125))) {
       var _2$2 = $s_Lwhilelang_syntax_Program$BExpr$__BFalse__Lwhilelang_syntax_Program$BExpr();
       var value$6 = new $c_T2("Or-true1", _2$2);
       return new $c_s_Some(value$6)
     };
     var x$19 = $s_Lwhilelang_syntax_Program$BExpr$__BTrue__Lwhilelang_syntax_Program$BExpr();
-    if (((x$19 === null) ? (x116 === null) : x$19.equals__O__Z(x116))) {
+    if (((x$19 === null) ? (x126 === null) : x$19.equals__O__Z(x126))) {
       var _2$3 = $s_Lwhilelang_syntax_Program$BExpr$__BFalse__Lwhilelang_syntax_Program$BExpr();
       var value$7 = new $c_T2("Or-true2", _2$3);
       return new $c_s_Some(value$7)
@@ -21662,15 +22070,15 @@ $c_Lwhilelang_backend_SmallSemantics$.prototype.nextBool__Lwhilelang_syntax_Prog
   };
   if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Not)) {
     var x$1$2 = $as_Lwhilelang_syntax_Program$BExpr$Not(b);
-    var x100 = x$1$2.Lwhilelang_syntax_Program$BExpr$Not__f_b;
+    var x110 = x$1$2.Lwhilelang_syntax_Program$BExpr$Not__f_b;
     var x$21 = $s_Lwhilelang_syntax_Program$BExpr$__BTrue__Lwhilelang_syntax_Program$BExpr();
-    if (((x$21 === null) ? (x100 === null) : x$21.equals__O__Z(x100))) {
+    if (((x$21 === null) ? (x110 === null) : x$21.equals__O__Z(x110))) {
       var _2$4 = $s_Lwhilelang_syntax_Program$BExpr$__BFalse__Lwhilelang_syntax_Program$BExpr();
       var value$8 = new $c_T2("Not-true", _2$4);
       return new $c_s_Some(value$8)
     };
     var x$23 = $s_Lwhilelang_syntax_Program$BExpr$__BFalse__Lwhilelang_syntax_Program$BExpr();
-    if (((x$23 === null) ? (x100 === null) : x$23.equals__O__Z(x100))) {
+    if (((x$23 === null) ? (x110 === null) : x$23.equals__O__Z(x110))) {
       var _2$5 = $s_Lwhilelang_syntax_Program$BExpr$__BTrue__Lwhilelang_syntax_Program$BExpr();
       var value$9 = new $c_T2("Not-true", _2$5);
       return new $c_s_Some(value$9)
@@ -21678,15 +22086,15 @@ $c_Lwhilelang_backend_SmallSemantics$.prototype.nextBool__Lwhilelang_syntax_Prog
   };
   if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Less)) {
     var x$1$3 = $as_Lwhilelang_syntax_Program$BExpr$Less(b);
-    var x87 = x$1$3.Lwhilelang_syntax_Program$BExpr$Less__f_e1;
-    var x88 = x$1$3.Lwhilelang_syntax_Program$BExpr$Less__f_e2;
-    if ((x87 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
-      var x$1$4 = $as_Lwhilelang_syntax_Program$IExpr$N(x87);
-      var x94 = x$1$4.Lwhilelang_syntax_Program$IExpr$N__f_n;
-      if ((x88 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
-        var x$1$5 = $as_Lwhilelang_syntax_Program$IExpr$N(x88);
-        var x91 = x$1$5.Lwhilelang_syntax_Program$IExpr$N__f_n;
-        if ((x94 < x91)) {
+    var x97 = x$1$3.Lwhilelang_syntax_Program$BExpr$Less__f_e1;
+    var x98 = x$1$3.Lwhilelang_syntax_Program$BExpr$Less__f_e2;
+    if ((x97 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
+      var x$1$4 = $as_Lwhilelang_syntax_Program$IExpr$N(x97);
+      var x104 = x$1$4.Lwhilelang_syntax_Program$IExpr$N__f_n;
+      if ((x98 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
+        var x$1$5 = $as_Lwhilelang_syntax_Program$IExpr$N(x98);
+        var x101 = x$1$5.Lwhilelang_syntax_Program$IExpr$N__f_n;
+        if ((x104 < x101)) {
           var _2$6 = $s_Lwhilelang_syntax_Program$BExpr$__BTrue__Lwhilelang_syntax_Program$BExpr();
           var value$10 = new $c_T2("Less-true", _2$6);
           return new $c_s_Some(value$10)
@@ -21700,15 +22108,15 @@ $c_Lwhilelang_backend_SmallSemantics$.prototype.nextBool__Lwhilelang_syntax_Prog
   };
   if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Greater)) {
     var x$1$6 = $as_Lwhilelang_syntax_Program$BExpr$Greater(b);
-    var x77 = x$1$6.Lwhilelang_syntax_Program$BExpr$Greater__f_e1;
-    var x78 = x$1$6.Lwhilelang_syntax_Program$BExpr$Greater__f_e2;
-    if ((x77 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
-      var x$1$7 = $as_Lwhilelang_syntax_Program$IExpr$N(x77);
-      var x84 = x$1$7.Lwhilelang_syntax_Program$IExpr$N__f_n;
-      if ((x78 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
-        var x$1$8 = $as_Lwhilelang_syntax_Program$IExpr$N(x78);
-        var x81 = x$1$8.Lwhilelang_syntax_Program$IExpr$N__f_n;
-        if ((x84 > x81)) {
+    var x87 = x$1$6.Lwhilelang_syntax_Program$BExpr$Greater__f_e1;
+    var x88 = x$1$6.Lwhilelang_syntax_Program$BExpr$Greater__f_e2;
+    if ((x87 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
+      var x$1$7 = $as_Lwhilelang_syntax_Program$IExpr$N(x87);
+      var x94 = x$1$7.Lwhilelang_syntax_Program$IExpr$N__f_n;
+      if ((x88 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
+        var x$1$8 = $as_Lwhilelang_syntax_Program$IExpr$N(x88);
+        var x91 = x$1$8.Lwhilelang_syntax_Program$IExpr$N__f_n;
+        if ((x94 > x91)) {
           var _2$8 = $s_Lwhilelang_syntax_Program$BExpr$__BTrue__Lwhilelang_syntax_Program$BExpr();
           var value$12 = new $c_T2("Greater-true", _2$8);
           return new $c_s_Some(value$12)
@@ -21722,15 +22130,15 @@ $c_Lwhilelang_backend_SmallSemantics$.prototype.nextBool__Lwhilelang_syntax_Prog
   };
   if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Eq)) {
     var x$1$9 = $as_Lwhilelang_syntax_Program$BExpr$Eq(b);
-    var x67 = x$1$9.Lwhilelang_syntax_Program$BExpr$Eq__f_e1;
-    var x68 = x$1$9.Lwhilelang_syntax_Program$BExpr$Eq__f_e2;
-    if ((x67 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
-      var x$1$10 = $as_Lwhilelang_syntax_Program$IExpr$N(x67);
-      var x74 = x$1$10.Lwhilelang_syntax_Program$IExpr$N__f_n;
-      if ((x68 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
-        var x$1$11 = $as_Lwhilelang_syntax_Program$IExpr$N(x68);
-        var x71 = x$1$11.Lwhilelang_syntax_Program$IExpr$N__f_n;
-        if ((x74 === x71)) {
+    var x77 = x$1$9.Lwhilelang_syntax_Program$BExpr$Eq__f_e1;
+    var x78 = x$1$9.Lwhilelang_syntax_Program$BExpr$Eq__f_e2;
+    if ((x77 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
+      var x$1$10 = $as_Lwhilelang_syntax_Program$IExpr$N(x77);
+      var x84 = x$1$10.Lwhilelang_syntax_Program$IExpr$N__f_n;
+      if ((x78 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
+        var x$1$11 = $as_Lwhilelang_syntax_Program$IExpr$N(x78);
+        var x81 = x$1$11.Lwhilelang_syntax_Program$IExpr$N__f_n;
+        if ((x84 === x81)) {
           var _2$10 = $s_Lwhilelang_syntax_Program$BExpr$__BTrue__Lwhilelang_syntax_Program$BExpr();
           var value$14 = new $c_T2("Eq-true", _2$10);
           return new $c_s_Some(value$14)
@@ -21744,8 +22152,8 @@ $c_Lwhilelang_backend_SmallSemantics$.prototype.nextBool__Lwhilelang_syntax_Prog
   };
   if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Not)) {
     var x$1$12 = $as_Lwhilelang_syntax_Program$BExpr$Not(b);
-    var x64 = x$1$12.Lwhilelang_syntax_Program$BExpr$Not__f_b;
-    var this$46 = this.nextBool__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option(x64, env);
+    var x74 = x$1$12.Lwhilelang_syntax_Program$BExpr$Not__f_b;
+    var this$46 = this.nextBool__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option(x74, env);
     if (this$46.isEmpty__Z()) {
       return $m_s_None$()
     } else {
@@ -21759,8 +22167,8 @@ $c_Lwhilelang_backend_SmallSemantics$.prototype.nextBool__Lwhilelang_syntax_Prog
   };
   if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$And)) {
     var x$1$14 = $as_Lwhilelang_syntax_Program$BExpr$And(b);
-    var x60 = x$1$14.Lwhilelang_syntax_Program$BExpr$And__f_b1;
-    var x61 = x$1$14.Lwhilelang_syntax_Program$BExpr$And__f_b2;
+    var x70 = x$1$14.Lwhilelang_syntax_Program$BExpr$And__f_b1;
+    var x71 = x$1$14.Lwhilelang_syntax_Program$BExpr$And__f_b2;
     var f = ((this$2$1, env$2) => ((b$2) => {
       var b$3 = $as_Lwhilelang_syntax_Program$BExpr(b$2);
       return this$2$1.nextBool__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option(b$3, env$2)
@@ -21770,21 +22178,21 @@ $c_Lwhilelang_backend_SmallSemantics$.prototype.nextBool__Lwhilelang_syntax_Prog
       var b2 = $as_Lwhilelang_syntax_Program$BExpr(b2$4);
       return new $c_Lwhilelang_syntax_Program$BExpr$And(b1, b2)
     }))(this);
-    var x223 = $as_s_Option(f(x60));
-    if ((x223 instanceof $c_s_Some)) {
-      var x225 = $m_s_Some$().unapply__s_Some__s_Option($as_s_Some(x223));
-      if ((!x225.isEmpty__Z())) {
-        var x226 = $as_T2(x225.get__O());
-        var s = $as_T(x226._1__O());
-        var a1b = x226._2__O();
-        var _2$13 = f$1(a1b, x61);
+    var x233 = $as_s_Option(f(x70));
+    if ((x233 instanceof $c_s_Some)) {
+      var x235 = $m_s_Some$().unapply__s_Some__s_Option($as_s_Some(x233));
+      if ((!x235.isEmpty__Z())) {
+        var x236 = $as_T2(x235.get__O());
+        var s = $as_T(x236._1__O());
+        var a1b = x236._2__O();
+        var _2$13 = f$1(a1b, x71);
         var value$16 = new $c_T2(s, _2$13);
         return new $c_s_Some(value$16)
       }
     };
     var x$2 = $m_s_None$();
-    if ((x$2 === x223)) {
-      var this$54 = $as_s_Option(f(x61));
+    if ((x$2 === x233)) {
+      var this$54 = $as_s_Option(f(x71));
       var p = new $c_sjsr_AnonFunction1(((this$53) => ((x$1$15) => {
         var x$1$16 = $as_T2(x$1$15);
         return ((x$1$16 !== null) && ($as_T(x$1$16._1__O()), x$1$16._2__O(), true))
@@ -21803,7 +22211,7 @@ $c_Lwhilelang_backend_SmallSemantics$.prototype.nextBool__Lwhilelang_syntax_Prog
           if ((x$1$17 !== null)) {
             var s$2 = $as_T(x$1$17._1__O());
             var a2b$1 = x$1$17._2__O();
-            var _2$14 = f$1(x60, a2b$1);
+            var _2$14 = f$1(x70, a2b$1);
             var $$x1 = new $c_T2(s$2, _2$14);
             break matchResult11
           };
@@ -21812,12 +22220,12 @@ $c_Lwhilelang_backend_SmallSemantics$.prototype.nextBool__Lwhilelang_syntax_Prog
         return new $c_s_Some($$x1)
       }
     };
-    throw new $c_s_MatchError(x223)
+    throw new $c_s_MatchError(x233)
   };
   if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Or)) {
     var x$1$18 = $as_Lwhilelang_syntax_Program$BExpr$Or(b);
-    var x56 = x$1$18.Lwhilelang_syntax_Program$BExpr$Or__f_b1;
-    var x57 = x$1$18.Lwhilelang_syntax_Program$BExpr$Or__f_b2;
+    var x66 = x$1$18.Lwhilelang_syntax_Program$BExpr$Or__f_b1;
+    var x67 = x$1$18.Lwhilelang_syntax_Program$BExpr$Or__f_b2;
     var f$2 = ((this$4$1, env$3) => ((b$3$1) => {
       var b$4 = $as_Lwhilelang_syntax_Program$BExpr(b$3$1);
       return this$4$1.nextBool__Lwhilelang_syntax_Program$BExpr__sci_Map__s_Option(b$4, env$3)
@@ -21827,21 +22235,21 @@ $c_Lwhilelang_backend_SmallSemantics$.prototype.nextBool__Lwhilelang_syntax_Prog
       var b2$1 = $as_Lwhilelang_syntax_Program$BExpr(b2$6);
       return new $c_Lwhilelang_syntax_Program$BExpr$Or(b1$1, b2$1)
     }))(this);
-    var x223$1 = $as_s_Option(f$2(x56));
-    if ((x223$1 instanceof $c_s_Some)) {
-      var x225$1 = $m_s_Some$().unapply__s_Some__s_Option($as_s_Some(x223$1));
-      if ((!x225$1.isEmpty__Z())) {
-        var x226$1 = $as_T2(x225$1.get__O());
-        var s$3 = $as_T(x226$1._1__O());
-        var a1b$1 = x226$1._2__O();
-        var _2$15 = f$3(a1b$1, x57);
+    var x233$1 = $as_s_Option(f$2(x66));
+    if ((x233$1 instanceof $c_s_Some)) {
+      var x235$1 = $m_s_Some$().unapply__s_Some__s_Option($as_s_Some(x233$1));
+      if ((!x235$1.isEmpty__Z())) {
+        var x236$1 = $as_T2(x235$1.get__O());
+        var s$3 = $as_T(x236$1._1__O());
+        var a1b$1 = x236$1._2__O();
+        var _2$15 = f$3(a1b$1, x67);
         var value$17 = new $c_T2(s$3, _2$15);
         return new $c_s_Some(value$17)
       }
     };
     var x$4 = $m_s_None$();
-    if ((x$4 === x223$1)) {
-      var this$64 = $as_s_Option(f$2(x57));
+    if ((x$4 === x233$1)) {
+      var this$64 = $as_s_Option(f$2(x67));
       var p$2 = new $c_sjsr_AnonFunction1(((this$63) => ((x$1$19) => {
         var x$1$20 = $as_T2(x$1$19);
         return ((x$1$20 !== null) && ($as_T(x$1$20._1__O()), x$1$20._2__O(), true))
@@ -21860,7 +22268,7 @@ $c_Lwhilelang_backend_SmallSemantics$.prototype.nextBool__Lwhilelang_syntax_Prog
           if ((x$1$21 !== null)) {
             var s$5 = $as_T(x$1$21._1__O());
             var a2b$3 = x$1$21._2__O();
-            var _2$16 = f$3(x56, a2b$3);
+            var _2$16 = f$3(x66, a2b$3);
             var $$x2 = new $c_T2(s$5, _2$16);
             break matchResult11$1
           };
@@ -21869,12 +22277,21 @@ $c_Lwhilelang_backend_SmallSemantics$.prototype.nextBool__Lwhilelang_syntax_Prog
         return new $c_s_Some($$x2)
       }
     };
-    throw new $c_s_MatchError(x223$1)
+    throw new $c_s_MatchError(x233$1)
+  };
+  if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Impl)) {
+    var x$1$22 = $as_Lwhilelang_syntax_Program$BExpr$Impl(b);
+    var x62 = x$1$22.Lwhilelang_syntax_Program$BExpr$Impl__f_e1;
+    var x63 = x$1$22.Lwhilelang_syntax_Program$BExpr$Impl__f_e2;
+    var b1$2 = new $c_Lwhilelang_syntax_Program$BExpr$Not(x62);
+    var _2$17 = new $c_Lwhilelang_syntax_Program$BExpr$Or(b1$2, x63);
+    var value$18 = new $c_T2("Impl-def", _2$17);
+    return new $c_s_Some(value$18)
   };
   if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Less)) {
-    var x$1$22 = $as_Lwhilelang_syntax_Program$BExpr$Less(b);
-    var x52 = x$1$22.Lwhilelang_syntax_Program$BExpr$Less__f_e1;
-    var x53 = x$1$22.Lwhilelang_syntax_Program$BExpr$Less__f_e2;
+    var x$1$23 = $as_Lwhilelang_syntax_Program$BExpr$Less(b);
+    var x58 = x$1$23.Lwhilelang_syntax_Program$BExpr$Less__f_e1;
+    var x59 = x$1$23.Lwhilelang_syntax_Program$BExpr$Less__f_e2;
     var f$4 = ((this$6$1, env$4) => ((e) => {
       var e$1 = $as_Lwhilelang_syntax_Program$IExpr(e);
       return this$6$1.nextInt__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(e$1, env$4)
@@ -21884,54 +22301,54 @@ $c_Lwhilelang_backend_SmallSemantics$.prototype.nextBool__Lwhilelang_syntax_Prog
       var e2 = $as_Lwhilelang_syntax_Program$IExpr(e2$2);
       return new $c_Lwhilelang_syntax_Program$BExpr$Less(e1, e2)
     }))(this);
-    var x223$2 = $as_s_Option(f$4(x52));
-    if ((x223$2 instanceof $c_s_Some)) {
-      var x225$2 = $m_s_Some$().unapply__s_Some__s_Option($as_s_Some(x223$2));
-      if ((!x225$2.isEmpty__Z())) {
-        var x226$2 = $as_T2(x225$2.get__O());
-        var s$6 = $as_T(x226$2._1__O());
-        var a1b$2 = x226$2._2__O();
-        var _2$17 = f$5(a1b$2, x53);
-        var value$18 = new $c_T2(s$6, _2$17);
-        return new $c_s_Some(value$18)
+    var x233$2 = $as_s_Option(f$4(x58));
+    if ((x233$2 instanceof $c_s_Some)) {
+      var x235$2 = $m_s_Some$().unapply__s_Some__s_Option($as_s_Some(x233$2));
+      if ((!x235$2.isEmpty__Z())) {
+        var x236$2 = $as_T2(x235$2.get__O());
+        var s$6 = $as_T(x236$2._1__O());
+        var a1b$2 = x236$2._2__O();
+        var _2$18 = f$5(a1b$2, x59);
+        var value$19 = new $c_T2(s$6, _2$18);
+        return new $c_s_Some(value$19)
       }
     };
     var x$6 = $m_s_None$();
-    if ((x$6 === x223$2)) {
-      var this$74 = $as_s_Option(f$4(x53));
-      var p$4 = new $c_sjsr_AnonFunction1(((this$73) => ((x$1$23) => {
-        var x$1$24 = $as_T2(x$1$23);
-        return ((x$1$24 !== null) && ($as_T(x$1$24._1__O()), x$1$24._2__O(), true))
+    if ((x$6 === x233$2)) {
+      var this$79 = $as_s_Option(f$4(x59));
+      var p$4 = new $c_sjsr_AnonFunction1(((this$78) => ((x$1$24) => {
+        var x$1$25 = $as_T2(x$1$24);
+        return ((x$1$25 !== null) && ($as_T(x$1$25._1__O()), x$1$25._2__O(), true))
       }))(this));
-      var this$75 = new $c_s_Option$WithFilter(this$74, p$4);
-      var this$76 = this$75.s_Option$WithFilter__f_$outer;
-      var p$5 = this$75.s_Option$WithFilter__f_p;
-      var this$77 = ((this$76.isEmpty__Z() || $uZ(p$5.apply__O__O(this$76.get__O()))) ? this$76 : $m_s_None$());
-      if (this$77.isEmpty__Z()) {
+      var this$80 = new $c_s_Option$WithFilter(this$79, p$4);
+      var this$81 = this$80.s_Option$WithFilter__f_$outer;
+      var p$5 = this$80.s_Option$WithFilter__f_p;
+      var this$82 = ((this$81.isEmpty__Z() || $uZ(p$5.apply__O__O(this$81.get__O()))) ? this$81 : $m_s_None$());
+      if (this$82.isEmpty__Z()) {
         return $m_s_None$()
       } else {
-        var arg1$3 = this$77.get__O();
-        var x$1$25 = $as_T2(arg1$3);
+        var arg1$3 = this$82.get__O();
+        var x$1$26 = $as_T2(arg1$3);
         matchResult11$2: {
           var $$x3;
-          if ((x$1$25 !== null)) {
-            var s$8 = $as_T(x$1$25._1__O());
-            var a2b$5 = x$1$25._2__O();
-            var _2$18 = f$5(x52, a2b$5);
-            var $$x3 = new $c_T2(s$8, _2$18);
+          if ((x$1$26 !== null)) {
+            var s$8 = $as_T(x$1$26._1__O());
+            var a2b$5 = x$1$26._2__O();
+            var _2$19 = f$5(x58, a2b$5);
+            var $$x3 = new $c_T2(s$8, _2$19);
             break matchResult11$2
           };
-          throw new $c_s_MatchError(x$1$25)
+          throw new $c_s_MatchError(x$1$26)
         };
         return new $c_s_Some($$x3)
       }
     };
-    throw new $c_s_MatchError(x223$2)
+    throw new $c_s_MatchError(x233$2)
   };
   if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Greater)) {
-    var x$1$26 = $as_Lwhilelang_syntax_Program$BExpr$Greater(b);
-    var x48 = x$1$26.Lwhilelang_syntax_Program$BExpr$Greater__f_e1;
-    var x49 = x$1$26.Lwhilelang_syntax_Program$BExpr$Greater__f_e2;
+    var x$1$27 = $as_Lwhilelang_syntax_Program$BExpr$Greater(b);
+    var x54 = x$1$27.Lwhilelang_syntax_Program$BExpr$Greater__f_e1;
+    var x55 = x$1$27.Lwhilelang_syntax_Program$BExpr$Greater__f_e2;
     var f$6 = ((this$8$1, env$5) => ((e$2) => {
       var e$3 = $as_Lwhilelang_syntax_Program$IExpr(e$2);
       return this$8$1.nextInt__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(e$3, env$5)
@@ -21941,54 +22358,54 @@ $c_Lwhilelang_backend_SmallSemantics$.prototype.nextBool__Lwhilelang_syntax_Prog
       var e2$1 = $as_Lwhilelang_syntax_Program$IExpr(e2$4);
       return new $c_Lwhilelang_syntax_Program$BExpr$Greater(e1$1, e2$1)
     }))(this);
-    var x223$3 = $as_s_Option(f$6(x48));
-    if ((x223$3 instanceof $c_s_Some)) {
-      var x225$3 = $m_s_Some$().unapply__s_Some__s_Option($as_s_Some(x223$3));
-      if ((!x225$3.isEmpty__Z())) {
-        var x226$3 = $as_T2(x225$3.get__O());
-        var s$9 = $as_T(x226$3._1__O());
-        var a1b$3 = x226$3._2__O();
-        var _2$19 = f$7(a1b$3, x49);
-        var value$19 = new $c_T2(s$9, _2$19);
-        return new $c_s_Some(value$19)
+    var x233$3 = $as_s_Option(f$6(x54));
+    if ((x233$3 instanceof $c_s_Some)) {
+      var x235$3 = $m_s_Some$().unapply__s_Some__s_Option($as_s_Some(x233$3));
+      if ((!x235$3.isEmpty__Z())) {
+        var x236$3 = $as_T2(x235$3.get__O());
+        var s$9 = $as_T(x236$3._1__O());
+        var a1b$3 = x236$3._2__O();
+        var _2$20 = f$7(a1b$3, x55);
+        var value$20 = new $c_T2(s$9, _2$20);
+        return new $c_s_Some(value$20)
       }
     };
     var x$8 = $m_s_None$();
-    if ((x$8 === x223$3)) {
-      var this$84 = $as_s_Option(f$6(x49));
-      var p$6 = new $c_sjsr_AnonFunction1(((this$83) => ((x$1$27) => {
-        var x$1$28 = $as_T2(x$1$27);
-        return ((x$1$28 !== null) && ($as_T(x$1$28._1__O()), x$1$28._2__O(), true))
+    if ((x$8 === x233$3)) {
+      var this$89 = $as_s_Option(f$6(x55));
+      var p$6 = new $c_sjsr_AnonFunction1(((this$88) => ((x$1$28) => {
+        var x$1$29 = $as_T2(x$1$28);
+        return ((x$1$29 !== null) && ($as_T(x$1$29._1__O()), x$1$29._2__O(), true))
       }))(this));
-      var this$85 = new $c_s_Option$WithFilter(this$84, p$6);
-      var this$86 = this$85.s_Option$WithFilter__f_$outer;
-      var p$7 = this$85.s_Option$WithFilter__f_p;
-      var this$87 = ((this$86.isEmpty__Z() || $uZ(p$7.apply__O__O(this$86.get__O()))) ? this$86 : $m_s_None$());
-      if (this$87.isEmpty__Z()) {
+      var this$90 = new $c_s_Option$WithFilter(this$89, p$6);
+      var this$91 = this$90.s_Option$WithFilter__f_$outer;
+      var p$7 = this$90.s_Option$WithFilter__f_p;
+      var this$92 = ((this$91.isEmpty__Z() || $uZ(p$7.apply__O__O(this$91.get__O()))) ? this$91 : $m_s_None$());
+      if (this$92.isEmpty__Z()) {
         return $m_s_None$()
       } else {
-        var arg1$4 = this$87.get__O();
-        var x$1$29 = $as_T2(arg1$4);
+        var arg1$4 = this$92.get__O();
+        var x$1$30 = $as_T2(arg1$4);
         matchResult11$3: {
           var $$x4;
-          if ((x$1$29 !== null)) {
-            var s$11 = $as_T(x$1$29._1__O());
-            var a2b$7 = x$1$29._2__O();
-            var _2$20 = f$7(x48, a2b$7);
-            var $$x4 = new $c_T2(s$11, _2$20);
+          if ((x$1$30 !== null)) {
+            var s$11 = $as_T(x$1$30._1__O());
+            var a2b$7 = x$1$30._2__O();
+            var _2$21 = f$7(x54, a2b$7);
+            var $$x4 = new $c_T2(s$11, _2$21);
             break matchResult11$3
           };
-          throw new $c_s_MatchError(x$1$29)
+          throw new $c_s_MatchError(x$1$30)
         };
         return new $c_s_Some($$x4)
       }
     };
-    throw new $c_s_MatchError(x223$3)
+    throw new $c_s_MatchError(x233$3)
   };
   if ((b instanceof $c_Lwhilelang_syntax_Program$BExpr$Eq)) {
-    var x$1$30 = $as_Lwhilelang_syntax_Program$BExpr$Eq(b);
-    var x44 = x$1$30.Lwhilelang_syntax_Program$BExpr$Eq__f_e1;
-    var x45 = x$1$30.Lwhilelang_syntax_Program$BExpr$Eq__f_e2;
+    var x$1$31 = $as_Lwhilelang_syntax_Program$BExpr$Eq(b);
+    var x50 = x$1$31.Lwhilelang_syntax_Program$BExpr$Eq__f_e1;
+    var x51 = x$1$31.Lwhilelang_syntax_Program$BExpr$Eq__f_e2;
     var f$8 = ((this$10$1, env$6) => ((e$3$1) => {
       var e$4 = $as_Lwhilelang_syntax_Program$IExpr(e$3$1);
       return this$10$1.nextInt__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(e$4, env$6)
@@ -21998,49 +22415,49 @@ $c_Lwhilelang_backend_SmallSemantics$.prototype.nextBool__Lwhilelang_syntax_Prog
       var e2$3 = $as_Lwhilelang_syntax_Program$IExpr(e2$6);
       return new $c_Lwhilelang_syntax_Program$BExpr$Eq(e1$3, e2$3)
     }))(this);
-    var x223$4 = $as_s_Option(f$8(x44));
-    if ((x223$4 instanceof $c_s_Some)) {
-      var x225$4 = $m_s_Some$().unapply__s_Some__s_Option($as_s_Some(x223$4));
-      if ((!x225$4.isEmpty__Z())) {
-        var x226$4 = $as_T2(x225$4.get__O());
-        var s$12 = $as_T(x226$4._1__O());
-        var a1b$4 = x226$4._2__O();
-        var _2$21 = f$9(a1b$4, x45);
-        var value$20 = new $c_T2(s$12, _2$21);
-        return new $c_s_Some(value$20)
+    var x233$4 = $as_s_Option(f$8(x50));
+    if ((x233$4 instanceof $c_s_Some)) {
+      var x235$4 = $m_s_Some$().unapply__s_Some__s_Option($as_s_Some(x233$4));
+      if ((!x235$4.isEmpty__Z())) {
+        var x236$4 = $as_T2(x235$4.get__O());
+        var s$12 = $as_T(x236$4._1__O());
+        var a1b$4 = x236$4._2__O();
+        var _2$22 = f$9(a1b$4, x51);
+        var value$21 = new $c_T2(s$12, _2$22);
+        return new $c_s_Some(value$21)
       }
     };
     var x$10 = $m_s_None$();
-    if ((x$10 === x223$4)) {
-      var this$94 = $as_s_Option(f$8(x45));
-      var p$8 = new $c_sjsr_AnonFunction1(((this$93) => ((x$1$31) => {
-        var x$1$32 = $as_T2(x$1$31);
-        return ((x$1$32 !== null) && ($as_T(x$1$32._1__O()), x$1$32._2__O(), true))
+    if ((x$10 === x233$4)) {
+      var this$99 = $as_s_Option(f$8(x51));
+      var p$8 = new $c_sjsr_AnonFunction1(((this$98) => ((x$1$32) => {
+        var x$1$33 = $as_T2(x$1$32);
+        return ((x$1$33 !== null) && ($as_T(x$1$33._1__O()), x$1$33._2__O(), true))
       }))(this));
-      var this$95 = new $c_s_Option$WithFilter(this$94, p$8);
-      var this$96 = this$95.s_Option$WithFilter__f_$outer;
-      var p$9 = this$95.s_Option$WithFilter__f_p;
-      var this$97 = ((this$96.isEmpty__Z() || $uZ(p$9.apply__O__O(this$96.get__O()))) ? this$96 : $m_s_None$());
-      if (this$97.isEmpty__Z()) {
+      var this$100 = new $c_s_Option$WithFilter(this$99, p$8);
+      var this$101 = this$100.s_Option$WithFilter__f_$outer;
+      var p$9 = this$100.s_Option$WithFilter__f_p;
+      var this$102 = ((this$101.isEmpty__Z() || $uZ(p$9.apply__O__O(this$101.get__O()))) ? this$101 : $m_s_None$());
+      if (this$102.isEmpty__Z()) {
         return $m_s_None$()
       } else {
-        var arg1$5 = this$97.get__O();
-        var x$1$33 = $as_T2(arg1$5);
+        var arg1$5 = this$102.get__O();
+        var x$1$34 = $as_T2(arg1$5);
         matchResult11$4: {
           var $$x5;
-          if ((x$1$33 !== null)) {
-            var s$14 = $as_T(x$1$33._1__O());
-            var a2b$9 = x$1$33._2__O();
-            var _2$22 = f$9(x44, a2b$9);
-            var $$x5 = new $c_T2(s$14, _2$22);
+          if ((x$1$34 !== null)) {
+            var s$14 = $as_T(x$1$34._1__O());
+            var a2b$9 = x$1$34._2__O();
+            var _2$23 = f$9(x50, a2b$9);
+            var $$x5 = new $c_T2(s$14, _2$23);
             break matchResult11$4
           };
-          throw new $c_s_MatchError(x$1$33)
+          throw new $c_s_MatchError(x$1$34)
         };
         return new $c_s_Some($$x5)
       }
     };
-    throw new $c_s_MatchError(x223$4)
+    throw new $c_s_MatchError(x233$4)
   };
   throw new $c_s_MatchError(b)
 });
@@ -22051,10 +22468,10 @@ $c_Lwhilelang_backend_SmallSemantics$.prototype.nextInt__Lwhilelang_syntax_Progr
   };
   if ((e instanceof $c_Lwhilelang_syntax_Program$IExpr$Var)) {
     var x$1$1 = $as_Lwhilelang_syntax_Program$IExpr$Var(e);
-    var x213 = x$1$1.Lwhilelang_syntax_Program$IExpr$Var__f_ident;
-    if (env.contains__O__Z(x213)) {
-      var self = ("Var-" + x213);
-      var n = $uI(env.apply__O__O(x213));
+    var x223 = x$1$1.Lwhilelang_syntax_Program$IExpr$Var__f_ident;
+    if (env.contains__O__Z(x223)) {
+      var self = ("Var-" + x223);
+      var n = $uI(env.apply__O__O(x223));
       var y = new $c_Lwhilelang_syntax_Program$IExpr$N(n);
       var value = new $c_T2(self, y);
       return new $c_s_Some(value)
@@ -22064,15 +22481,15 @@ $c_Lwhilelang_backend_SmallSemantics$.prototype.nextInt__Lwhilelang_syntax_Progr
   };
   if ((e instanceof $c_Lwhilelang_syntax_Program$IExpr$Plus)) {
     var x$1$2 = $as_Lwhilelang_syntax_Program$IExpr$Plus(e);
-    var x203 = x$1$2.Lwhilelang_syntax_Program$IExpr$Plus__f_e1;
-    var x204 = x$1$2.Lwhilelang_syntax_Program$IExpr$Plus__f_e2;
-    if ((x203 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
-      var x$1$3 = $as_Lwhilelang_syntax_Program$IExpr$N(x203);
-      var x210 = x$1$3.Lwhilelang_syntax_Program$IExpr$N__f_n;
-      if ((x204 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
-        var x$1$4 = $as_Lwhilelang_syntax_Program$IExpr$N(x204);
-        var x207 = x$1$4.Lwhilelang_syntax_Program$IExpr$N__f_n;
-        var n$1 = ((x210 + x207) | 0);
+    var x213 = x$1$2.Lwhilelang_syntax_Program$IExpr$Plus__f_e1;
+    var x214 = x$1$2.Lwhilelang_syntax_Program$IExpr$Plus__f_e2;
+    if ((x213 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
+      var x$1$3 = $as_Lwhilelang_syntax_Program$IExpr$N(x213);
+      var x220 = x$1$3.Lwhilelang_syntax_Program$IExpr$N__f_n;
+      if ((x214 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
+        var x$1$4 = $as_Lwhilelang_syntax_Program$IExpr$N(x214);
+        var x217 = x$1$4.Lwhilelang_syntax_Program$IExpr$N__f_n;
+        var n$1 = ((x220 + x217) | 0);
         var _2 = new $c_Lwhilelang_syntax_Program$IExpr$N(n$1);
         var value$1 = new $c_T2("Plus", _2);
         return new $c_s_Some(value$1)
@@ -22081,15 +22498,15 @@ $c_Lwhilelang_backend_SmallSemantics$.prototype.nextInt__Lwhilelang_syntax_Progr
   };
   if ((e instanceof $c_Lwhilelang_syntax_Program$IExpr$Minus)) {
     var x$1$5 = $as_Lwhilelang_syntax_Program$IExpr$Minus(e);
-    var x193 = x$1$5.Lwhilelang_syntax_Program$IExpr$Minus__f_e1;
-    var x194 = x$1$5.Lwhilelang_syntax_Program$IExpr$Minus__f_e2;
-    if ((x193 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
-      var x$1$6 = $as_Lwhilelang_syntax_Program$IExpr$N(x193);
-      var x200 = x$1$6.Lwhilelang_syntax_Program$IExpr$N__f_n;
-      if ((x194 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
-        var x$1$7 = $as_Lwhilelang_syntax_Program$IExpr$N(x194);
-        var x197 = x$1$7.Lwhilelang_syntax_Program$IExpr$N__f_n;
-        var n$2 = ((x200 - x197) | 0);
+    var x203 = x$1$5.Lwhilelang_syntax_Program$IExpr$Minus__f_e1;
+    var x204 = x$1$5.Lwhilelang_syntax_Program$IExpr$Minus__f_e2;
+    if ((x203 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
+      var x$1$6 = $as_Lwhilelang_syntax_Program$IExpr$N(x203);
+      var x210 = x$1$6.Lwhilelang_syntax_Program$IExpr$N__f_n;
+      if ((x204 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
+        var x$1$7 = $as_Lwhilelang_syntax_Program$IExpr$N(x204);
+        var x207 = x$1$7.Lwhilelang_syntax_Program$IExpr$N__f_n;
+        var n$2 = ((x210 - x207) | 0);
         var _2$1 = new $c_Lwhilelang_syntax_Program$IExpr$N(n$2);
         var value$2 = new $c_T2("Minus", _2$1);
         return new $c_s_Some(value$2)
@@ -22098,15 +22515,15 @@ $c_Lwhilelang_backend_SmallSemantics$.prototype.nextInt__Lwhilelang_syntax_Progr
   };
   if ((e instanceof $c_Lwhilelang_syntax_Program$IExpr$Times)) {
     var x$1$8 = $as_Lwhilelang_syntax_Program$IExpr$Times(e);
-    var x183 = x$1$8.Lwhilelang_syntax_Program$IExpr$Times__f_e1;
-    var x184 = x$1$8.Lwhilelang_syntax_Program$IExpr$Times__f_e2;
-    if ((x183 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
-      var x$1$9 = $as_Lwhilelang_syntax_Program$IExpr$N(x183);
-      var x190 = x$1$9.Lwhilelang_syntax_Program$IExpr$N__f_n;
-      if ((x184 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
-        var x$1$10 = $as_Lwhilelang_syntax_Program$IExpr$N(x184);
-        var x187 = x$1$10.Lwhilelang_syntax_Program$IExpr$N__f_n;
-        var n$3 = $imul(x190, x187);
+    var x193 = x$1$8.Lwhilelang_syntax_Program$IExpr$Times__f_e1;
+    var x194 = x$1$8.Lwhilelang_syntax_Program$IExpr$Times__f_e2;
+    if ((x193 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
+      var x$1$9 = $as_Lwhilelang_syntax_Program$IExpr$N(x193);
+      var x200 = x$1$9.Lwhilelang_syntax_Program$IExpr$N__f_n;
+      if ((x194 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
+        var x$1$10 = $as_Lwhilelang_syntax_Program$IExpr$N(x194);
+        var x197 = x$1$10.Lwhilelang_syntax_Program$IExpr$N__f_n;
+        var n$3 = $imul(x200, x197);
         var _2$2 = new $c_Lwhilelang_syntax_Program$IExpr$N(n$3);
         var value$3 = new $c_T2("Times", _2$2);
         return new $c_s_Some(value$3)
@@ -22115,63 +22532,63 @@ $c_Lwhilelang_backend_SmallSemantics$.prototype.nextInt__Lwhilelang_syntax_Progr
   };
   if ((e instanceof $c_Lwhilelang_syntax_Program$IExpr$Plus)) {
     var x$1$11 = $as_Lwhilelang_syntax_Program$IExpr$Plus(e);
-    var x176 = x$1$11.Lwhilelang_syntax_Program$IExpr$Plus__f_e1;
-    var x177 = x$1$11.Lwhilelang_syntax_Program$IExpr$Plus__f_e2;
-    if ((x176 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
-      var x$1$12 = $as_Lwhilelang_syntax_Program$IExpr$N(x176);
-      var x180 = x$1$12.Lwhilelang_syntax_Program$IExpr$N__f_n;
-      if ((x180 === 0)) {
-        var value$4 = new $c_T2("Plus-0", x177);
+    var x186 = x$1$11.Lwhilelang_syntax_Program$IExpr$Plus__f_e1;
+    var x187 = x$1$11.Lwhilelang_syntax_Program$IExpr$Plus__f_e2;
+    if ((x186 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
+      var x$1$12 = $as_Lwhilelang_syntax_Program$IExpr$N(x186);
+      var x190 = x$1$12.Lwhilelang_syntax_Program$IExpr$N__f_n;
+      if ((x190 === 0)) {
+        var value$4 = new $c_T2("Plus-0", x187);
         return new $c_s_Some(value$4)
       }
     };
-    if ((x177 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
-      var x$1$13 = $as_Lwhilelang_syntax_Program$IExpr$N(x177);
-      var x173 = x$1$13.Lwhilelang_syntax_Program$IExpr$N__f_n;
-      if ((x173 === 0)) {
-        var value$5 = new $c_T2("Plus-0", x176);
+    if ((x187 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
+      var x$1$13 = $as_Lwhilelang_syntax_Program$IExpr$N(x187);
+      var x183 = x$1$13.Lwhilelang_syntax_Program$IExpr$N__f_n;
+      if ((x183 === 0)) {
+        var value$5 = new $c_T2("Plus-0", x186);
         return new $c_s_Some(value$5)
       }
     }
   };
   if ((e instanceof $c_Lwhilelang_syntax_Program$IExpr$Minus)) {
     var x$1$14 = $as_Lwhilelang_syntax_Program$IExpr$Minus(e);
-    var x162 = x$1$14.Lwhilelang_syntax_Program$IExpr$Minus__f_e1;
-    var x163 = x$1$14.Lwhilelang_syntax_Program$IExpr$Minus__f_e2;
-    if ((x163 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
-      var x$1$15 = $as_Lwhilelang_syntax_Program$IExpr$N(x163);
-      var x166 = x$1$15.Lwhilelang_syntax_Program$IExpr$N__f_n;
-      if ((x166 === 0)) {
-        var value$6 = new $c_T2("Minus-0", x162);
+    var x172 = x$1$14.Lwhilelang_syntax_Program$IExpr$Minus__f_e1;
+    var x173 = x$1$14.Lwhilelang_syntax_Program$IExpr$Minus__f_e2;
+    if ((x173 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
+      var x$1$15 = $as_Lwhilelang_syntax_Program$IExpr$N(x173);
+      var x176 = x$1$15.Lwhilelang_syntax_Program$IExpr$N__f_n;
+      if ((x176 === 0)) {
+        var value$6 = new $c_T2("Minus-0", x172);
         return new $c_s_Some(value$6)
       }
     }
   };
   if ((e instanceof $c_Lwhilelang_syntax_Program$IExpr$Times)) {
     var x$1$16 = $as_Lwhilelang_syntax_Program$IExpr$Times(e);
-    var x155 = x$1$16.Lwhilelang_syntax_Program$IExpr$Times__f_e1;
-    var x156 = x$1$16.Lwhilelang_syntax_Program$IExpr$Times__f_e2;
-    if ((x155 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
-      var x$1$17 = $as_Lwhilelang_syntax_Program$IExpr$N(x155);
-      var x159 = x$1$17.Lwhilelang_syntax_Program$IExpr$N__f_n;
-      if ((x159 === 1)) {
-        var value$7 = new $c_T2("Times-1", x156);
+    var x165 = x$1$16.Lwhilelang_syntax_Program$IExpr$Times__f_e1;
+    var x166 = x$1$16.Lwhilelang_syntax_Program$IExpr$Times__f_e2;
+    if ((x165 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
+      var x$1$17 = $as_Lwhilelang_syntax_Program$IExpr$N(x165);
+      var x169 = x$1$17.Lwhilelang_syntax_Program$IExpr$N__f_n;
+      if ((x169 === 1)) {
+        var value$7 = new $c_T2("Times-1", x166);
         return new $c_s_Some(value$7)
       }
     };
-    if ((x156 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
-      var x$1$18 = $as_Lwhilelang_syntax_Program$IExpr$N(x156);
-      var x152 = x$1$18.Lwhilelang_syntax_Program$IExpr$N__f_n;
-      if ((x152 === 1)) {
-        var value$8 = new $c_T2("Times-1", x155);
+    if ((x166 instanceof $c_Lwhilelang_syntax_Program$IExpr$N)) {
+      var x$1$18 = $as_Lwhilelang_syntax_Program$IExpr$N(x166);
+      var x162 = x$1$18.Lwhilelang_syntax_Program$IExpr$N__f_n;
+      if ((x162 === 1)) {
+        var value$8 = new $c_T2("Times-1", x165);
         return new $c_s_Some(value$8)
       }
     }
   };
   if ((e instanceof $c_Lwhilelang_syntax_Program$IExpr$Plus)) {
     var x$1$19 = $as_Lwhilelang_syntax_Program$IExpr$Plus(e);
-    var x144 = x$1$19.Lwhilelang_syntax_Program$IExpr$Plus__f_e1;
-    var x145 = x$1$19.Lwhilelang_syntax_Program$IExpr$Plus__f_e2;
+    var x154 = x$1$19.Lwhilelang_syntax_Program$IExpr$Plus__f_e1;
+    var x155 = x$1$19.Lwhilelang_syntax_Program$IExpr$Plus__f_e2;
     var f = ((this$44, env$2) => ((e$7) => {
       var e$1 = $as_Lwhilelang_syntax_Program$IExpr(e$7);
       return this$44.nextInt__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(e$1, env$2)
@@ -22181,21 +22598,21 @@ $c_Lwhilelang_backend_SmallSemantics$.prototype.nextInt__Lwhilelang_syntax_Progr
       var e2 = $as_Lwhilelang_syntax_Program$IExpr(e2$2);
       return new $c_Lwhilelang_syntax_Program$IExpr$Plus(e1, e2)
     }))(this);
-    var x223 = $as_s_Option(f(x144));
-    if ((x223 instanceof $c_s_Some)) {
-      var x225 = $m_s_Some$().unapply__s_Some__s_Option($as_s_Some(x223));
-      if ((!x225.isEmpty__Z())) {
-        var x226 = $as_T2(x225.get__O());
-        var s = $as_T(x226._1__O());
-        var a1b = x226._2__O();
-        var _2$3 = f$1(a1b, x145);
+    var x233 = $as_s_Option(f(x154));
+    if ((x233 instanceof $c_s_Some)) {
+      var x235 = $m_s_Some$().unapply__s_Some__s_Option($as_s_Some(x233));
+      if ((!x235.isEmpty__Z())) {
+        var x236 = $as_T2(x235.get__O());
+        var s = $as_T(x236._1__O());
+        var a1b = x236._2__O();
+        var _2$3 = f$1(a1b, x155);
         var value$9 = new $c_T2(s, _2$3);
         return new $c_s_Some(value$9)
       }
     };
     var x = $m_s_None$();
-    if ((x === x223)) {
-      var this$49 = $as_s_Option(f(x145));
+    if ((x === x233)) {
+      var this$49 = $as_s_Option(f(x155));
       var p = new $c_sjsr_AnonFunction1(((this$48) => ((x$1$20) => {
         var x$1$21 = $as_T2(x$1$20);
         return ((x$1$21 !== null) && ($as_T(x$1$21._1__O()), x$1$21._2__O(), true))
@@ -22214,7 +22631,7 @@ $c_Lwhilelang_backend_SmallSemantics$.prototype.nextInt__Lwhilelang_syntax_Progr
           if ((x$1$22 !== null)) {
             var s$2 = $as_T(x$1$22._1__O());
             var a2b$1 = x$1$22._2__O();
-            var _2$4 = f$1(x144, a2b$1);
+            var _2$4 = f$1(x154, a2b$1);
             var $$x1 = new $c_T2(s$2, _2$4);
             break matchResult11
           };
@@ -22223,12 +22640,12 @@ $c_Lwhilelang_backend_SmallSemantics$.prototype.nextInt__Lwhilelang_syntax_Progr
         return new $c_s_Some($$x1)
       }
     };
-    throw new $c_s_MatchError(x223)
+    throw new $c_s_MatchError(x233)
   };
   if ((e instanceof $c_Lwhilelang_syntax_Program$IExpr$Minus)) {
     var x$1$23 = $as_Lwhilelang_syntax_Program$IExpr$Minus(e);
-    var x140 = x$1$23.Lwhilelang_syntax_Program$IExpr$Minus__f_e1;
-    var x141 = x$1$23.Lwhilelang_syntax_Program$IExpr$Minus__f_e2;
+    var x150 = x$1$23.Lwhilelang_syntax_Program$IExpr$Minus__f_e1;
+    var x151 = x$1$23.Lwhilelang_syntax_Program$IExpr$Minus__f_e2;
     var f$2 = ((this$3$1, env$3) => ((e$8) => {
       var e$2 = $as_Lwhilelang_syntax_Program$IExpr(e$8);
       return this$3$1.nextInt__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(e$2, env$3)
@@ -22238,21 +22655,21 @@ $c_Lwhilelang_backend_SmallSemantics$.prototype.nextInt__Lwhilelang_syntax_Progr
       var e2$1 = $as_Lwhilelang_syntax_Program$IExpr(e2$4);
       return new $c_Lwhilelang_syntax_Program$IExpr$Minus(e1$1, e2$1)
     }))(this);
-    var x223$1 = $as_s_Option(f$2(x140));
-    if ((x223$1 instanceof $c_s_Some)) {
-      var x225$1 = $m_s_Some$().unapply__s_Some__s_Option($as_s_Some(x223$1));
-      if ((!x225$1.isEmpty__Z())) {
-        var x226$1 = $as_T2(x225$1.get__O());
-        var s$3 = $as_T(x226$1._1__O());
-        var a1b$1 = x226$1._2__O();
-        var _2$5 = f$3(a1b$1, x141);
+    var x233$1 = $as_s_Option(f$2(x150));
+    if ((x233$1 instanceof $c_s_Some)) {
+      var x235$1 = $m_s_Some$().unapply__s_Some__s_Option($as_s_Some(x233$1));
+      if ((!x235$1.isEmpty__Z())) {
+        var x236$1 = $as_T2(x235$1.get__O());
+        var s$3 = $as_T(x236$1._1__O());
+        var a1b$1 = x236$1._2__O();
+        var _2$5 = f$3(a1b$1, x151);
         var value$10 = new $c_T2(s$3, _2$5);
         return new $c_s_Some(value$10)
       }
     };
     var x$2 = $m_s_None$();
-    if ((x$2 === x223$1)) {
-      var this$59 = $as_s_Option(f$2(x141));
+    if ((x$2 === x233$1)) {
+      var this$59 = $as_s_Option(f$2(x151));
       var p$2 = new $c_sjsr_AnonFunction1(((this$58) => ((x$1$24) => {
         var x$1$25 = $as_T2(x$1$24);
         return ((x$1$25 !== null) && ($as_T(x$1$25._1__O()), x$1$25._2__O(), true))
@@ -22271,7 +22688,7 @@ $c_Lwhilelang_backend_SmallSemantics$.prototype.nextInt__Lwhilelang_syntax_Progr
           if ((x$1$26 !== null)) {
             var s$5 = $as_T(x$1$26._1__O());
             var a2b$3 = x$1$26._2__O();
-            var _2$6 = f$3(x140, a2b$3);
+            var _2$6 = f$3(x150, a2b$3);
             var $$x2 = new $c_T2(s$5, _2$6);
             break matchResult11$1
           };
@@ -22280,12 +22697,12 @@ $c_Lwhilelang_backend_SmallSemantics$.prototype.nextInt__Lwhilelang_syntax_Progr
         return new $c_s_Some($$x2)
       }
     };
-    throw new $c_s_MatchError(x223$1)
+    throw new $c_s_MatchError(x233$1)
   };
   if ((e instanceof $c_Lwhilelang_syntax_Program$IExpr$Times)) {
     var x$1$27 = $as_Lwhilelang_syntax_Program$IExpr$Times(e);
-    var x136 = x$1$27.Lwhilelang_syntax_Program$IExpr$Times__f_e1;
-    var x137 = x$1$27.Lwhilelang_syntax_Program$IExpr$Times__f_e2;
+    var x146 = x$1$27.Lwhilelang_syntax_Program$IExpr$Times__f_e1;
+    var x147 = x$1$27.Lwhilelang_syntax_Program$IExpr$Times__f_e2;
     var f$4 = ((this$5$1, env$4) => ((e$9) => {
       var e$3 = $as_Lwhilelang_syntax_Program$IExpr(e$9);
       return this$5$1.nextInt__Lwhilelang_syntax_Program$IExpr__sci_Map__s_Option(e$3, env$4)
@@ -22295,21 +22712,21 @@ $c_Lwhilelang_backend_SmallSemantics$.prototype.nextInt__Lwhilelang_syntax_Progr
       var e2$3 = $as_Lwhilelang_syntax_Program$IExpr(e2$6);
       return new $c_Lwhilelang_syntax_Program$IExpr$Times(e1$3, e2$3)
     }))(this);
-    var x223$2 = $as_s_Option(f$4(x136));
-    if ((x223$2 instanceof $c_s_Some)) {
-      var x225$2 = $m_s_Some$().unapply__s_Some__s_Option($as_s_Some(x223$2));
-      if ((!x225$2.isEmpty__Z())) {
-        var x226$2 = $as_T2(x225$2.get__O());
-        var s$6 = $as_T(x226$2._1__O());
-        var a1b$2 = x226$2._2__O();
-        var _2$7 = f$5(a1b$2, x137);
+    var x233$2 = $as_s_Option(f$4(x146));
+    if ((x233$2 instanceof $c_s_Some)) {
+      var x235$2 = $m_s_Some$().unapply__s_Some__s_Option($as_s_Some(x233$2));
+      if ((!x235$2.isEmpty__Z())) {
+        var x236$2 = $as_T2(x235$2.get__O());
+        var s$6 = $as_T(x236$2._1__O());
+        var a1b$2 = x236$2._2__O();
+        var _2$7 = f$5(a1b$2, x147);
         var value$11 = new $c_T2(s$6, _2$7);
         return new $c_s_Some(value$11)
       }
     };
     var x$3 = $m_s_None$();
-    if ((x$3 === x223$2)) {
-      var this$69 = $as_s_Option(f$4(x137));
+    if ((x$3 === x233$2)) {
+      var this$69 = $as_s_Option(f$4(x147));
       var p$4 = new $c_sjsr_AnonFunction1(((this$68) => ((x$1$28) => {
         var x$1$29 = $as_T2(x$1$28);
         return ((x$1$29 !== null) && ($as_T(x$1$29._1__O()), x$1$29._2__O(), true))
@@ -22328,7 +22745,7 @@ $c_Lwhilelang_backend_SmallSemantics$.prototype.nextInt__Lwhilelang_syntax_Progr
           if ((x$1$30 !== null)) {
             var s$8 = $as_T(x$1$30._1__O());
             var a2b$5 = x$1$30._2__O();
-            var _2$8 = f$5(x136, a2b$5);
+            var _2$8 = f$5(x146, a2b$5);
             var $$x3 = new $c_T2(s$8, _2$8);
             break matchResult11$2
           };
@@ -22337,7 +22754,7 @@ $c_Lwhilelang_backend_SmallSemantics$.prototype.nextInt__Lwhilelang_syntax_Progr
         return new $c_s_Some($$x3)
       }
     };
-    throw new $c_s_MatchError(x223$2)
+    throw new $c_s_MatchError(x233$2)
   };
   throw new $c_s_MatchError(e)
 });
@@ -22373,7 +22790,7 @@ function $c_Lwhilelang_frontend_CaosConfig$() {
     return $m_Lwhilelang_syntax_Parser$().parseProgram__T__Lwhilelang_syntax_Program$Command(str$1)
   }))(this));
   $m_s_package$();
-  var elems = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_Lcaos_common_Example.getArrayOf().constr)([new $c_Lcaos_common_Example("x:=27; while x>5 do x:=x-5", "mod 5", "Keeps subtracting 5"), new $c_Lcaos_common_Example("x:=5*2+10;\nif x<10\nthen {skip;x:=x+20; x:=2*x}\nelse x:=x*(0-1)", "if-then-else", ""), new $c_Lcaos_common_Example("x:=5;\nassert x<8;\nx:=3;\nassert (x>=5);\nx:=0", "asserts", ""), new $c_Lcaos_common_Example("if x>0 then {x:=2*x;\n   while x<10 do x:=2*x }\nelse skip", "Ex5.5", "From RSD book"), new $c_Lcaos_common_Example("if x<=y then { z:=x ; w:=y } else { w:=x ; z:=y }", "Sort2", "Example 5.7 from RSD book")]));
+  var elems = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_Lcaos_common_Example.getArrayOf().constr)([new $c_Lcaos_common_Example("x:=27; while x>5 do x:=x-5", "mod 5", "Keeps subtracting 5"), new $c_Lcaos_common_Example("x:=5*2+10;\nif x<10\nthen {skip;x:=x+20; x:=2*x}\nelse x:=x*(0-1)", "if-then-else", ""), new $c_Lcaos_common_Example("x:=5;\nassert x<8;\nx:=3;\nassert (x>=5);\nx:=0", "asserts", ""), new $c_Lcaos_common_Example("if x>0 then {x:=2*x;\n   while x<10 do x:=2*x }\nelse skip", "Ex5.5", "From RSD book"), new $c_Lcaos_common_Example("if x<=y then { z:=x ; w:=y } else { w:=x ; z:=y }", "Sort2", "Example 5.7 from RSD book"), new $c_Lcaos_common_Example("{x = 5 && y = 10}\naux := y ;\ny := x ;\nx := x + aux\n{x > 10 && y = 5}", "Contract", "Simple contract, used in the lecture slides")]));
   this.Lwhilelang_frontend_CaosConfig$__f_examples = $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems);
   $m_s_package$();
   var $$x1 = $m_sr_ScalaRunTime$();
@@ -22385,98 +22802,113 @@ function $c_Lwhilelang_frontend_CaosConfig$() {
   var elems$1 = $$x1.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("Parsing works", y)]));
   this.Lwhilelang_frontend_CaosConfig$__f_smallWidgets = $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems$1);
   $m_s_package$();
-  var $$x12 = $m_sr_ScalaRunTime$();
+  var $$x14 = $m_sr_ScalaRunTime$();
   var y$1 = $m_Lcaos_frontend_Configurator$().view__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$3$1) => ((_$2) => {
     var _$2$1 = $as_Lwhilelang_syntax_Program$Command(_$2);
     return _$2$1.toString__T()
   }))(this)), $m_Lcaos_view_Text$());
-  var $$x11 = new $c_T2("View parsed data", y$1);
+  var $$x13 = new $c_T2("View parsed data", y$1);
   var y$2 = $m_Lcaos_frontend_Configurator$().view__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$4$1) => ((com) => {
     var com$1 = $as_Lwhilelang_syntax_Program$Command(com);
     return $m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$Command__T(com$1)
   }))(this)), $m_Lcaos_view_Text$());
-  var $$x10 = new $c_T2("View pretty data", y$2);
-  var y$3 = $m_Lcaos_frontend_Configurator$().steps__F1__Lcaos_sos_SOS__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$5$1) => ((com$2) => {
+  var $$x12 = new $c_T2("View pretty data", y$2);
+  var y$3 = $m_Lcaos_frontend_Configurator$().view__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$5$1) => ((x) => {
+    var x$1 = $as_Lwhilelang_syntax_Program$Command(x);
+    var this$45 = $m_Lwhilelang_backend_VCGen$();
+    var this$47 = $as_sc_IterableOnceOps(this$45.vcgen__Lwhilelang_syntax_Program$Command__Lwhilelang_syntax_Program$BExpr__sci_Set(x$1, $s_Lwhilelang_syntax_Program$BExpr$__BTrue__Lwhilelang_syntax_Program$BExpr()).map__F1__O(new $c_sjsr_AnonFunction1(((this$46) => ((b) => {
+      var b$1 = $as_Lwhilelang_syntax_Program$BExpr(b);
+      return $m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$BExpr__T(b$1)
+    }))(this$5$1))));
+    return $f_sc_IterableOnceOps__mkString__T__T__T__T(this$47, "", "\n", "")
+  }))(this)), $m_Lcaos_view_Text$());
+  var $$x11 = new $c_T2("VCGen", y$3);
+  var y$4 = $m_Lcaos_frontend_Configurator$().view__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$6$1) => ((x$2) => {
+    var x$3 = $as_Lwhilelang_syntax_Program$Command(x$2);
+    return $m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$BExpr__T($m_Lwhilelang_backend_VCGen$().wprec__Lwhilelang_syntax_Program$Command__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr(x$3, $s_Lwhilelang_syntax_Program$BExpr$__BTrue__Lwhilelang_syntax_Program$BExpr()))
+  }))(this)), $m_Lcaos_view_Text$());
+  var $$x10 = new $c_T2("wprec", y$4);
+  var y$5 = $m_Lcaos_frontend_Configurator$().steps__F1__Lcaos_sos_SOS__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$7$1) => ((com$2) => {
     var com$3 = $as_Lwhilelang_syntax_Program$Command(com$2);
-    var this$39 = $m_s_Predef$().s_Predef$__f_Map;
+    var this$52 = $m_s_Predef$().s_Predef$__f_Map;
     var elems$2 = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([]));
-    var _2 = this$39.from__sc_IterableOnce__sci_Map(elems$2);
+    var _2 = this$52.from__sc_IterableOnce__sci_Map(elems$2);
     return new $c_T2(com$3, _2)
-  }))(this)), $m_Lwhilelang_backend_SmallBigSemantics$(), new $c_sjsr_AnonFunction1(((this$6$1) => ((x$1) => {
-    var x$1$1 = $as_T2(x$1);
-    var $$x8 = $m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$Command__T($as_Lwhilelang_syntax_Program$Command(x$1$1._1__O()));
-    var this$41 = $as_sci_Map(x$1$1._2__O());
-    return (($$x8 + "\t\t") + $f_sc_IterableOnceOps__mkString__T__T__T__T(this$41, "[", ",", "]"))
+  }))(this)), $m_Lwhilelang_backend_SmallBigSemantics$(), new $c_sjsr_AnonFunction1(((this$8$1) => ((x$1$1) => {
+    var x$1$2 = $as_T2(x$1$1);
+    var $$x8 = $m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$Command__T($as_Lwhilelang_syntax_Program$Command(x$1$2._1__O()));
+    var this$54 = $as_sci_Map(x$1$2._2__O());
+    return (($$x8 + "\t\t") + $f_sc_IterableOnceOps__mkString__T__T__T__T(this$54, "[", ",", "]"))
   }))(this)), $m_Lcaos_view_Text$());
-  var $$x9 = new $c_T2("Run big-steps", y$3);
-  var y$4 = $m_Lcaos_frontend_Configurator$().steps__F1__Lcaos_sos_SOS__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$7$1) => ((com$3$1) => {
+  var $$x9 = new $c_T2("Run big-steps", y$5);
+  var y$6 = $m_Lcaos_frontend_Configurator$().steps__F1__Lcaos_sos_SOS__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$9$1) => ((com$3$1) => {
     var com$4 = $as_Lwhilelang_syntax_Program$Command(com$3$1);
-    var this$44 = $m_s_Predef$().s_Predef$__f_Map;
+    var this$57 = $m_s_Predef$().s_Predef$__f_Map;
     var elems$3 = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([]));
-    var _2$1 = this$44.from__sc_IterableOnce__sci_Map(elems$3);
+    var _2$1 = this$57.from__sc_IterableOnce__sci_Map(elems$3);
     return new $c_T2(com$4, _2$1)
-  }))(this)), $m_Lwhilelang_backend_PartialSemantics$(), new $c_sjsr_AnonFunction1(((this$8$1) => ((x$1$2) => {
-    var x$1$3 = $as_T2(x$1$2);
+  }))(this)), $m_Lwhilelang_backend_PartialSemantics$(), new $c_sjsr_AnonFunction1(((this$10$1) => ((x$1$2$1) => {
+    var x$1$3 = $as_T2(x$1$2$1);
     var $$x6 = $m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$Command__T($as_Lwhilelang_syntax_Program$Command(x$1$3._1__O()));
-    var this$46 = $as_sci_Map(x$1$3._2__O());
-    return (($$x6 + "\t\t") + $f_sc_IterableOnceOps__mkString__T__T__T__T(this$46, "[", ",", "]"))
+    var this$59 = $as_sci_Map(x$1$3._2__O());
+    return (($$x6 + "\t\t") + $f_sc_IterableOnceOps__mkString__T__T__T__T(this$59, "[", ",", "]"))
   }))(this)), $m_Lcaos_view_Text$());
-  var $$x7 = new $c_T2("Run partial-semantics", y$4);
-  var y$5 = $m_Lcaos_frontend_Configurator$().steps__F1__Lcaos_sos_SOS__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$9$1) => ((com$4$1) => {
+  var $$x7 = new $c_T2("Run partial-semantics", y$6);
+  var y$7 = $m_Lcaos_frontend_Configurator$().steps__F1__Lcaos_sos_SOS__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$11$1) => ((com$4$1) => {
     var com$5 = $as_Lwhilelang_syntax_Program$Command(com$4$1);
-    var this$49 = $m_s_Predef$().s_Predef$__f_Map;
+    var this$62 = $m_s_Predef$().s_Predef$__f_Map;
     var elems$4 = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([]));
-    var _2$2 = this$49.from__sc_IterableOnce__sci_Map(elems$4);
+    var _2$2 = this$62.from__sc_IterableOnce__sci_Map(elems$4);
     return new $c_T2(com$5, _2$2)
-  }))(this)), $m_Lwhilelang_backend_SmallSemantics$(), new $c_sjsr_AnonFunction1(((this$10$1) => ((x$1$3$1) => {
+  }))(this)), $m_Lwhilelang_backend_SmallSemantics$(), new $c_sjsr_AnonFunction1(((this$12$1) => ((x$1$3$1) => {
     var x$1$4 = $as_T2(x$1$3$1);
     var $$x4 = $m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$Command__T($as_Lwhilelang_syntax_Program$Command(x$1$4._1__O()));
-    var this$51 = $as_sci_Map(x$1$4._2__O());
-    return (($$x4 + "\t\t") + $f_sc_IterableOnceOps__mkString__T__T__T__T(this$51, "[", ",", "]"))
+    var this$64 = $as_sci_Map(x$1$4._2__O());
+    return (($$x4 + "\t\t") + $f_sc_IterableOnceOps__mkString__T__T__T__T(this$64, "[", ",", "]"))
   }))(this)), $m_Lcaos_view_Text$());
-  var $$x5 = new $c_T2("Run small-steps", y$5);
-  var y$6 = $m_Lcaos_frontend_Configurator$().lts__F1__Lcaos_sos_SOS__F1__F1__I__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$11$1) => ((com$5$1) => {
+  var $$x5 = new $c_T2("Run small-steps", y$7);
+  var y$8 = $m_Lcaos_frontend_Configurator$().lts__F1__Lcaos_sos_SOS__F1__F1__I__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$13$1) => ((com$5$1) => {
     var com$6 = $as_Lwhilelang_syntax_Program$Command(com$5$1);
-    var this$54 = $m_s_Predef$().s_Predef$__f_Map;
+    var this$67 = $m_s_Predef$().s_Predef$__f_Map;
     var elems$5 = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([]));
-    var _2$3 = this$54.from__sc_IterableOnce__sci_Map(elems$5);
+    var _2$3 = this$67.from__sc_IterableOnce__sci_Map(elems$5);
     return new $c_T2(com$6, _2$3)
-  }))(this)), $m_Lwhilelang_backend_SmallBigSemantics$(), new $c_sjsr_AnonFunction1(((this$12$1) => ((x) => {
-    var x$2 = $as_T2(x);
-    return $m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$Command__T($as_Lwhilelang_syntax_Program$Command(x$2._1__O()))
-  }))(this)), new $c_sjsr_AnonFunction1(((this$13$1) => ((_$3) => {
+  }))(this)), $m_Lwhilelang_backend_SmallBigSemantics$(), new $c_sjsr_AnonFunction1(((this$14$1) => ((x$3$1) => {
+    var x$4 = $as_T2(x$3$1);
+    return $m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$Command__T($as_Lwhilelang_syntax_Program$Command(x$4._1__O()))
+  }))(this)), new $c_sjsr_AnonFunction1(((this$15$1) => ((_$3) => {
     var _$3$1 = $as_T(_$3);
     return _$3$1
   }))(this)), 80);
-  var $$x3 = new $c_T2("LTS big-steps", y$6);
-  var y$7 = $m_Lcaos_frontend_Configurator$().lts__F1__Lcaos_sos_SOS__F1__F1__I__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$14$1) => ((com$6$1) => {
+  var $$x3 = new $c_T2("LTS big-steps", y$8);
+  var y$9 = $m_Lcaos_frontend_Configurator$().lts__F1__Lcaos_sos_SOS__F1__F1__I__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$16$1) => ((com$6$1) => {
     var com$7 = $as_Lwhilelang_syntax_Program$Command(com$6$1);
-    var this$58 = $m_s_Predef$().s_Predef$__f_Map;
+    var this$71 = $m_s_Predef$().s_Predef$__f_Map;
     var elems$6 = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([]));
-    var _2$4 = this$58.from__sc_IterableOnce__sci_Map(elems$6);
+    var _2$4 = this$71.from__sc_IterableOnce__sci_Map(elems$6);
     return new $c_T2(com$7, _2$4)
-  }))(this)), $m_Lwhilelang_backend_PartialSemantics$(), new $c_sjsr_AnonFunction1(((this$15$1) => ((x$2$1) => {
-    var x$3 = $as_T2(x$2$1);
-    return $m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$Command__T($as_Lwhilelang_syntax_Program$Command(x$3._1__O()))
-  }))(this)), new $c_sjsr_AnonFunction1(((this$16$1) => ((_$4) => {
+  }))(this)), $m_Lwhilelang_backend_PartialSemantics$(), new $c_sjsr_AnonFunction1(((this$17$1) => ((x$4$1) => {
+    var x$5 = $as_T2(x$4$1);
+    return $m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$Command__T($as_Lwhilelang_syntax_Program$Command(x$5._1__O()))
+  }))(this)), new $c_sjsr_AnonFunction1(((this$18$1) => ((_$4) => {
     var _$4$1 = $as_T(_$4);
     return _$4$1
   }))(this)), 80);
-  var $$x2 = new $c_T2("LTS partial-semantics", y$7);
-  var y$8 = $m_Lcaos_frontend_Configurator$().lts__F1__Lcaos_sos_SOS__F1__F1__I__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$17$1) => ((com$7$1) => {
+  var $$x2 = new $c_T2("LTS partial-semantics", y$9);
+  var y$10 = $m_Lcaos_frontend_Configurator$().lts__F1__Lcaos_sos_SOS__F1__F1__I__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$19$1) => ((com$7$1) => {
     var com$8 = $as_Lwhilelang_syntax_Program$Command(com$7$1);
-    var this$62 = $m_s_Predef$().s_Predef$__f_Map;
+    var this$75 = $m_s_Predef$().s_Predef$__f_Map;
     var elems$7 = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([]));
-    var _2$5 = this$62.from__sc_IterableOnce__sci_Map(elems$7);
+    var _2$5 = this$75.from__sc_IterableOnce__sci_Map(elems$7);
     return new $c_T2(com$8, _2$5)
-  }))(this)), $m_Lwhilelang_backend_SmallSemantics$(), new $c_sjsr_AnonFunction1(((this$18$1) => ((x$3$1) => {
-    var x$4 = $as_T2(x$3$1);
-    return $m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$Command__T($as_Lwhilelang_syntax_Program$Command(x$4._1__O()))
-  }))(this)), new $c_sjsr_AnonFunction1(((this$19$1) => ((_$5) => {
+  }))(this)), $m_Lwhilelang_backend_SmallSemantics$(), new $c_sjsr_AnonFunction1(((this$20$1) => ((x$5$1) => {
+    var x$6 = $as_T2(x$5$1);
+    return $m_Lwhilelang_syntax_Show$().apply__Lwhilelang_syntax_Program$Command__T($as_Lwhilelang_syntax_Program$Command(x$6._1__O()))
+  }))(this)), new $c_sjsr_AnonFunction1(((this$21$1) => ((_$5) => {
     var _$5$1 = $as_T(_$5);
     return _$5$1
   }))(this)), 80);
-  var elems$8 = $$x12.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([$$x11, $$x10, $$x9, $$x7, $$x5, $$x3, $$x2, new $c_T2("LTS small-steps", y$8)]));
+  var elems$8 = $$x14.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([$$x13, $$x12, $$x11, $$x10, $$x9, $$x7, $$x5, $$x3, $$x2, new $c_T2("LTS small-steps", y$10)]));
   this.Lwhilelang_frontend_CaosConfig$__f_widgets = $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems$8)
 }
 $c_Lwhilelang_frontend_CaosConfig$.prototype = new $h_O();
@@ -26962,6 +27394,44 @@ function $h_Lwhilelang_syntax_Program$BExpr$() {
   /*<skip>*/
 }
 $h_Lwhilelang_syntax_Program$BExpr$.prototype = $c_Lwhilelang_syntax_Program$BExpr$.prototype;
+$c_Lwhilelang_syntax_Program$BExpr$.prototype.and__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr = (function(b1, b2) {
+  var x = $s_Lwhilelang_syntax_Program$BExpr$__BTrue__Lwhilelang_syntax_Program$BExpr();
+  if (((x === null) ? (b1 === null) : x.equals__O__Z(b1))) {
+    return b2
+  };
+  var x$3 = $s_Lwhilelang_syntax_Program$BExpr$__BTrue__Lwhilelang_syntax_Program$BExpr();
+  if (((x$3 === null) ? (b2 === null) : x$3.equals__O__Z(b2))) {
+    return b1
+  };
+  matchAlts1: {
+    matchAlts2: {
+      var x$5 = $s_Lwhilelang_syntax_Program$BExpr$__BFalse__Lwhilelang_syntax_Program$BExpr();
+      if (((x$5 === null) ? (b1 === null) : x$5.equals__O__Z(b1))) {
+        break matchAlts2
+      };
+      var x$7 = $s_Lwhilelang_syntax_Program$BExpr$__BFalse__Lwhilelang_syntax_Program$BExpr();
+      if (((x$7 === null) ? (b2 === null) : x$7.equals__O__Z(b2))) {
+        break matchAlts2
+      };
+      break matchAlts1
+    };
+    return $s_Lwhilelang_syntax_Program$BExpr$__BFalse__Lwhilelang_syntax_Program$BExpr()
+  };
+  return new $c_Lwhilelang_syntax_Program$BExpr$And(b1, b2)
+});
+$c_Lwhilelang_syntax_Program$BExpr$.prototype.not__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr = (function(b1) {
+  var x = $s_Lwhilelang_syntax_Program$BExpr$__BTrue__Lwhilelang_syntax_Program$BExpr();
+  if (((x === null) ? (b1 === null) : x.equals__O__Z(b1))) {
+    return $s_Lwhilelang_syntax_Program$BExpr$__BFalse__Lwhilelang_syntax_Program$BExpr()
+  } else {
+    var x$3 = $s_Lwhilelang_syntax_Program$BExpr$__BFalse__Lwhilelang_syntax_Program$BExpr();
+    if (((x$3 === null) ? (b1 === null) : x$3.equals__O__Z(b1))) {
+      return $s_Lwhilelang_syntax_Program$BExpr$__BTrue__Lwhilelang_syntax_Program$BExpr()
+    } else {
+      return new $c_Lwhilelang_syntax_Program$BExpr$Not(b1)
+    }
+  }
+});
 var $d_Lwhilelang_syntax_Program$BExpr$ = new $TypeData().initClass({
   Lwhilelang_syntax_Program$BExpr$: 0
 }, false, "whilelang.syntax.Program$BExpr$", {
@@ -39215,6 +39685,17 @@ function $isArrayOf_Lwhilelang_syntax_Program$BExpr(obj, depth) {
 function $asArrayOf_Lwhilelang_syntax_Program$BExpr(obj, depth) {
   return (($isArrayOf_Lwhilelang_syntax_Program$BExpr(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lwhilelang.syntax.Program$BExpr;", depth))
 }
+var $d_Lwhilelang_syntax_Program$BExpr = new $TypeData().initClass({
+  Lwhilelang_syntax_Program$BExpr: 0
+}, false, "whilelang.syntax.Program$BExpr", {
+  Lwhilelang_syntax_Program$BExpr: 1,
+  O: 1,
+  s_Equals: 1,
+  s_Product: 1,
+  Ljava_io_Serializable: 1,
+  s_reflect_Enum: 1
+});
+$c_Lwhilelang_syntax_Program$BExpr.prototype.$classData = $d_Lwhilelang_syntax_Program$BExpr;
 /** @constructor */
 function $c_Lwhilelang_syntax_Program$Command() {
   /*<skip>*/
@@ -43637,6 +44118,81 @@ var $d_Lwhilelang_syntax_Program$BExpr$Greater = new $TypeData().initClass({
 });
 $c_Lwhilelang_syntax_Program$BExpr$Greater.prototype.$classData = $d_Lwhilelang_syntax_Program$BExpr$Greater;
 /** @constructor */
+function $c_Lwhilelang_syntax_Program$BExpr$Impl(e1, e2) {
+  this.Lwhilelang_syntax_Program$BExpr$Impl__f_e1 = null;
+  this.Lwhilelang_syntax_Program$BExpr$Impl__f_e2 = null;
+  this.Lwhilelang_syntax_Program$BExpr$Impl__f_e1 = e1;
+  this.Lwhilelang_syntax_Program$BExpr$Impl__f_e2 = e2
+}
+$c_Lwhilelang_syntax_Program$BExpr$Impl.prototype = new $h_Lwhilelang_syntax_Program$BExpr();
+$c_Lwhilelang_syntax_Program$BExpr$Impl.prototype.constructor = $c_Lwhilelang_syntax_Program$BExpr$Impl;
+/** @constructor */
+function $h_Lwhilelang_syntax_Program$BExpr$Impl() {
+  /*<skip>*/
+}
+$h_Lwhilelang_syntax_Program$BExpr$Impl.prototype = $c_Lwhilelang_syntax_Program$BExpr$Impl.prototype;
+$c_Lwhilelang_syntax_Program$BExpr$Impl.prototype.hashCode__I = (function() {
+  var this$2 = $m_s_util_hashing_MurmurHash3$();
+  return this$2.productHash__s_Product__I__Z__I(this, (-889275714), false)
+});
+$c_Lwhilelang_syntax_Program$BExpr$Impl.prototype.equals__O__Z = (function(x$0) {
+  if ((this === x$0)) {
+    return true
+  } else if ((x$0 instanceof $c_Lwhilelang_syntax_Program$BExpr$Impl)) {
+    var x$0$2 = $as_Lwhilelang_syntax_Program$BExpr$Impl(x$0);
+    var x = this.Lwhilelang_syntax_Program$BExpr$Impl__f_e1;
+    var x$2 = x$0$2.Lwhilelang_syntax_Program$BExpr$Impl__f_e1;
+    if (((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))) {
+      var x$3 = this.Lwhilelang_syntax_Program$BExpr$Impl__f_e2;
+      var x$4 = x$0$2.Lwhilelang_syntax_Program$BExpr$Impl__f_e2;
+      return ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
+    } else {
+      return false
+    }
+  } else {
+    return false
+  }
+});
+$c_Lwhilelang_syntax_Program$BExpr$Impl.prototype.toString__T = (function() {
+  return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+});
+$c_Lwhilelang_syntax_Program$BExpr$Impl.prototype.productArity__I = (function() {
+  return 2
+});
+$c_Lwhilelang_syntax_Program$BExpr$Impl.prototype.productPrefix__T = (function() {
+  return "Impl"
+});
+$c_Lwhilelang_syntax_Program$BExpr$Impl.prototype.productElement__I__O = (function(n) {
+  if ((n === 0)) {
+    return this.Lwhilelang_syntax_Program$BExpr$Impl__f_e1
+  };
+  if ((n === 1)) {
+    return this.Lwhilelang_syntax_Program$BExpr$Impl__f_e2
+  };
+  throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + n))
+});
+function $as_Lwhilelang_syntax_Program$BExpr$Impl(obj) {
+  return (((obj instanceof $c_Lwhilelang_syntax_Program$BExpr$Impl) || (obj === null)) ? obj : $throwClassCastException(obj, "whilelang.syntax.Program$BExpr$Impl"))
+}
+function $isArrayOf_Lwhilelang_syntax_Program$BExpr$Impl(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lwhilelang_syntax_Program$BExpr$Impl)))
+}
+function $asArrayOf_Lwhilelang_syntax_Program$BExpr$Impl(obj, depth) {
+  return (($isArrayOf_Lwhilelang_syntax_Program$BExpr$Impl(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lwhilelang.syntax.Program$BExpr$Impl;", depth))
+}
+var $d_Lwhilelang_syntax_Program$BExpr$Impl = new $TypeData().initClass({
+  Lwhilelang_syntax_Program$BExpr$Impl: 0
+}, false, "whilelang.syntax.Program$BExpr$Impl", {
+  Lwhilelang_syntax_Program$BExpr$Impl: 1,
+  Lwhilelang_syntax_Program$BExpr: 1,
+  O: 1,
+  s_Equals: 1,
+  s_Product: 1,
+  Ljava_io_Serializable: 1,
+  s_reflect_Enum: 1
+});
+$c_Lwhilelang_syntax_Program$BExpr$Impl.prototype.$classData = $d_Lwhilelang_syntax_Program$BExpr$Impl;
+/** @constructor */
 function $c_Lwhilelang_syntax_Program$BExpr$Less(e1, e2) {
   this.Lwhilelang_syntax_Program$BExpr$Less__f_e1 = null;
   this.Lwhilelang_syntax_Program$BExpr$Less__f_e2 = null;
@@ -43988,6 +44544,100 @@ var $d_Lwhilelang_syntax_Program$Command$Assign = new $TypeData().initClass({
 });
 $c_Lwhilelang_syntax_Program$Command$Assign.prototype.$classData = $d_Lwhilelang_syntax_Program$Command$Assign;
 /** @constructor */
+function $c_Lwhilelang_syntax_Program$Command$Contract(pre, c, pos) {
+  this.Lwhilelang_syntax_Program$Command$Contract__f_pre = null;
+  this.Lwhilelang_syntax_Program$Command$Contract__f_c = null;
+  this.Lwhilelang_syntax_Program$Command$Contract__f_pos = null;
+  this.Lwhilelang_syntax_Program$Command$Contract__f_pre = pre;
+  this.Lwhilelang_syntax_Program$Command$Contract__f_c = c;
+  this.Lwhilelang_syntax_Program$Command$Contract__f_pos = pos
+}
+$c_Lwhilelang_syntax_Program$Command$Contract.prototype = new $h_Lwhilelang_syntax_Program$Command();
+$c_Lwhilelang_syntax_Program$Command$Contract.prototype.constructor = $c_Lwhilelang_syntax_Program$Command$Contract;
+/** @constructor */
+function $h_Lwhilelang_syntax_Program$Command$Contract() {
+  /*<skip>*/
+}
+$h_Lwhilelang_syntax_Program$Command$Contract.prototype = $c_Lwhilelang_syntax_Program$Command$Contract.prototype;
+$c_Lwhilelang_syntax_Program$Command$Contract.prototype.hashCode__I = (function() {
+  var this$2 = $m_s_util_hashing_MurmurHash3$();
+  return this$2.productHash__s_Product__I__Z__I(this, (-889275714), false)
+});
+$c_Lwhilelang_syntax_Program$Command$Contract.prototype.equals__O__Z = (function(x$0) {
+  if ((this === x$0)) {
+    return true
+  } else if ((x$0 instanceof $c_Lwhilelang_syntax_Program$Command$Contract)) {
+    var x$0$2 = $as_Lwhilelang_syntax_Program$Command$Contract(x$0);
+    var x = this.Lwhilelang_syntax_Program$Command$Contract__f_pre;
+    var x$2 = x$0$2.Lwhilelang_syntax_Program$Command$Contract__f_pre;
+    if (((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))) {
+      var x$3 = this.Lwhilelang_syntax_Program$Command$Contract__f_c;
+      var x$4 = x$0$2.Lwhilelang_syntax_Program$Command$Contract__f_c;
+      var $$x1 = ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
+    } else {
+      var $$x1 = false
+    };
+    if ($$x1) {
+      var x$5 = this.Lwhilelang_syntax_Program$Command$Contract__f_pos;
+      var x$6 = x$0$2.Lwhilelang_syntax_Program$Command$Contract__f_pos;
+      return ((x$5 === null) ? (x$6 === null) : x$5.equals__O__Z(x$6))
+    } else {
+      return false
+    }
+  } else {
+    return false
+  }
+});
+$c_Lwhilelang_syntax_Program$Command$Contract.prototype.toString__T = (function() {
+  return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+});
+$c_Lwhilelang_syntax_Program$Command$Contract.prototype.productArity__I = (function() {
+  return 3
+});
+$c_Lwhilelang_syntax_Program$Command$Contract.prototype.productPrefix__T = (function() {
+  return "Contract"
+});
+$c_Lwhilelang_syntax_Program$Command$Contract.prototype.productElement__I__O = (function(n) {
+  switch (n) {
+    case 0: {
+      return this.Lwhilelang_syntax_Program$Command$Contract__f_pre;
+      break
+    }
+    case 1: {
+      return this.Lwhilelang_syntax_Program$Command$Contract__f_c;
+      break
+    }
+    case 2: {
+      return this.Lwhilelang_syntax_Program$Command$Contract__f_pos;
+      break
+    }
+    default: {
+      throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + n))
+    }
+  }
+});
+function $as_Lwhilelang_syntax_Program$Command$Contract(obj) {
+  return (((obj instanceof $c_Lwhilelang_syntax_Program$Command$Contract) || (obj === null)) ? obj : $throwClassCastException(obj, "whilelang.syntax.Program$Command$Contract"))
+}
+function $isArrayOf_Lwhilelang_syntax_Program$Command$Contract(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lwhilelang_syntax_Program$Command$Contract)))
+}
+function $asArrayOf_Lwhilelang_syntax_Program$Command$Contract(obj, depth) {
+  return (($isArrayOf_Lwhilelang_syntax_Program$Command$Contract(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lwhilelang.syntax.Program$Command$Contract;", depth))
+}
+var $d_Lwhilelang_syntax_Program$Command$Contract = new $TypeData().initClass({
+  Lwhilelang_syntax_Program$Command$Contract: 0
+}, false, "whilelang.syntax.Program$Command$Contract", {
+  Lwhilelang_syntax_Program$Command$Contract: 1,
+  Lwhilelang_syntax_Program$Command: 1,
+  O: 1,
+  s_Equals: 1,
+  s_Product: 1,
+  Ljava_io_Serializable: 1,
+  s_reflect_Enum: 1
+});
+$c_Lwhilelang_syntax_Program$Command$Contract.prototype.$classData = $d_Lwhilelang_syntax_Program$Command$Contract;
+/** @constructor */
 function $c_Lwhilelang_syntax_Program$Command$ITE(b, ct, cf) {
   this.Lwhilelang_syntax_Program$Command$ITE__f_b = null;
   this.Lwhilelang_syntax_Program$Command$ITE__f_ct = null;
@@ -44157,11 +44807,13 @@ var $d_Lwhilelang_syntax_Program$Command$Seq = new $TypeData().initClass({
 });
 $c_Lwhilelang_syntax_Program$Command$Seq.prototype.$classData = $d_Lwhilelang_syntax_Program$Command$Seq;
 /** @constructor */
-function $c_Lwhilelang_syntax_Program$Command$While(b, c) {
+function $c_Lwhilelang_syntax_Program$Command$While(b, c, inv) {
   this.Lwhilelang_syntax_Program$Command$While__f_b = null;
   this.Lwhilelang_syntax_Program$Command$While__f_c = null;
+  this.Lwhilelang_syntax_Program$Command$While__f_inv = null;
   this.Lwhilelang_syntax_Program$Command$While__f_b = b;
-  this.Lwhilelang_syntax_Program$Command$While__f_c = c
+  this.Lwhilelang_syntax_Program$Command$While__f_c = c;
+  this.Lwhilelang_syntax_Program$Command$While__f_inv = inv
 }
 $c_Lwhilelang_syntax_Program$Command$While.prototype = new $h_Lwhilelang_syntax_Program$Command();
 $c_Lwhilelang_syntax_Program$Command$While.prototype.constructor = $c_Lwhilelang_syntax_Program$Command$While;
@@ -44184,7 +44836,14 @@ $c_Lwhilelang_syntax_Program$Command$While.prototype.equals__O__Z = (function(x$
     if (((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))) {
       var x$3 = this.Lwhilelang_syntax_Program$Command$While__f_c;
       var x$4 = x$0$2.Lwhilelang_syntax_Program$Command$While__f_c;
-      return ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
+      var $$x1 = ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
+    } else {
+      var $$x1 = false
+    };
+    if ($$x1) {
+      var x$5 = this.Lwhilelang_syntax_Program$Command$While__f_inv;
+      var x$6 = x$0$2.Lwhilelang_syntax_Program$Command$While__f_inv;
+      return ((x$5 === null) ? (x$6 === null) : x$5.equals__O__Z(x$6))
     } else {
       return false
     }
@@ -44196,19 +44855,29 @@ $c_Lwhilelang_syntax_Program$Command$While.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
 });
 $c_Lwhilelang_syntax_Program$Command$While.prototype.productArity__I = (function() {
-  return 2
+  return 3
 });
 $c_Lwhilelang_syntax_Program$Command$While.prototype.productPrefix__T = (function() {
   return "While"
 });
 $c_Lwhilelang_syntax_Program$Command$While.prototype.productElement__I__O = (function(n) {
-  if ((n === 0)) {
-    return this.Lwhilelang_syntax_Program$Command$While__f_b
-  };
-  if ((n === 1)) {
-    return this.Lwhilelang_syntax_Program$Command$While__f_c
-  };
-  throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + n))
+  switch (n) {
+    case 0: {
+      return this.Lwhilelang_syntax_Program$Command$While__f_b;
+      break
+    }
+    case 1: {
+      return this.Lwhilelang_syntax_Program$Command$While__f_c;
+      break
+    }
+    case 2: {
+      return this.Lwhilelang_syntax_Program$Command$While__f_inv;
+      break
+    }
+    default: {
+      throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + n))
+    }
+  }
 });
 function $as_Lwhilelang_syntax_Program$Command$While(obj) {
   return (((obj instanceof $c_Lwhilelang_syntax_Program$Command$While) || (obj === null)) ? obj : $throwClassCastException(obj, "whilelang.syntax.Program$Command$While"))

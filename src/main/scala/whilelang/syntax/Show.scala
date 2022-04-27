@@ -17,9 +17,10 @@ object Show:
     case Seq(c1, c2) => s"${apply(c1)};\n${apply(c2)}"
     case Assign(ident, e) => s"$ident:=${apply(e)}"
     case ITE(b, ct, cf) => s"if ${apply(b)} then\n${indent(apply(ct))}\nelse\n${indent(apply(cf))}"
-    case While(b, c) => s"while ${apply(b)} do\n${indent(apply(c))}"
+    case While(b, c, i) => s"while ${apply(b)} ${if i!=BTrue then s"{${apply(i)}} " else ""}do\n${indent(apply(c))}"
     case Assert(b) => s"assert ${apply(b)}"
     case Fail => "FAIL"
+    case Contract(pre,c,pos) => s"{${apply(pre)}} ${apply(c)} {${apply(pos)}}"
 
   def apply(e: IExpr): String = e match
     case N(n) => n.toString
@@ -35,6 +36,7 @@ object Show:
   def apply(b: BExpr): String = b match
     case BTrue => "true"
     case BFalse => "false"
+    case Impl(e1, e2) => s"(${apply(e1)}) -> (${apply(e2)})"
     case And(b1, b2) => s"${applyAnd(b1)} && ${applyAnd(b2)}"
     case Or(b1, b2) => s"${apply(b1)} || ${apply(b2)}"
     case Not(b1) => s"!${applyNot(b1)}"

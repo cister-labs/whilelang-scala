@@ -62,7 +62,7 @@ object Parser :
   /** (Recursive) Parser for a command in the while language */
   def command: P[Command] = P.recursive(commRec =>
     def basicCommand:P[Command] =
-      skip | ite | whilec | assert | assign
+      contract | skip | ite | whilec | assert | assign
 
     def skip: P[Skip.type] =
       string("skip").as(Skip)
@@ -72,9 +72,10 @@ object Parser :
         string("else") ~ sps ~ commBlock)
         .map(x => ITE(x._1._1._1._1._1._2, x._1._1._1._2, x._2))
     def whilec: P[While] =
-      (string("while") ~ bexpr.surroundedBy(sps) ~
+      (string("while") ~ bexpr.surroundedBy(sps) ~ invariant.? ~ sps ~
         string("do") ~ sps ~ commBlock)
-        .map(x => While(x._1._1._1._2, x._2))
+        .map(x =>
+          While(x._1._1._1._1._1._2, x._2, x._1._1._1._1._2.getOrElse(BTrue)) )
     def assert: P[Assert] =
       (string("assert") *> bexpr.surroundedBy(sps))
         .map(Assert.apply)
@@ -84,11 +85,18 @@ object Parser :
     def assign: P[Assign] =
       (varName ~ string(":=").surroundedBy(sps) ~ iexpr)
         .map(x => Assign(x._1._1,x._2))
+    def contract: P[Command] =
+      (invariant~commRec.surroundedBy(sps)~invariant)
+        .map(x => Contract(x._1._1, x._1._2, x._2))
+
     def seqOp =
       char(';').as(Seq.apply)
 
     listSep(basicCommand, seqOp)
   )
+
+  def invariant: P[BExpr] =
+    char('{')*>bexpr.surroundedBy(sps)<*char('}')
 
   /** (Recursive) Parser for a boolean expression */
   def bexpr: P[BExpr] = P.recursive( bexprRec =>

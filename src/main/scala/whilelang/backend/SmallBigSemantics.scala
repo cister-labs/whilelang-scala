@@ -27,9 +27,9 @@ object SmallBigSemantics extends SOS[String,St]:
     case Seq(c1,c2) =>
       for (by,st) <- next(c1->st._2) yield
         (by, Seq(st._1,c2)->st._2)
-    case While(b,c) =>
+    case While(b,c,i) =>
       if eval(b,st._2)
-      then Set("while-true"->(Seq(c,While(b,c)),st._2))
+      then Set("while-true"->(Seq(c,While(b,c,i)),st._2))
       else Set("while-false"->(Skip,st._2))
     case Assert(b) =>
       if eval(b,st._2)
@@ -42,6 +42,7 @@ object SmallBigSemantics extends SOS[String,St]:
     case Assign(ident,e) =>
       val v = eval(e,st._2)
       Set(s"Assign $ident:=$v" -> (Skip,st._2+(ident->v)))
+    case Contract(p,c,q) => next(c,st._2)
 
   /** Evaluation of boolean expressions */
   def eval(b:BExpr,env:Env): Boolean = b match
@@ -49,6 +50,7 @@ object SmallBigSemantics extends SOS[String,St]:
     case BFalse => false
     case And(b1, b2)     => eval(b1,env) && eval(b2,env)
     case Or(b1, b2)      => eval(b1,env) || eval(b2,env)
+    case Impl(b1, b2)    => !eval(b1,env) || eval(b2,env)
     case Not(b)          => !eval(b,env)
     case Less(e1, e2)    => eval(e1,env) < eval(e2,env)
     case Greater(e1, e2) => eval(e1,env) > eval(e2,env)

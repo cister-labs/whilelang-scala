@@ -28,7 +28,7 @@ object SmallSemantics extends SOS[String,St]:
       case Seq(c1,c2) =>
         for (by,st) <- next(c1->env) yield
           (by, Seq(st._1,c2)->st._2)
-      case While(b,c) => Set("while-if" -> (ITE(b,Seq(c,While(b,c)),Skip), env))
+      case While(b,c,i) => Set("while-if" -> (ITE(b,Seq(c,While(b,c,i)),Skip), env))
       case Assert(b) => b match
         case BTrue => Set("assert-true"->(Skip,env))
         case BFalse => Set("assert-false"->(Fail,env))
@@ -43,6 +43,7 @@ object SmallSemantics extends SOS[String,St]:
         case N(n) => Set(s"Assign $ident:=$n" -> (Skip, env + (ident -> n)))
         case _ => nextInt(e)(using env).map((s, e2) =>
           (s, (Assign(ident, e2), env))).toSet
+      case Contract(p,c,q) => next(c,env)
 
   /** Evaluation of the next rewrite for a boolean expression */
   def nextBool(b: BExpr)(using env: Env): Option[(String, BExpr)] = b match
@@ -70,6 +71,7 @@ object SmallSemantics extends SOS[String,St]:
     case Not(b1) => nextBool(b1).map((s, b1b) => (s, Not(b1b)))
     case And(b1, b2) => mbNext(nextBool, And.apply)(b1, b2)
     case Or(b1, b2) => mbNext(nextBool, Or.apply)(b1, b2)
+    case Impl(b1, b2) =>  Some("Impl-def", Or(Not(b1),b2))
     case Less(e1, e2) => mbNext(nextInt, Less.apply)(e1, e2)
     case Greater(e1, e2) => mbNext(nextInt, Greater.apply)(e1, e2)
     case Eq(e1, e2) => mbNext(nextInt, Eq.apply)(e1, e2)

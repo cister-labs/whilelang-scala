@@ -28,10 +28,10 @@ object PartialSemantics extends SOS[String,St]:
     case Seq(c1,c2) =>
       for (by,st) <- next(c1->st._2) yield
         (by, Seq(st._1,c2)->st._2)
-    case While(b,c) => eval(b,st._2) match
-      case None => Set(s"${Show(b)}-true?" ->(Seq(c,While(b,c)),st._2),
+    case While(b,c,i) => eval(b,st._2) match
+      case None => Set(s"${Show(b)}-true?" ->(Seq(c,While(b,c,i)),st._2),
                           s"${Show(b)}-false?"->(Skip,st._2))
-      case Some(true)  => Set("while-true" ->(Seq(c,While(b,c)),st._2))
+      case Some(true)  => Set("while-true" ->(Seq(c,While(b,c,i)),st._2))
       case Some(false) => Set("while-false"->(Skip,st._2))
     case Assert(b) => eval(b,st._2) match
       case None => Set()
@@ -45,6 +45,7 @@ object PartialSemantics extends SOS[String,St]:
     case Assign(ident,e) => eval(e,st._2) match
       case None  => Set(s"Some assign $ident:=${Show(e)}" -> (Skip,st._2))
       case Some(v) => Set(s"Assign $ident:=$v" -> (Skip,st._2+(ident->v)))
+    case Contract(p,c,q) => next(c,st._2)
 
   /** Evaluation of integer expressions */
   def eval(e:IExpr,env:Env): Option[Int] = e match
@@ -62,6 +63,7 @@ object PartialSemantics extends SOS[String,St]:
     case BFalse => Some(false)
     case And(b1, b2)     => for (x<-eval(b1,env);y<-eval(b2,env)) yield x&&y
     case Or(b1, b2)      => for (x<-eval(b1,env);y<-eval(b2,env)) yield x||y
+    case Impl(b1, b2)    => for (x<-eval(b1,env);y<-eval(b2,env)) yield (!x)||y
     case Not(b1)         => for x<-eval(b1,env) yield !x
     case Less(e1, e2)    => for (x<-eval(e1,env);y<-eval(e2,env)) yield x<y
     case Greater(e1, e2) => for (x<-eval(e1,env);y<-eval(e2,env)) yield x>y
