@@ -14652,25 +14652,18 @@ $c_Lwhilelang_backend_VCGen$.prototype.vcgen__Lwhilelang_syntax_Program$Command_
     var x12 = x$1$3.Lwhilelang_syntax_Program$Command$While__f_b;
     var x13 = x$1$3.Lwhilelang_syntax_Program$Command$While__f_c;
     var x14 = x$1$3.Lwhilelang_syntax_Program$Command$While__f_inv;
-    var this$14 = this.vcgen__Lwhilelang_syntax_Program$Command__Lwhilelang_syntax_Program$BExpr__sci_Set(x13, x14);
-    var this$13 = $m_s_Predef$().s_Predef$__f_Set;
-    var $$x2 = $m_sr_ScalaRunTime$();
-    $m_Lwhilelang_syntax_Program$BExpr$();
-    var b1 = $m_Lwhilelang_syntax_Program$BExpr$().and__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr(x14, x12);
-    var b2 = this.wprec__Lwhilelang_syntax_Program$Command__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr(x13, q);
-    var $$x1 = new $c_Lwhilelang_syntax_Program$BExpr$Impl(b1, b2);
-    $m_Lwhilelang_syntax_Program$BExpr$();
-    var b1$1 = $m_Lwhilelang_syntax_Program$BExpr$().and__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr(x14, $m_Lwhilelang_syntax_Program$BExpr$().not__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr(x12));
-    var elems$2 = $$x2.wrapRefArray__AO__sci_ArraySeq(new ($d_Lwhilelang_syntax_Program$BExpr.getArrayOf().constr)([$$x1, new $c_Lwhilelang_syntax_Program$BExpr$Impl(b1$1, q)]));
-    var that$2 = this$13.from__sc_IterableOnce__sci_Set(elems$2);
-    return $as_sci_Set(this$14.concat__sc_IterableOnce__sc_SetOps(that$2))
+    var this$10 = this.vcgen__Lwhilelang_syntax_Program$Command__Lwhilelang_syntax_Program$BExpr__sci_Set(x13, x14);
+    var this$9 = $m_s_Predef$().s_Predef$__f_Set;
+    var elems$2 = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_Lwhilelang_syntax_Program$BExpr.getArrayOf().constr)([$m_Lwhilelang_syntax_Program$BExpr$().imply__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr($m_Lwhilelang_syntax_Program$BExpr$().and__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr(x14, x12), this.wprec__Lwhilelang_syntax_Program$Command__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr(x13, q)), $m_Lwhilelang_syntax_Program$BExpr$().imply__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr($m_Lwhilelang_syntax_Program$BExpr$().and__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr(x14, $m_Lwhilelang_syntax_Program$BExpr$().not__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr(x12)), q)]));
+    var that$2 = this$9.from__sc_IterableOnce__sci_Set(elems$2);
+    return $as_sci_Set(this$10.concat__sc_IterableOnce__sc_SetOps(that$2))
   };
   if ((c instanceof $c_Lwhilelang_syntax_Program$Command$Assert)) {
     var x$1$4 = $as_Lwhilelang_syntax_Program$Command$Assert(c);
     var x9 = x$1$4.Lwhilelang_syntax_Program$Command$Assert__f_b;
-    var this$16 = $m_s_Predef$().s_Predef$__f_Set;
+    var this$12 = $m_s_Predef$().s_Predef$__f_Set;
     var elems$3 = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_Lwhilelang_syntax_Program$BExpr.getArrayOf().constr)([x9]));
-    return this$16.from__sc_IterableOnce__sci_Set(elems$3)
+    return this$12.from__sc_IterableOnce__sci_Set(elems$3)
   };
   var x$3 = $s_Lwhilelang_syntax_Program$Command$__Fail__Lwhilelang_syntax_Program$Command();
   if (((x$3 === null) ? (c === null) : x$3.equals__O__Z(c))) {
@@ -14681,11 +14674,9 @@ $c_Lwhilelang_backend_VCGen$.prototype.vcgen__Lwhilelang_syntax_Program$Command_
     var x4 = x$1$5.Lwhilelang_syntax_Program$Command$Contract__f_pre;
     var x5 = x$1$5.Lwhilelang_syntax_Program$Command$Contract__f_c;
     var x6 = x$1$5.Lwhilelang_syntax_Program$Command$Contract__f_pos;
-    var this$20 = this.vcgen__Lwhilelang_syntax_Program$Command__Lwhilelang_syntax_Program$BExpr__sci_Set(x5, q);
-    $m_Lwhilelang_syntax_Program$BExpr$();
-    var b2$1 = this.wprec__Lwhilelang_syntax_Program$Command__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr(x5, $m_Lwhilelang_syntax_Program$BExpr$().and__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr(q, x6));
-    var elem = new $c_Lwhilelang_syntax_Program$BExpr$Impl(x4, b2$1);
-    return $as_sci_Set(this$20.incl__O__sci_SetOps(elem))
+    var this$14 = this.vcgen__Lwhilelang_syntax_Program$Command__Lwhilelang_syntax_Program$BExpr__sci_Set(x5, q);
+    var elem = $m_Lwhilelang_syntax_Program$BExpr$().imply__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr(x4, this.wprec__Lwhilelang_syntax_Program$Command__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr(x5, $m_Lwhilelang_syntax_Program$BExpr$().and__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr(q, x6)));
+    return $as_sci_Set(this$14.incl__O__sci_SetOps(elem))
   };
   throw new $c_s_MatchError(c)
 });
@@ -14721,14 +14712,7 @@ $c_Lwhilelang_backend_VCGen$.prototype.wprec__Lwhilelang_syntax_Program$Command_
       var x44 = x$1$2.Lwhilelang_syntax_Program$Command$ITE__f_b;
       var x45 = x$1$2.Lwhilelang_syntax_Program$Command$ITE__f_ct;
       var x46 = x$1$2.Lwhilelang_syntax_Program$Command$ITE__f_cf;
-      var $$x3 = $m_Lwhilelang_syntax_Program$BExpr$();
-      $m_Lwhilelang_syntax_Program$BExpr$();
-      var b2 = this.wprec__Lwhilelang_syntax_Program$Command__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr(x45, q$tailLocal1);
-      var $$x2 = new $c_Lwhilelang_syntax_Program$BExpr$Impl(x44, b2);
-      $m_Lwhilelang_syntax_Program$BExpr$();
-      var b1 = $m_Lwhilelang_syntax_Program$BExpr$().not__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr(x44);
-      var b2$1 = this.wprec__Lwhilelang_syntax_Program$Command__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr(x46, q$tailLocal1);
-      return $$x3.and__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr($$x2, new $c_Lwhilelang_syntax_Program$BExpr$Impl(b1, b2$1))
+      return $m_Lwhilelang_syntax_Program$BExpr$().and__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr($m_Lwhilelang_syntax_Program$BExpr$().imply__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr(x44, this.wprec__Lwhilelang_syntax_Program$Command__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr(x45, q$tailLocal1)), $m_Lwhilelang_syntax_Program$BExpr$().imply__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr($m_Lwhilelang_syntax_Program$BExpr$().not__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr(x44), this.wprec__Lwhilelang_syntax_Program$Command__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr(x46, q$tailLocal1)))
     };
     if ((x28 instanceof $c_Lwhilelang_syntax_Program$Command$While)) {
       var x$1$3 = $as_Lwhilelang_syntax_Program$Command$While(x28);
@@ -27394,6 +27378,31 @@ function $h_Lwhilelang_syntax_Program$BExpr$() {
   /*<skip>*/
 }
 $h_Lwhilelang_syntax_Program$BExpr$.prototype = $c_Lwhilelang_syntax_Program$BExpr$.prototype;
+$c_Lwhilelang_syntax_Program$BExpr$.prototype.imply__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr = (function(b1, b2) {
+  var x = $s_Lwhilelang_syntax_Program$BExpr$__BTrue__Lwhilelang_syntax_Program$BExpr();
+  if (((x === null) ? (b1 === null) : x.equals__O__Z(b1))) {
+    return b2
+  };
+  var x$3 = $s_Lwhilelang_syntax_Program$BExpr$__BFalse__Lwhilelang_syntax_Program$BExpr();
+  if (((x$3 === null) ? (b2 === null) : x$3.equals__O__Z(b2))) {
+    return this.not__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr(b1)
+  };
+  matchAlts1: {
+    matchAlts2: {
+      var x$5 = $s_Lwhilelang_syntax_Program$BExpr$__BFalse__Lwhilelang_syntax_Program$BExpr();
+      if (((x$5 === null) ? (b1 === null) : x$5.equals__O__Z(b1))) {
+        break matchAlts2
+      };
+      var x$7 = $s_Lwhilelang_syntax_Program$BExpr$__BTrue__Lwhilelang_syntax_Program$BExpr();
+      if (((x$7 === null) ? (b2 === null) : x$7.equals__O__Z(b2))) {
+        break matchAlts2
+      };
+      break matchAlts1
+    };
+    return $s_Lwhilelang_syntax_Program$BExpr$__BTrue__Lwhilelang_syntax_Program$BExpr()
+  };
+  return new $c_Lwhilelang_syntax_Program$BExpr$Impl(b1, b2)
+});
 $c_Lwhilelang_syntax_Program$BExpr$.prototype.and__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr__Lwhilelang_syntax_Program$BExpr = (function(b1, b2) {
   var x = $s_Lwhilelang_syntax_Program$BExpr$__BTrue__Lwhilelang_syntax_Program$BExpr();
   if (((x === null) ? (b1 === null) : x.equals__O__Z(b1))) {
@@ -27403,17 +27412,17 @@ $c_Lwhilelang_syntax_Program$BExpr$.prototype.and__Lwhilelang_syntax_Program$BEx
   if (((x$3 === null) ? (b2 === null) : x$3.equals__O__Z(b2))) {
     return b1
   };
-  matchAlts1: {
-    matchAlts2: {
+  matchAlts3: {
+    matchAlts4: {
       var x$5 = $s_Lwhilelang_syntax_Program$BExpr$__BFalse__Lwhilelang_syntax_Program$BExpr();
       if (((x$5 === null) ? (b1 === null) : x$5.equals__O__Z(b1))) {
-        break matchAlts2
+        break matchAlts4
       };
       var x$7 = $s_Lwhilelang_syntax_Program$BExpr$__BFalse__Lwhilelang_syntax_Program$BExpr();
       if (((x$7 === null) ? (b2 === null) : x$7.equals__O__Z(b2))) {
-        break matchAlts2
+        break matchAlts4
       };
-      break matchAlts1
+      break matchAlts3
     };
     return $s_Lwhilelang_syntax_Program$BExpr$__BFalse__Lwhilelang_syntax_Program$BExpr()
   };
