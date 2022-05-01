@@ -112,15 +112,16 @@ object Parser :
     def op:P[(IExpr,IExpr)=>BExpr] =
       string("<=").as((x:IExpr,y:IExpr) => Or(Less(x,y),Eq(x,y))) |
       string(">=").as((x:IExpr,y:IExpr) => Or(Greater(x,y),Eq(x,y))) |
+      string("!=").as((x:IExpr,y:IExpr) => Not(Eq(x,y))) |
       char('<').as(Less.apply) |
       char('>').as(Greater.apply) |
       char('=').as(Eq.apply)
     def ineq =
       (iexpr ~ op.surroundedBy(sps) ~ iexpr).map(x=>x._1._2(x._1._1,x._2))
     def or: P[(BExpr,BExpr)=>BExpr] =
-      string("||").map(_ => Or.apply)
+      (string("||")|string("\\/")).map(_ => Or.apply)
     def and: P[(BExpr,BExpr)=>BExpr] =
-      string("&&").map(_ => And.apply)
+      (string("&&")|string("/\\")).map(_ => And.apply)
 
     listSep( listSep(lit,and) , or)
   )

@@ -31,9 +31,47 @@ object CaosConfig extends Configurator[Command]:
     "Sort2" ->
       "if x<=y then { z:=x ; w:=y } else { w:=x ; z:=y }" ->
       "Example 5.7 from RSD book",
-    "Contract" ->
+    "Contract (:=)" ->
       "{x = 5 && y = 10}\naux := y ;\ny := x ;\nx := x + aux\n{x > 10 && y = 5}" ->
-      "Simple contract, used in the lecture slides"
+      "Simple contract, used in the lecture slides",
+    "Contract (while)" ->
+      "{true}\nx:=5;\nwhile (x!=2 && x!=4) {x>0} do {\n  x:=x-1\n}\n{x!=2}",
+    "Ex.1" ->
+      "{i = 5}\na := i + 2\n{(a = 7) && (i = 5)}" ->
+      "// description: Ex.1 from the exercises list.",
+    "Ex.2" ->
+      "{i = 5}\na := i + 2\n{(a = 7) && (i > 0)}" ->
+      "// description: Ex.2 from the exercises list.",
+    "Ex.3" ->
+      "{(i = 5) && (a = 3)}\na := i + 2\n{a = 7}" ->
+      "// description: Ex.3 from the exercises list.",
+    "Ex.4" ->
+      "{a = 7}\ni := i + 2\n{a = 7}" ->
+      "// description: Ex.4 from the exercises list.",
+    "Ex.5" ->
+      "{i = a - 1}\ni := i + 2\n{i = a + 1}" ->
+      "// description: Ex.5 from the exercises list.",
+    "Ex.6" ->
+      "{true}\na := i + 2\n{a = i + 2}" ->
+      "// description: Ex.6 from the exercises list.",
+    "Ex.7" ->
+      "{a > b}\nm := 1; n := a - b\n{m * n > 0}" ->
+      "// description: Ex.7 from the exercises list.",
+    "Ex.8" ->
+      "{s = 2*i}\ni := i + 1; s := s * 2\n{s = 2*i}" ->
+      "// description: Ex.8 from the exercises list.",
+    "Ex.9" ->
+      "{true}\nif(i < j) then min := i else min := j\n{(min <= i) && (min <= j)}" ->
+      "// description: Ex.9 from the exercises list.",
+    "Ex.10" ->
+      "{(i > 0) && (j > 0)}\nif(i < j) then min := i else min := j\n{min > 0}" ->
+      "// description: Ex.10 from the exercises list.",
+    "Ex.11" ->
+      "// replace \"?\" with some formula\n{s = 2*i}\nwhile i < n {?} do i := i + 1; s := s * 2\n{s = 2*i}" ->
+      "// description: Ex.11 from the exercises list.",
+    "Ex.12" ->
+      "// replace \"?\" with some formula\n{(s = 2*i) && (i <= n)}\nwhile i < n {?} do i := i + 1; s := s * 2\n{s = 2*n}" ->
+      "// description:Ex.12: from the exercises list.",
   )
 
   override val smallWidgets = List(
