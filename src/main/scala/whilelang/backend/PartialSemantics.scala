@@ -56,6 +56,7 @@ object PartialSemantics extends SOS[String,St]:
     case Plus(e1, e2)  => for (x<-eval(e1,env);y<-eval(e2,env)) yield x+y
     case Times(e1, e2) => for (x<-eval(e1,env);y<-eval(e2,env)) yield x*y
     case Minus(e1, e2) => for (x<-eval(e1,env);y<-eval(e2,env)) yield x-y
+    case Power(e1, e2) => for (x<-eval(e1,env);y<-eval(e2,env)) yield math.pow(x,y).toInt
 
   /** Evaluation of boolean expressions */
   def eval(b:BExpr,env:Env): Option[Boolean] = b match

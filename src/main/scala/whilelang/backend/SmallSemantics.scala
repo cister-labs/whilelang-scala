@@ -92,10 +92,15 @@ object SmallSemantics extends SOS[String,St]:
     case Minus(e, N(0)) => Some("Minus-0", e)
     case Times(N(1), e) => Some("Times-1", e)
     case Times(e, N(1)) => Some("Times-1", e)
+    case Power(_, N(0)) => Some("x^0", N(1))
+    case Power(N(0), _) => Some("0^x", N(0))
+    case Power(N(1), e) => Some("1^x", N(1))
+    case Power(e, N(1)) => Some("x^1", e)
     // general cases
     case Plus(e1, e2) => mbNext(nextInt, Plus.apply)(e1, e2)
     case Minus(e1, e2) => mbNext(nextInt, Minus.apply)(e1, e2)
     case Times(e1, e2) => mbNext(nextInt, Times.apply)(e1, e2)
+    case Power(e1, e2) => mbNext(nextInt, Power.apply)(e1, e2)
 
   ///////////////
   // Auxiliary //

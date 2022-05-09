@@ -28,10 +28,15 @@ object Show:
     case Plus(e1, e2) => s"${apply(e1)}+${apply(e2)}"
     case Times(e1, e2) => s"${applyPar(e1)}*${applyPar(e2)}"
     case Minus(e1, e2) => s"${apply(e1)}-${apply(e2)}"
+    case Power(e1, e2) => s"${applyLit(e1)}^${applyLit(e2)}"
 
   def applyPar(expr: IExpr): String = expr match
     case _:(Plus|Minus) => s"(${apply(expr)})"
     case _ => apply(expr)
+
+  def applyLit(expr:IExpr): String = expr match
+    case N(_)| Var(_) => apply(expr)
+    case _ => s"(${apply(expr)})"
 
   def apply(b: BExpr): String = b match
     case BTrue => "true"
@@ -49,7 +54,7 @@ object Show:
     case _ => s"${apply(expr)}"
 
   def applyNot(expr: Program.BExpr): String = expr match
-    case _: (Or|And) => s"(${apply(expr)})"
+    case _: (Or | And) => s"(${apply(expr)})"
     case _ => s"${apply(expr)}"
 
   def indent(str: String, n: Int = 1): String =

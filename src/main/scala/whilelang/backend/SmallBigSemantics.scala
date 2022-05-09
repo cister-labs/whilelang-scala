@@ -66,6 +66,7 @@ object SmallBigSemantics extends SOS[String,St]:
     case Plus(e1, e2)  => eval(e1,env) + eval(e2,env)
     case Times(e1, e2) => eval(e1,env) * eval(e2,env)
     case Minus(e1, e2) => eval(e1,env) - eval(e2,env)
+    case Power(e1, e2) => math.pow(eval(e1,env) , eval(e2,env)).toInt
 
 
 

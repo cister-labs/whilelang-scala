@@ -25,6 +25,7 @@ object Program:
     case Plus(e1:IExpr, e2:IExpr)
     case Times(e1:IExpr, e2:IExpr)
     case Minus(e1:IExpr, e2:IExpr)
+    case Power(e1:IExpr, e2:IExpr)
 
   /** A boolean expression in the while language */
   enum BExpr:

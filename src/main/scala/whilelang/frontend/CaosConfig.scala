@@ -58,7 +58,7 @@ object CaosConfig extends Configurator[Command]:
       "{a > b}\nm := 1; n := a - b\n{m * n > 0}" ->
       "// description: Ex.7 from the exercises list.",
     "Ex.8" ->
-      "{s = 2*i}\ni := i + 1; s := s * 2\n{s = 2*i}" ->
+      "{s = 2^i}\ni := i + 1; s := s * 2\n{s = 2^i}" ->
       "// description: Ex.8 from the exercises list.",
     "Ex.9" ->
       "{true}\nif(i < j) then min := i else min := j\n{(min <= i) && (min <= j)}" ->
@@ -67,10 +67,10 @@ object CaosConfig extends Configurator[Command]:
       "{(i > 0) && (j > 0)}\nif(i < j) then min := i else min := j\n{min > 0}" ->
       "// description: Ex.10 from the exercises list.",
     "Ex.11" ->
-      "// replace \"?\" with some formula\n{s = 2*i}\nwhile i < n {?} do i := i + 1; s := s * 2\n{s = 2*i}" ->
+      "// replace \"?\" with some formula\n{s = 2^i}\nwhile i < n {?} do i := i + 1; s := s * 2\n{s = 2^i}" ->
       "// description: Ex.11 from the exercises list.",
     "Ex.12" ->
-      "// replace \"?\" with some formula\n{(s = 2*i) && (i <= n)}\nwhile i < n {?} do i := i + 1; s := s * 2\n{s = 2*n}" ->
+      "// replace \"?\" with some formula\n{(s = 2^i) && (i <= n)}\nwhile i < n {?} do i := i + 1; s := s * 2\n{s = 2*n}" ->
       "// description:Ex.12: from the exercises list.",
   )
 

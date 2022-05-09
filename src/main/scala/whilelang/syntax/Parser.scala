@@ -132,13 +132,15 @@ object Parser :
       char('(') *> iexprRec.surroundedBy(sps) <* char(')') |
       digits.map(x=>N(x.toInt)) |
       varName.map(Var.apply)
+    def pow: P[(IExpr,IExpr)=>IExpr] =
+      string("^").map(_ => Power.apply)
     def mult: P[(IExpr,IExpr)=>IExpr] =
       string("*").map(_ => Times.apply)
     def plusminus: P[(IExpr,IExpr)=>IExpr] =
       string("+").as(Plus.apply) |
       string("-").as(Minus.apply)
 
-    listSep( listSep(lit,mult) , plusminus )
+    listSep( listSep(listSep(lit,pow),mult) , plusminus )
   )
 
 

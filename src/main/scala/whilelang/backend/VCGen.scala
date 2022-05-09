@@ -54,3 +54,4 @@ object VCGen:
     case Plus(e1, e2) => Plus(subst(e1),subst(e2))
     case Times(e1, e2) => Times(subst(e1),subst(e2))
     case Minus(e1, e2) => Minus(subst(e1),subst(e2))
+    case Power(e1, e2) => Power(subst(e1),subst(e2))
