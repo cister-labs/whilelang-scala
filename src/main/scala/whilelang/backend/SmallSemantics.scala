@@ -43,7 +43,7 @@ object SmallSemantics extends SOS[String,St]:
         case N(n) => Set(s"Assign $ident:=$n" -> (Skip, env + (ident -> n)))
         case _ => nextInt(e)(using env).map((s, e2) =>
           (s, (Assign(ident, e2), env))).toSet
-      case Contract(p,c,q) => next(c,env)
+      case Contract(_,c,_) => next(c,env)
 
   /** Evaluation of the next rewrite for a boolean expression */
   def nextBool(b: BExpr)(using env: Env): Option[(String, BExpr)] = b match
@@ -79,7 +79,7 @@ object SmallSemantics extends SOS[String,St]:
   /** Evaluation of the next rewrite for an int expression */
   def nextInt(e: IExpr)(using env: Env): Option[(String, IExpr)] = e match
     // nothing to reduce
-    case N(n) => None
+    case N(_) => None
     case Var(ident) => if env contains ident
       then Some(s"Var-$ident" -> N(env(ident)))
       else None
@@ -94,7 +94,7 @@ object SmallSemantics extends SOS[String,St]:
     case Times(e, N(1)) => Some("Times-1", e)
     case Power(_, N(0)) => Some("x^0", N(1))
     case Power(N(0), _) => Some("0^x", N(0))
-    case Power(N(1), e) => Some("1^x", N(1))
+    case Power(N(1), _) => Some("1^x", N(1))
     case Power(e, N(1)) => Some("x^1", e)
     // general cases
     case Plus(e1, e2) => mbNext(nextInt, Plus.apply)(e1, e2)

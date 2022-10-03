@@ -1,10 +1,9 @@
 package whilelang.frontend
 
-import caos.common.Example
 import caos.frontend.Configurator
 import caos.frontend.Configurator.*
 import caos.frontend.widgets.WidgetInfo
-import caos.view.{Mermaid, Text, View}
+import caos.view.{Code, Mermaid, Text, View}
 import whilelang.backend.*
 import whilelang.syntax.Program.Command
 import whilelang.syntax.{Program, Show}
@@ -75,33 +74,33 @@ object CaosConfig extends Configurator[Command]:
   )
 
   override val smallWidgets = List(
-    "Parsing works" -> check(_ => Nil)
+    "Parsing works" -> check(_ => Nil),
+    "View pretty data" -> view(Show.apply , Code("clike")),
   )
 
   val widgets = List(
 //    "Parsing works" -> check(_ => (Nil,Nil)),
-    "View parsed data" -> view(_.toString , Text),
-    "View pretty data" -> view(Show.apply , Text),
-    "VCGen" -> view(x => VCGen(x).map(Show.apply).mkString("\n"), Text),
-    "wprec" -> view(x => Show(VCGen.wprec(x)(using Program.BExpr.BTrue)), Text),
-    "Run big-steps" -> steps(
+//    "View parsed data" -> view(_.toString , Text),
+//    "VCGen" -> view(x => VCGen(x).map(Show.apply).mkString("\n"), Text),
+    "WPrec" -> view(x => Show(VCGen.wprec(x)(using Program.BExpr.BTrue)), Text),
+    "Stepwise: big-step semantics" -> steps(
       com=>(com,Map()), SmallBigSemantics,
       (nxt,state) => Show(nxt)+"\t\t"+state.mkString("[",",","]"),
       Text),
-    "Run partial-semantics" -> steps(
+    "Stepwise: partial semantics" -> steps(
       com=>(com,Map()), PartialSemantics,
       (nxt,state) => Show(nxt)+"\t\t"+state.mkString("[",",","]"),
       Text),
-    "Run small-steps" -> steps(
+    "Stepwise: small-step semantics" -> steps(
       com=>(com,Map()), // build initial state from a program
       SmallSemantics, // which SOS semantics to use
       (nxt,state) => Show(nxt)+"\t\t"+state.mkString("[",",","]"), // how to represent the state
       Text // represent as text or as mermaid diagram
     ),
-    "LTS big-steps" -> lts(
-      com=>(com,Map()), SmallBigSemantics, x=>Show(x._1), _.toString),
-    "LTS partial-semantics" -> lts(
-      com=>(com,Map()), PartialSemantics, x=>Show(x._1), _.toString),
-    "LTS small-steps" -> lts(
-      com=>(com,Map()), SmallSemantics, x=>Show(x._1), _.toString)
+    "All-steps: big-step semantics" -> lts(
+      com=>(com,Map()), SmallBigSemantics, x=>Show(x._1)+"\n\n"+x._2.mkString("[",",","]"), _.toString),
+    "All-steps: partial semantics" -> lts(
+      com=>(com,Map()), PartialSemantics, x=>Show(x._1)+"\n\n"+x._2.mkString("[",",","]"), _.toString),
+    "All-steps: small-step semantics" -> lts(
+      com=>(com,Map()), SmallSemantics, x=>Show(x._1)+"\n\n"+x._2.mkString("[",",","]"), _.toString)
   )

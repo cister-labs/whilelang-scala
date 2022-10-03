@@ -45,7 +45,7 @@ object PartialSemantics extends SOS[String,St]:
     case Assign(ident,e) => eval(e,st._2) match
       case None  => Set(s"Some assign $ident:=${Show(e)}" -> (Skip,st._2))
       case Some(v) => Set(s"Assign $ident:=$v" -> (Skip,st._2+(ident->v)))
-    case Contract(p,c,q) => next(c,st._2)
+    case Contract(_,c,_) => next(c,st._2)
 
   /** Evaluation of integer expressions */
   def eval(e:IExpr,env:Env): Option[Int] = e match

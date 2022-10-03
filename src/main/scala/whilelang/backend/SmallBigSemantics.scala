@@ -42,7 +42,7 @@ object SmallBigSemantics extends SOS[String,St]:
     case Assign(ident,e) =>
       val v = eval(e,st._2)
       Set(s"Assign $ident:=$v" -> (Skip,st._2+(ident->v)))
-    case Contract(p,c,q) => next(c,st._2)
+    case Contract(_,c,_) => next(c,st._2)
 
   /** Evaluation of boolean expressions */
   def eval(b:BExpr,env:Env): Boolean = b match
