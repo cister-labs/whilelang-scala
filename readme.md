@@ -1,6 +1,9 @@
 # WhileLang
 
 Small `While` language to be used in an introductory course on software verification.
+It produces JavaScript code that can be executed at the link below, using a snapshot of this tool:
+
+ - https://cister-labs.github.io/whilelang-scala
 
 
 ## Requirements
