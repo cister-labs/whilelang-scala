@@ -57,15 +57,22 @@ object Parser :
 
 
   /** A program is a command with possible spaces or comments around. */
-  def program: P[Command] = command.surroundedBy(sps)
+  def program: P[Command] = contract.surroundedBy(sps)
+
+  def contract: P[Command] =
+    (invariant~command.surroundedBy(sps)~invariant)
+      .map(x => Contract(x._1._1, x._1._2, x._2)) |
+    command
 
   /** (Recursive) Parser for a command in the while language */
   def command: P[Command] = P.recursive(commRec =>
     def basicCommand:P[Command] =
-      contract | skip | ite | whilec | assert | assign
+      skip | ite | whilec | assert | assign
+//      contract | skip | ite | whilec | assert | assign
 
     def skip: P[Skip.type] =
-      string("skip").as(Skip)
+//      string("skip").as(Skip)
+      (string("skip")~sps~char(';')).as(Skip)
     def ite: P[ITE] =
       (string("if") ~ bexpr.surroundedBy(sps) ~
         string("then") ~ commBlock.surroundedBy(sps) ~
@@ -77,22 +84,28 @@ object Parser :
         .map(x =>
           While(x._1._1._1._1._1._2, x._2, x._1._1._1._1._2.getOrElse(BTrue)) )
     def assert: P[Assert] =
-      (string("assert") *> bexpr.surroundedBy(sps))
+      (string("assert") *> bexpr.surroundedBy(sps)<*char(';'))
         .map(Assert.apply)
     def commBlock =
-      char('{')*>commRec.surroundedBy(sps)<*char('}') |
-        commRec
+      (char('{')~sps)*>commRec<*(sps~char('}')) |
+        skip  | assert | assign
     def assign: P[Assign] =
-      (varName ~ string(":=").surroundedBy(sps) ~ iexpr)
+//      (varName ~ (string(":=")|char('=')).surroundedBy(sps) ~ iexpr)
+      (varName ~ (string(":=")|char('=')).surroundedBy(sps) ~ iexpr <*(sps~char(';')))
         .map(x => Assign(x._1._1,x._2))
-    def contract: P[Command] =
-      (invariant~commRec.surroundedBy(sps)~invariant)
-        .map(x => Contract(x._1._1, x._1._2, x._2))
+//    def contract: P[Command] = // contracts now only in the outside, after ';' is at the end of every assignment.
+//      (invariant~commRec.surroundedBy(sps)~invariant)
+//        .map(x => Contract(x._1._1, x._1._2, x._2))
 
     def seqOp =
       char(';').as(Seq.apply)
 
-    listSep(basicCommand, seqOp)
+    def seqOp2 =
+      sps.as(Seq.apply)
+
+//    listSep(basicCommand, seqOp2)
+//    listSepRep(basicCommand, char(';').surroundedBy(sps), Seq.apply)
+    listSepRep(basicCommand, sps, Seq.apply)
   )
 
   def invariant: P[BExpr] =
@@ -147,8 +160,8 @@ object Parser :
   /// Auxiliary parser combinators
 
   /** Non-empty list of elements with a binary operator */
-  def listSep[A](elem:P[A],op:P[(A,A)=>A]): P[A] =
-    (elem ~ (op.surroundedBy(sps).backtrack~elem).rep0)
+  def listSep[A](elem:P[A],op:P0[(A,A)=>A]): P[A] =
+    (elem ~ (op.surroundedBy(sps).backtrack.with1~elem).rep0)
       .map(x=>
         val pairlist = x._2
         val first = x._1;
@@ -158,6 +171,11 @@ object Parser :
   /** Pair of elements with a separator */
   def binary[A,B](p1:P[A],op:String,p2:P[B]): P[(A,B)] =
     (p1 ~ string(op).surroundedBy(sps) ~ p2).map(x=>(x._1._1,x._2))
+
+  /** Similar to `listSep`, but using native repSep that is more eager (less backtrack). */
+  def listSepRep[A](elem:P[A],sep:P0[_],join:(A,A)=>A): P[A] =
+    elem.repSep(sep)
+      .map(ls => ls.tail.fold(ls.head)(join(_, _)))
 
 
   //////////////////////////////

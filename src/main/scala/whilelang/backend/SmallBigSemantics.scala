@@ -20,7 +20,7 @@ object SmallBigSemantics extends SOS[String,St]:
     s._1 == Skip
 
   /** What are the set of possible evolutions (label and new state) */
-  override def next(st: St): Set[(String, St)] = st._1 match
+  override def next[Act>:String](st: St): Set[(Act, St)] = st._1 match
     case Skip => Set()
     case Fail => Set()
     case Seq(Skip,c2) => next(c2->st._2)

@@ -19,7 +19,7 @@ object SmallSemantics extends SOS[String,St]:
     s._1 == Skip
 
   /** What are the set of possible evolutions (label and new state) */
-  override def next(st: St): Set[(String, St)] =
+  override def next[Act>:String](st: St): Set[(Act, St)] =
     val (comm,env) = st
     comm match
       case Skip => Set()
