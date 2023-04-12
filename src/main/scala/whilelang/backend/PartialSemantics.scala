@@ -43,7 +43,7 @@ object PartialSemantics extends SOS[String,St]:
       case Some(true)  => Set("if-true" ->(ct,st._2))
       case Some(false) => Set("if-false"->(cf,st._2))
     case Assign(ident,e) => eval(e,st._2) match
-      case None  => Set(s"Some assign $ident:=${Show(e)}" -> (Skip,st._2))
+      case None  => Set(s"Some assign $ident:=${Show(e)}" -> (Skip,st._2 - ident))
       case Some(v) => Set(s"Assign $ident:=$v" -> (Skip,st._2+(ident->v)))
     case Contract(_,c,_) => next(c,st._2)
 
