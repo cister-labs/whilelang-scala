@@ -97,6 +97,13 @@ object CaosConfig extends Configurator[Command]:
       (nxt,state) => Show(nxt)+"\t\t"+state.mkString("[",",","]"), // how to represent the state
       Text // represent as text or as mermaid diagram
     ),
+    "Stepwise: small-step semantics (graph)" -> ltsExplore(
+      com=>(com,Map()), // build initial state from a program
+      SmallSemantics, // which SOS semantics to use
+      x=>Show(x._1)+"\n\n"+x._2.mkString("[",",","]"),
+      _.toString
+      // (nxt,state) => Show(nxt)+"\t\t"+state.mkString("[",",","]"), // how to represent the state
+    ),
     "All-steps: big-step semantics" -> lts(
       com=>(com,Map()), SmallBigSemantics, x=>Show(x._1)+"\n\n"+x._2.mkString("[",",","]"), _.toString),
     "All-steps: partial semantics" -> lts(
