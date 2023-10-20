@@ -1,6 +1,6 @@
 package whilelang.frontend
 
-import caos.frontend.Configurator
+import caos.frontend.{Configurator, Documentation}
 import caos.frontend.Configurator.*
 import caos.frontend.widgets.WidgetInfo
 import caos.view.{Code, Mermaid, Text, View}
@@ -86,15 +86,18 @@ object CaosConfig extends Configurator[Command]:
     "Stepwise: big-step semantics" -> steps(
       com=>(com,Map()), SmallBigSemantics,
       (nxt,state) => Show(nxt)+"\t\t"+state.mkString("[",",","]"),
+      _.toString,
       Text),
     "Stepwise: partial semantics" -> steps(
       com=>(com,Map()), PartialSemantics,
       (nxt,state) => Show(nxt)+"\t\t"+state.mkString("[",",","]"),
+      _.toString,
       Text),
     "Stepwise: small-step semantics" -> steps(
       com=>(com,Map()), // build initial state from a program
       SmallSemantics, // which SOS semantics to use
       (nxt,state) => Show(nxt)+"\t\t"+state.mkString("[",",","]"), // how to represent the state
+      _.toString,
       Text // represent as text or as mermaid diagram
     ),
     "Stepwise: small-step semantics (graph)" -> ltsExplore(
@@ -102,7 +105,6 @@ object CaosConfig extends Configurator[Command]:
       SmallSemantics, // which SOS semantics to use
       x=>Show(x._1)+"\n\n"+x._2.mkString("[",",","]"),
       _.toString
-      // (nxt,state) => Show(nxt)+"\t\t"+state.mkString("[",",","]"), // how to represent the state
     ),
     "All-steps: big-step semantics" -> lts(
       com=>(com,Map()), SmallBigSemantics, x=>Show(x._1)+"\n\n"+x._2.mkString("[",",","]"), _.toString),
@@ -110,4 +112,80 @@ object CaosConfig extends Configurator[Command]:
       com=>(com,Map()), PartialSemantics, x=>Show(x._1)+"\n\n"+x._2.mkString("[",",","]"), _.toString),
     "All-steps: small-step semantics" -> lts(
       com=>(com,Map()), SmallSemantics, x=>Show(x._1)+"\n\n"+x._2.mkString("[",",","]"), _.toString)
+  )
+
+
+  //// Documentation below
+
+  override val footer: String =
+    """Simple animator of a while language with contracts, meant both for teaching CCS and to exemplify the
+      | CAOS libraries, used to generate this website. Source code available online:
+      | <a target="_blank" href="https://github.com/cister-labs/whilelang-scala">
+      | https://github.com/cister-labs/whilelang-scala</a> (while language),
+      | <a target="_blank" href="https://github.com/arcalab/CAOS">
+      | https://github.com/arcalab/CAOS</a> (CAOS).""".stripMargin
+
+  private val sosRules: String =
+    """The operational rules that we use to reduce a while-program are provided below.
+      | They can also be found, for example, in the slides available at
+      | <a target="_blank" href="https://cister-labs.github.io/fvoca2122/slides/4-semantics.pdf#page=27">
+      | https://cister-labs.github.io/fvoca2122/slides/4-semantics.pdf#page=27</a>.
+      |
+      |<pre>
+      |   s(x) = n
+      |  --------------------(var)
+      |  <x,s> --var-x--> <n,s>
+      |</pre>""".stripMargin
+
+  private val bigstep =
+    """"Use a natural semantics for evaluating integer and boolean expressions,
+      | failing when an unknown variable is found,
+      | and a small-step semantics for the reducing programs.""".stripMargin
+  private val partialsem =
+    """Use a natural semantics for evaluating integer and boolean expressions,
+      | allowing operations over unknown variable to succeed (allowing any evaluation of boolean expressions),
+      | and a small-step semantics for the reducing programs.""".stripMargin
+
+  private val smallstep =
+    """Use a small step semantics to reduce both expressions and programs,
+      | possibly getting "stuck" if an unkown variable is found.""".stripMargin
+
+
+  override val documentation: Documentation = List(
+    languageName -> "More information on the syntax of a program." ->
+      """A program <code>prog</code> in this while language is given by the following grammar:
+        |<pre>
+        |prog ::= "skip;"
+        |       | x ":=" iexpr ";""
+        |       | "if" bexpr "then" prog "else" prog
+        |       | "while" bexpr "do" "{" prog "}"
+        |       | "while" bexpr "{" bexpr "}" "do" "{" prog "}"
+        |       | "{" bexpr "}" prog "{" bexpr "}"
+        |
+        |bexpr ::= "true" | "false"
+        |       | bexpr "&&" bexpr
+        |       | bexpr "||" bexpr
+        |       | "!" bexpr
+        |       | iexpr "<" iexpr
+        |       | iexpr "=" iexpr
+        |
+        |iexpr ::= n | x
+        |       | iexpr "+" iexpr
+        |       | iexpr "*" iexpr
+        |       | iexpr "−" iexpr
+        |
+        |x ∈ Identifiers
+        |n ∈ Numerals
+        |</pre>
+        |""".stripMargin,
+    "Stepwise: big-step semantics" -> "More information on the rules used here" -> bigstep,
+    "Stepwise: partial semantics" -> "More information on the rules used here" -> partialsem,
+    "Stepwise: small-step semantics" -> "More information on the rules used here" -> smallstep,
+    "Stepwise: small-step semantics (graph)" -> "More information on the rules used here" -> smallstep,
+    "All-steps: big-step semantics" -> "More information on the rules used here" -> bigstep,
+    "All-steps: partial semantics" -> "More information on the rules used here" -> partialsem,
+    "All-steps: small-step semantics" -> "More information on the rules used here" -> smallstep,
+    "WPrec" -> "More information on weakest preconditions" ->
+      """This widget, given a program <code>{...} prog {post}</code>, calculates
+        | the weakest precondition that should be insted of <code>{...}</code>.""".stripMargin
   )

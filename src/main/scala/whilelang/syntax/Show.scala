@@ -20,7 +20,7 @@ object Show:
     case While(b, c, i) => s"while ${apply(b)} ${if i!=BTrue then s"{${apply(i)}} " else ""}do\n${indent(apply(c))}"
     case Assert(b) => s"assert ${apply(b)}"
     case Fail => "FAIL"
-    case Contract(pre,c,pos) => s"{${apply(pre)}} ${apply(c)} {${apply(pos)}}"
+    case Contract(pre,c,pos) => s"{${apply(pre)}}\n${apply(c)}\n{${apply(pos)}}"
 
   def apply(e: IExpr): String = e match
     case N(n) => n.toString
